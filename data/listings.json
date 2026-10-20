@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-20T12:49:27.050152-04:00",
+ "generatedAt": "2026-10-20T13:49:23.236637-04:00",
  "source": "https://www.kijiji.ca/b-rideshare-carpool/city-of-toronto/c5l1700273",
  "counts": {
   "pulled": 40,
@@ -20,23 +20,23 @@
    "name": "Toronto",
    "lat": 43.6532,
    "lon": -79.3832,
-   "temp": 15.8,
+   "temp": 15.9,
    "code": 0,
    "label": "Clear sky",
    "emoji": "☀️",
-   "wind": 16.0,
-   "hi": 15.8,
+   "wind": 15.9,
+   "hi": 15.9,
    "lo": 6.5
   },
   {
    "name": "Kingston",
    "lat": 44.2312,
    "lon": -76.486,
-   "temp": 13.5,
+   "temp": 14.3,
    "code": 0,
    "label": "Clear sky",
    "emoji": "☀️",
-   "wind": 16.6,
+   "wind": 15.6,
    "hi": 14.3,
    "lo": 5.1
   },
@@ -44,25 +44,25 @@
    "name": "Ottawa",
    "lat": 45.4215,
    "lon": -75.6972,
-   "temp": 13.6,
+   "temp": 14.5,
    "code": 0,
    "label": "Clear sky",
    "emoji": "☀️",
-   "wind": 10.1,
-   "hi": 14.5,
+   "wind": 10.6,
+   "hi": 14.9,
    "lo": 1.8
   },
   {
    "name": "Montréal",
    "lat": 45.5019,
    "lon": -73.5674,
-   "temp": 12.1,
+   "temp": 13.1,
    "code": 0,
    "label": "Clear sky",
    "emoji": "☀️",
-   "wind": 14.1,
-   "hi": 13.4,
-   "lo": 4.3
+   "wind": 12.3,
+   "hi": 13.8,
+   "lo": 4.5
   }
  ],
  "listings": [
@@ -79,6 +79,12 @@
    "postedIso": "2026-10-20T12:34:27.000Z",
    "route": "montreal",
    "departure": "Fri · 7:30 AM",
+   "departureParts": {
+    "days": "Fri",
+    "times": [
+     "7:30 AM"
+    ]
+   },
    "phone": "(514) 290-8030",
    "phoneTel": "+15142908030",
    "spot": 1
@@ -96,6 +102,12 @@
    "postedIso": "2026-10-16T19:18:10.000Z",
    "route": "montreal",
    "departure": "Daily · 3:30 PM",
+   "departureParts": {
+    "days": "Daily",
+    "times": [
+     "3:30 PM"
+    ]
+   },
    "phone": null,
    "phoneTel": null,
    "spot": 2
@@ -113,6 +125,10 @@
    "postedIso": "2026-10-15T01:49:20.000Z",
    "route": "montreal",
    "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
    "phone": null,
    "phoneTel": null,
    "spot": 3
@@ -130,6 +146,14 @@
    "postedIso": "2026-10-17T21:58:53.000Z",
    "route": "ottawa",
    "departure": "Daily · 8:00 AM, 2:00 PM, 5 PM",
+   "departureParts": {
+    "days": "Daily",
+    "times": [
+     "8:00 AM",
+     "2:00 PM",
+     "5 PM"
+    ]
+   },
    "phone": null,
    "phoneTel": null,
    "spot": 4
@@ -147,6 +171,12 @@
    "postedIso": "2026-10-16T22:49:31.000Z",
    "route": "ottawa",
    "departure": "5 PM",
+   "departureParts": {
+    "days": null,
+    "times": [
+     "5 PM"
+    ]
+   },
    "phone": null,
    "phoneTel": null,
    "spot": 5
@@ -164,6 +194,12 @@
    "postedIso": "2026-10-16T10:25:46.000Z",
    "route": "ottawa",
    "departure": "Fri · 8:30 AM",
+   "departureParts": {
+    "days": "Fri",
+    "times": [
+     "8:30 AM"
+    ]
+   },
    "phone": "(647) 545-6059",
    "phoneTel": "+16475456059",
    "spot": 6
@@ -181,6 +217,10 @@
    "postedIso": "2026-10-16T00:32:06.000Z",
    "route": "ottawa",
    "departure": "Fri",
+   "departureParts": {
+    "days": "Fri",
+    "times": []
+   },
    "phone": null,
    "phoneTel": null,
    "spot": 7
@@ -198,6 +238,12 @@
    "postedIso": "2026-10-14T15:21:38.000Z",
    "route": "ottawa",
    "departure": "Wed · 3:00 PM",
+   "departureParts": {
+    "days": "Wed",
+    "times": [
+     "3:00 PM"
+    ]
+   },
    "phone": "(426) 938-8454",
    "phoneTel": "+14269388454",
    "spot": 8
@@ -215,6 +261,12 @@
    "postedIso": "2026-06-14T20:44:12.000Z",
    "route": "ottawa",
    "departure": "7 PM",
+   "departureParts": {
+    "days": null,
+    "times": [
+     "7 PM"
+    ]
+   },
    "phone": null,
    "phoneTel": null,
    "spot": 9
@@ -232,6 +284,10 @@
    "postedIso": "2024-10-24T18:12:33.000Z",
    "route": "ottawa",
    "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
    "phone": "(647) 619-0835",
    "phoneTel": "+16476190835",
    "spot": 10
@@ -249,6 +305,10 @@
    "postedIso": "2026-10-19T01:16:04.000Z",
    "route": "other",
    "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
    "phone": null,
    "phoneTel": null,
    "spot": 11
@@ -266,6 +326,13 @@
    "postedIso": "2026-10-17T20:15:06.000Z",
    "route": "other",
    "departure": "5 PM, 6 PM",
+   "departureParts": {
+    "days": null,
+    "times": [
+     "5 PM",
+     "6 PM"
+    ]
+   },
    "phone": null,
    "phoneTel": null,
    "spot": 12
@@ -283,6 +350,13 @@
    "postedIso": "2026-10-16T18:23:05.000Z",
    "route": "other",
    "departure": "6 PM, 7 PM",
+   "departureParts": {
+    "days": null,
+    "times": [
+     "6 PM",
+     "7 PM"
+    ]
+   },
    "phone": null,
    "phoneTel": null,
    "spot": 13
@@ -300,6 +374,10 @@
    "postedIso": "2026-08-20T15:52:35.000Z",
    "route": "other",
    "departure": "Weekends",
+   "departureParts": {
+    "days": "Weekends",
+    "times": []
+   },
    "phone": null,
    "phoneTel": null,
    "spot": 14
@@ -317,6 +395,10 @@
    "postedIso": "2026-08-19T17:35:27.000Z",
    "route": "other",
    "departure": "Weekends",
+   "departureParts": {
+    "days": "Weekends",
+    "times": []
+   },
    "phone": null,
    "phoneTel": null,
    "spot": 15
@@ -334,6 +416,10 @@
    "postedIso": "2026-08-19T12:58:41.000Z",
    "route": "other",
    "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
    "phone": null,
    "phoneTel": null,
    "spot": 16
@@ -351,6 +437,10 @@
    "postedIso": "2026-06-20T20:57:06.000Z",
    "route": "other",
    "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
    "spot": 17
@@ -368,6 +458,10 @@
    "postedIso": "2026-06-19T17:38:00.000Z",
    "route": "other",
    "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
    "spot": 18
@@ -385,6 +479,10 @@
    "postedIso": "2026-06-18T07:55:55.000Z",
    "route": "other",
    "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
    "phone": null,
    "phoneTel": null,
    "spot": 19
@@ -402,6 +500,10 @@
    "postedIso": "2026-06-17T07:57:05.000Z",
    "route": "other",
    "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
    "spot": 20
@@ -419,6 +521,10 @@
    "postedIso": "2026-06-16T08:52:11.000Z",
    "route": "other",
    "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
    "spot": 21
@@ -436,6 +542,10 @@
    "postedIso": "2026-06-08T01:48:57.000Z",
    "route": "other",
    "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
    "spot": 22
@@ -453,6 +563,10 @@
    "postedIso": "2026-06-08T01:48:35.000Z",
    "route": "other",
    "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
    "spot": 23
@@ -470,6 +584,10 @@
    "postedIso": "2026-06-07T09:28:35.000Z",
    "route": "other",
    "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
    "spot": 24
@@ -487,6 +605,10 @@
    "postedIso": "2026-06-06T07:02:47.000Z",
    "route": "other",
    "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
    "spot": 25
@@ -504,6 +626,10 @@
    "postedIso": "2026-05-31T19:34:57.000Z",
    "route": "other",
    "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
    "spot": 26
@@ -521,6 +647,10 @@
    "postedIso": "2026-05-31T17:51:06.000Z",
    "route": "other",
    "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
    "spot": 27
@@ -538,6 +668,10 @@
    "postedIso": "2026-05-30T19:13:20.000Z",
    "route": "other",
    "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
    "spot": 28
