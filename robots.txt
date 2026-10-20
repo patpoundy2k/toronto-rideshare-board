@@ -1,6 +1,6 @@
 # Toronto Rideshare Board — robots.txt
 # This site WANTS to be indexed: all search engines and AI crawlers are
-# explicitly allowed everywhere. Replace patpound2k in the
+# explicitly allowed everywhere. Replace patpoundy2k in the
 # Sitemap URL with the real GitHub username once hosted (see README).
 
 User-agent: *
@@ -58,4 +58,4 @@ Allow: /
 User-agent: YouBot
 Allow: /
 
-Sitemap: https://patpound2k.github.io/toronto-rideshare-board/sitemap.xml
+Sitemap: https://patpoundy2k.github.io/toronto-rideshare-board/sitemap.xml
