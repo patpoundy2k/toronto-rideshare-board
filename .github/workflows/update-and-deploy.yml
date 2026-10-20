@@ -1,0 +1,67 @@
+name: Update listings & deploy
+
+# Refreshes the Kijiji listings, route weather and the baked-in page every
+# day, commits the fresh data back to the repo, and deploys to GitHub Pages.
+# 11:15 UTC ≈ 7:15 a.m. Toronto in summer (EDT) / 6:15 a.m. in winter (EST).
+
+on:
+  schedule:
+    - cron: "15 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write # commit the refreshed data
+  pages: write # deploy to GitHub Pages
+  id-token: write # OIDC token for the Pages deployment
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh listings, weather and page
+        run: python scripts/update-listings.py
+
+      - name: Commit the refreshed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/listings.json index.html sitemap.xml
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Daily rideshare refresh ($(date -u +%Y-%m-%d))"
+            git push
+          fi
+
+      - name: Stage the public site files
+        run: |
+          mkdir -p _site/data
+          cp index.html robots.txt sitemap.xml _site/
+          cp data/listings.json _site/data/
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload the site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
