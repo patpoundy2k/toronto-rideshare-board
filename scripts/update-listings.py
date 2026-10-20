@@ -171,14 +171,18 @@ TIME_AMPM_RE = re.compile(r"\b(\d{1,2})(?:[:.](\d{2}))?\s*([aApP])\.?[mM]\b\.?")
 TIME_H_RE = re.compile(r"(?<![\d:])(\d{1,2})h(\d{2})?\b")
 
 
-def extract_departure(text: str) -> str | None:
+def extract_departure(text: str) -> tuple[str | None, dict]:
     """Best-effort departure day/time from the ad's own words.
 
-    Returns a display string like "Daily · 9 AM, 7 PM" or "Fri · 8:30 AM",
-    or None when the ad states nothing usable. Never invents a value.
+    Returns (display, parts). Display is the English chip string like
+    "Daily · 9 AM, 7 PM" or "Fri · 8:30 AM", or None when the ad states
+    nothing usable — never invents a value. Parts carries the same
+    information structurally ({"days": "Daily" | "Mon, Wed" | "Mon–Fri" |
+    None, "times": ["8:30 AM", ...]}) so the page can re-render the chip
+    in French client-side.
     """
     if not text:
-        return None
+        return None, {"days": None, "times": []}
     low = text.lower()
 
     day_part = None
@@ -221,7 +225,8 @@ def extract_departure(text: str) -> str | None:
     times = times[:4]
 
     parts = [p for p in (day_part, ", ".join(times) if times else None) if p]
-    return " · ".join(parts) if parts else None
+    display = " · ".join(parts) if parts else None
+    return display, {"days": day_part, "times": times}
 
 
 PHONE_SEPARATED_RE = re.compile(
@@ -388,6 +393,7 @@ def build_records(raw_listings: list[dict]):
         coords = location.get("coordinates") or {}
         posted_iso = raw.get("activationDate") or raw.get("sortingDate")
         phone = extract_phone(full_text)
+        dep_display, dep_parts = extract_departure(full_text)
 
         kept.append(
             {
@@ -402,7 +408,8 @@ def build_records(raw_listings: list[dict]):
                 "posted": format_posted(posted_iso),
                 "postedIso": posted_iso,
                 "route": classify_route(title, description),
-                "departure": extract_departure(full_text),
+                "departure": dep_display,
+                "departureParts": dep_parts,
                 "phone": phone["display"] if phone else None,
                 "phoneTel": phone["tel"] if phone else None,
                 "spot": None,  # assigned below, in display order
@@ -544,6 +551,7 @@ def build_jsonld(listings: list[dict], canonical: str) -> str:
                 "@type": "WebSite",
                 "name": "Toronto Rideshare Board",
                 "url": canonical,
+                "inLanguage": ["en-CA", "fr-CA"],
                 "description": (
                     "Daily-updated board of Toronto rideshare and carpool rides "
                     "to Montréal and Ottawa, with pickup spots, route weather, "
