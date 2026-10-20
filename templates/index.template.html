@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toronto Rideshare Board — Toronto to Montréal &amp; Ottawa Carpool Rides, Updated Daily</title>
+<meta name="description" content="Daily-updated Toronto rideshare board: carpool rides from Toronto to Montréal and Toronto to Ottawa, plus other Toronto rides. Prices, pickup spots, departure days and times, driver phone numbers and route weather.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="Toronto Rideshare Board">
+<!-- Canonical URL -->
+<link rel="canonical" href="https://patpoundy2k.github.io/toronto-rideshare-board/">
+<!-- Bilingual page (EN/FR toggle): language alternates -->
+<link rel="alternate" hreflang="en" href="https://patpoundy2k.github.io/toronto-rideshare-board/">
+<link rel="alternate" hreflang="fr" href="https://patpoundy2k.github.io/toronto-rideshare-board/">
+<link rel="alternate" hreflang="x-default" href="https://patpoundy2k.github.io/toronto-rideshare-board/">
+<meta name="description" lang="fr" content="Tableau de covoiturage de Toronto mis à jour chaque jour : trajets de Toronto vers Montréal et Toronto vers Ottawa, et autres trajets au départ de Toronto. Prix, lieux de ramassage, jours et heures de départ, numéros de téléphone des conducteurs et météo du trajet.">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Toronto Rideshare Board">
+<meta property="og:title" content="Toronto Rideshare Board — Toronto to Montréal &amp; Ottawa Carpool Rides">
+<meta property="og:description" content="Daily-updated Toronto rideshare and carpool listings to Montréal and Ottawa: prices, pickup spots, departure days, phone numbers and route weather.">
+<meta property="og:url" content="https://patpoundy2k.github.io/toronto-rideshare-board/">
+<meta property="og:locale" content="en_CA">
+<meta property="og:locale:alternate" content="fr_CA">
+<!-- Twitter card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Toronto Rideshare Board — Toronto to Montréal &amp; Ottawa Carpool Rides">
+<meta name="twitter:description" content="Daily-updated Toronto rideshare and carpool listings to Montréal and Ottawa: prices, pickup spots, departure days, phone numbers and route weather.">
+<!-- Structured data for search engines and AI systems -->
+<script type="application/ld+json">
+%%JSONLD%%
+</script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+  :root{
+    --green:#0b6e2f; --green-dark:#084d21; --ink:#1c2430; --muted:#5b6675;
+    --line:#dde3ea; --bg:#f5f7f5; --amber:#fff3cd; --amber-ink:#7a5200;
+    --call-bg:#e3f4e5; --radius:12px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.45}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 16px 48px}
+  header.site{background:linear-gradient(135deg,var(--green),var(--green-dark));color:#fff;padding:28px 0 22px;margin-bottom:18px}
+  header.site .wrap{padding-bottom:0}
+  header.site h1{margin:0 0 6px;font-size:1.9rem;letter-spacing:.2px}
+  header.site p{margin:0;max-width:70ch;opacity:.92}
+  .updated{margin-top:10px;font-size:.9rem;opacity:.85}
+  h2{font-size:1.25rem;margin:26px 0 10px}
+  h2 .count{color:var(--muted);font-weight:500;font-size:1rem}
+  .hidden-note{font-size:.85rem;color:var(--muted);margin:4px 0 0}
+  .lang-toggle{display:flex;gap:8px;align-items:center;margin-top:14px}
+  .lang-toggle>span{opacity:.7;color:#fff}
+  .lang-btn{background:transparent;border:1px solid rgba(255,255,255,.7);color:#fff;border-radius:999px;padding:4px 16px;font-weight:700;font-size:.9rem;cursor:pointer}
+  .lang-btn.active{background:#fff;color:var(--green-dark);border-color:#fff}
+  /* weather */
+  .wx-strip{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px}
+  .wx-chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:.9rem;display:flex;gap:8px;align-items:center}
+  .wx-city{font-weight:700}
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 6px}
+  .tabs button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 16px;font-size:.95rem;cursor:pointer}
+  .tabs button.active{background:var(--green);color:#fff;border-color:var(--green)}
+  /* map + spots */
+  #map{height:380px;border-radius:var(--radius);border:1px solid var(--line);background:#e8eee9;z-index:0}
+  .map-fallback{display:none;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;color:var(--muted)}
+  .pin-icon{border-radius:50%;color:#fff;font-weight:700;font-size:.8rem;display:flex;align-items:center;justify-content:center;width:26px;height:26px;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.35)}
+  .spots{list-style:none;margin:10px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:6px}
+  .spot-item{display:flex;gap:8px;align-items:center;width:100%;text-align:left;background:#fff;border:1px solid var(--line);border-radius:8px;padding:7px 10px;cursor:pointer;font-size:.9rem}
+  .spot-item:hover{border-color:var(--green)}
+  .spot-badge{flex:0 0 auto;width:22px;height:22px;border-radius:50%;color:#fff;font-weight:700;font-size:.78rem;display:inline-flex;align-items:center;justify-content:center}
+  /* cards */
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:12px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;display:flex;flex-direction:column;gap:6px}
+  .card.flash{outline:3px solid #f5b301;outline-offset:2px}
+  .card-top{display:flex;align-items:center;gap:10px}
+  .price{font-size:1.3rem;font-weight:800;color:var(--green)}
+  .posted{margin-left:auto;font-size:.8rem;color:var(--muted)}
+  .card-title{margin:0;font-size:1.02rem;line-height:1.3}
+  .card-title a{color:var(--ink);text-decoration:none}
+  .card-title a:hover{text-decoration:underline}
+  .when{margin:0;background:var(--amber);color:var(--amber-ink);border-radius:8px;padding:6px 10px;font-size:.95rem}
+  .call{margin:0;background:var(--call-bg);border-radius:8px;padding:6px 10px;font-size:.98rem}
+  .call a{font-weight:800;color:var(--green-dark);text-decoration:none}
+  .call a:hover{text-decoration:underline}
+  .pickup{margin:0;font-size:.92rem}
+  .desc{margin:0;font-size:.88rem;color:var(--muted);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .open-link{margin-top:auto;font-weight:600;color:var(--green);text-decoration:none;font-size:.92rem}
+  .open-link:hover{text-decoration:underline}
+  .empty{color:var(--muted)}
+  footer.site{border-top:1px solid var(--line);margin-top:36px;padding-top:16px;font-size:.85rem;color:var(--muted)}
+  @media (max-width:560px){ #map{height:300px} header.site h1{font-size:1.55rem} }
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <h1 data-i18n="siteTitle">🚗 Toronto Rideshare Board</h1>
+    <p data-i18n="intro">Toronto rideshare and carpool rides — Toronto to Montréal, Toronto to Ottawa, and other Toronto rides — pulled from Kijiji daily, with prices, pickup spots, departure days, driver phone numbers and weather along the route.</p>
+    <p class="updated"><span data-i18n="lastUpdated">Last updated:</span> <time id="updated-time" datetime="%%GENERATED_AT_ISO%%">%%GENERATED_AT_DISPLAY%%</time> <span data-i18n="updatedSuffix">(Toronto time) · Updates daily</span></p>
+    <p class="hidden-note" id="hidden-note">%%HIDDEN_NOTE%%</p>
+    <div class="lang-toggle" role="group" aria-label="Language / Langue">
+      <button type="button" id="lang-en" class="lang-btn active" aria-pressed="true">EN</button>
+      <span aria-hidden="true">|</span>
+      <button type="button" id="lang-fr" class="lang-btn" aria-pressed="false">FR</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section data-i18n-aria="weatherAria" aria-label="Route weather">
+    <h2 data-i18n="weatherHeading">🌤️ Weather along the route</h2>
+    <div class="wx-strip" id="wx-strip">
+%%WEATHER_HTML%%
+    </div>
+  </section>
+
+  <nav class="tabs" data-i18n-aria="tabsAria" aria-label="Filter rides by route">
+    <button type="button" class="tab active" data-filter="all" data-i18n="tabAll">All rides</button>
+    <button type="button" class="tab" data-filter="montreal" data-i18n="tabMontreal">→ Montréal</button>
+    <button type="button" class="tab" data-filter="ottawa" data-i18n="tabOttawa">→ Ottawa</button>
+    <button type="button" class="tab" data-filter="other" data-i18n="tabOther">Other rides</button>
+  </nav>
+
+  <section data-i18n-aria="pickupAria" aria-label="Pickup map">
+    <h2 data-i18n="pickupHeading">📍 Pickup spots</h2>
+    <div id="map" role="img" data-i18n-aria="mapAria" aria-label="Map of rideshare pickup spots between Toronto, Kingston, Montréal and Ottawa"></div>
+    <p class="map-fallback" id="map-fallback" data-i18n="mapFallback">The interactive map could not load — use the numbered pickup index below; tapping a spot highlights its ride.</p>
+    <ul class="spots" id="spots">
+%%SPOTS_HTML%%
+    </ul>
+  </section>
+
+  <div id="board">
+%%LISTINGS_HTML%%
+  </div>
+
+  <footer class="site">
+    <p data-i18n="footer">Listings are collected from the public Kijiji Toronto rideshare &amp; carpool category and refreshed daily. Prices, times and phone numbers are quoted from the ads themselves — always confirm details with the driver before travelling. This board is not affiliated with Kijiji. Brampton and Windsor rides and Kijiji promoted (“Top Ad”) listings are filtered out.</p>
+  </footer>
+</main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+"use strict";
+const BOARD = %%LISTINGS_JSON%%;
+const WX_SNAPSHOT = %%WEATHER_JSON%%;
+/* ---------- i18n: page chrome in English / French (ad content stays as printed) ---------- */
+const I18N = {
+  en: {
+    siteTitle: "🚗 Toronto Rideshare Board",
+    intro: "Toronto rideshare and carpool rides — Toronto to Montréal, Toronto to Ottawa, and other Toronto rides — pulled from Kijiji daily, with prices, pickup spots, departure days, driver phone numbers and weather along the route.",
+    lastUpdated: "Last updated:",
+    updatedSuffix: "(Toronto time) · Updates daily",
+    weatherHeading: "🌤️ Weather along the route",
+    weatherAria: "Route weather",
+    tabsAria: "Filter rides by route",
+    tabAll: "All rides",
+    tabMontreal: "→ Montréal",
+    tabOttawa: "→ Ottawa",
+    tabOther: "Other rides",
+    pickupHeading: "📍 Pickup spots",
+    pickupAria: "Pickup map",
+    mapAria: "Map of rideshare pickup spots between Toronto, Kingston, Montréal and Ottawa",
+    mapFallback: "The interactive map could not load — use the numbered pickup index below; tapping a spot highlights its ride.",
+    footer: "Listings are collected from the public Kijiji Toronto rideshare & carpool category and refreshed daily. Prices, times and phone numbers are quoted from the ads themselves — always confirm details with the driver before travelling. This board is not affiliated with Kijiji. Brampton and Windsor rides and Kijiji promoted (“Top Ad”) listings are filtered out.",
+    docTitle: "Toronto Rideshare Board — Toronto to Montréal & Ottawa Carpool Rides, Updated Daily",
+    metaDesc: "Daily-updated Toronto rideshare board: carpool rides from Toronto to Montréal and Toronto to Ottawa, plus other Toronto rides. Prices, pickup spots, departure days and times, driver phone numbers and route weather.",
+    routes: {montreal: "Toronto → Montréal", ottawa: "Toronto → Ottawa", other: "Other Toronto rides"},
+    posted: "Posted",
+    call: "Call:",
+    viewAd: "View ad on Kijiji →",
+    seeAd: "See ad",
+    noRides: "No rides listed right now — check back after the next daily update.",
+    noSpots: "No pickup locations published right now.",
+    wxUnavailable: "Unavailable",
+    wxHi: "H",
+    wxLo: "L"
+  },
+  fr: {
+    siteTitle: "🚗 Covoiturage Toronto",
+    intro: "Trajets de covoiturage au départ de Toronto — Toronto vers Montréal, Toronto vers Ottawa et autres trajets — tirés de Kijiji chaque jour, avec les prix, les lieux de ramassage, les jours de départ, les numéros de téléphone des conducteurs et la météo le long du trajet.",
+    lastUpdated: "Dernière mise à jour :",
+    updatedSuffix: "(heure de Toronto) · Mis à jour chaque jour",
+    weatherHeading: "🌤️ Météo le long du trajet",
+    weatherAria: "Météo du trajet",
+    tabsAria: "Filtrer les trajets par destination",
+    tabAll: "Tous les trajets",
+    tabMontreal: "→ Montréal",
+    tabOttawa: "→ Ottawa",
+    tabOther: "Autres trajets",
+    pickupHeading: "📍 Lieux de ramassage",
+    pickupAria: "Carte des lieux de ramassage",
+    mapAria: "Carte des lieux de ramassage entre Toronto, Kingston, Montréal et Ottawa",
+    mapFallback: "La carte interactive n'a pas pu se charger — utilisez l'index numéroté des lieux de ramassage ci-dessous; touchez un lieu pour mettre son trajet en évidence.",
+    footer: "Les annonces proviennent de la catégorie publique Covoiturage de Kijiji Toronto et sont actualisées chaque jour. Les prix, les heures et les numéros de téléphone sont cités des annonces elles-mêmes — confirmez toujours les détails avec le conducteur avant de voyager. Ce tableau n'est pas affilié à Kijiji. Les trajets vers Brampton et Windsor ainsi que les annonces promues de Kijiji (« Top Ad ») sont exclus.",
+    docTitle: "Covoiturage Toronto — Trajets de Toronto vers Montréal et Ottawa, mis à jour chaque jour",
+    metaDesc: "Tableau de covoiturage de Toronto mis à jour chaque jour : trajets de Toronto vers Montréal et Toronto vers Ottawa, et autres trajets au départ de Toronto. Prix, lieux de ramassage, jours et heures de départ, numéros de téléphone des conducteurs et météo du trajet.",
+    routes: {montreal: "Toronto → Montréal", ottawa: "Toronto → Ottawa", other: "Autres trajets à Toronto"},
+    posted: "Publié le",
+    call: "Appeler :",
+    viewAd: "Voir l'annonce sur Kijiji →",
+    seeAd: "Voir l'annonce",
+    noRides: "Aucun trajet affiché pour le moment — revenez après la prochaine mise à jour quotidienne.",
+    noSpots: "Aucun lieu de ramassage publié pour le moment.",
+    wxUnavailable: "Indisponible",
+    wxHi: "Max",
+    wxLo: "Min"
+  }
+};
+let lang = "en";
+try{ const saved = localStorage.getItem("trb-lang"); if(saved === "fr" || saved === "en") lang = saved; }catch(e){}
+let generatedAt = BOARD.generatedAt || null;
+function t(key){ return I18N[lang][key]; }
+function routeLabel(route){ return I18N[lang].routes[route] || route; }
+function hiddenNoteText(c){
+  if(lang === "fr") return c.hidden + " annonces masquées par les filtres (" + c.hiddenBlockedCity + " Brampton/Windsor, " + c.hiddenTopAd + " promues)";
+  return c.hidden + " ads hidden by filters (" + c.hiddenBlockedCity + " Brampton/Windsor, " + c.hiddenTopAd + " promoted)";
+}
+const FR_DAYS = {Mon: "lun.", Tue: "mar.", Wed: "mer.", Thu: "jeu.", Fri: "ven.", Sat: "sam.", Sun: "dim.", Daily: "Tous les jours", Weekdays: "Jours de semaine", Weekends: "Fins de semaine"};
+function frTime(ts){
+  let m = String(ts).match(/^(\d{1,2})(?::(\d{2}))?\s*(AM|PM)$/i);
+  if(m){
+    let h = parseInt(m[1], 10) % 12;
+    if(/pm/i.test(m[3])) h += 12;
+    return (m[2] && m[2] !== "00") ? h + " h " + m[2] : h + " h";
+  }
+  m = String(ts).match(/^(\d{1,2})h(\d{2})?$/);
+  if(m) return (m[2] && m[2] !== "00") ? parseInt(m[1], 10) + " h " + m[2] : parseInt(m[1], 10) + " h";
+  return ts;
+}
+function departureText(r){
+  if(!r.departure) return null;
+  if(lang !== "fr" || !r.departureParts) return r.departure;
+  const p = r.departureParts;
+  let days = null;
+  if(p.days){
+    days = p.days.split(/,\s*/).map(tok => {
+      if(tok.indexOf("–") >= 0){
+        const ab = tok.split("–");
+        return (FR_DAYS[ab[0]] || ab[0]) + "–" + (FR_DAYS[ab[1]] || ab[1]);
+      }
+      return FR_DAYS[tok] || tok;
+    }).join(", ");
+  }
+  const times = (p.times || []).map(frTime);
+  return [days, times.length ? times.join(", ") : null].filter(Boolean).join(" · ") || r.departure;
+}
+const ROUTE_COLORS = {montreal: "#2563eb", ottawa: "#16a34a", other: "#ea580c"};
+const ROUTE_ORDER = ["montreal", "ottawa", "other"];
+let listings = BOARD.listings || [];
+
+function esc(s){ return String(s == null ? "" : s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+
+/* ---------- weather (live from Open-Meteo, snapshot as fallback) ---------- */
+const WMO_FR = {0:"Ciel dégagé",1:"Plutôt dégagé",2:"Partiellement nuageux",3:"Couvert",45:"Brouillard",48:"Brouillard",51:"Bruine légère",53:"Bruine",55:"Bruine",56:"Bruine verglaçante",57:"Bruine verglaçante",61:"Pluie légère",63:"Pluie",65:"Pluie forte",66:"Pluie verglaçante",67:"Pluie verglaçante",71:"Neige légère",73:"Neige",75:"Neige abondante",77:"Granules de neige",80:"Averses légères",81:"Averses",82:"Fortes averses",85:"Averses de neige",86:"Averses de neige",95:"Orage",96:"Orage avec grêle",99:"Orage avec grêle"};
+let wxData = (WX_SNAPSHOT || []).map(w => ({name: w.name, lat: w.lat, lon: w.lon, temp: w.temp, code: w.code, hi: w.hi, lo: w.lo, label: w.label, emoji: w.emoji}));
+function wxLabel(w){
+  if(w.temp == null || w.code == null) return t("wxUnavailable");
+  if(lang === "fr") return WMO_FR[w.code] || w.label || "—";
+  return (WMO[w.code] && WMO[w.code][0]) || w.label || "—";
+}
+function wxEmoji(w){
+  if(w.code != null && WMO[w.code]) return WMO[w.code][1];
+  return w.emoji || "🌡️";
+}
+function paintWeather(){
+  wxData.forEach(w => {
+    const body = document.querySelector('.wx-chip[data-city="' + w.name + '"] .wx-body');
+    if(!body) return;
+    let txt = wxEmoji(w) + " ";
+    if(w.temp == null){
+      txt += wxLabel(w);
+    }else{
+      txt += Math.round(w.temp) + "°C · " + wxLabel(w);
+      if(w.hi != null && w.lo != null) txt += " · " + t("wxHi") + " " + Math.round(w.hi) + "° / " + t("wxLo") + " " + Math.round(w.lo) + "°";
+    }
+    body.textContent = txt;
+  });
+}
+const WMO = {0:["Clear sky","☀️"],1:["Mainly clear","🌤️"],2:["Partly cloudy","⛅"],3:["Overcast","☁️"],45:["Fog","🌫️"],48:["Fog","🌫️"],51:["Light drizzle","🌦️"],53:["Drizzle","🌦️"],55:["Drizzle","🌦️"],56:["Freezing drizzle","🌧️"],57:["Freezing drizzle","🌧️"],61:["Light rain","🌧️"],63:["Rain","🌧️"],65:["Heavy rain","🌧️"],66:["Freezing rain","🌧️"],67:["Freezing rain","🌧️"],71:["Light snow","🌨️"],73:["Snow","🌨️"],75:["Heavy snow","❄️"],77:["Snow grains","🌨️"],80:["Light showers","🌦️"],81:["Showers","🌧️"],82:["Heavy showers","🌧️"],85:["Snow showers","🌨️"],86:["Snow showers","🌨️"],95:["Thunderstorm","⛈️"],96:["Thunderstorm, hail","⛈️"],99:["Thunderstorm, hail","⛈️"]};
+async function refreshWeather(){
+  for (const city of wxData){
+    try{
+      const u = "https://api.open-meteo.com/v1/forecast?latitude=" + city.lat + "&longitude=" + city.lon +
+        "&current=temperature_2m,weather_code,wind_speed_10m&daily=temperature_2m_max,temperature_2m_min&timezone=America%2FToronto&forecast_days=1";
+      const r = await fetch(u); if(!r.ok) continue;
+      const d = await r.json();
+      if(d.current){ city.temp = d.current.temperature_2m; city.code = d.current.weather_code; }
+      if(d.daily && d.daily.temperature_2m_max && d.daily.temperature_2m_max.length){
+        city.hi = d.daily.temperature_2m_max[0];
+        city.lo = d.daily.temperature_2m_min[0];
+      }
+    }catch(e){ /* keep the baked-in snapshot */ }
+  }
+  paintWeather();
+}
+
+/* ---------- board rendering (used when data/listings.json is newer) ---------- */
+function priceText(r){ return r.price === "See ad" ? t("seeAd") : r.price; }
+function postedText(r){
+  if(lang === "fr" && r.postedIso){
+    try{ return new Date(r.postedIso).toLocaleString("fr-CA", {month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZone: "America/Toronto"}); }catch(e){}
+  }
+  return r.posted;
+}
+function cardHTML(r){
+  const badge = r.spot ? '<span class="spot-badge" style="background:' + ROUTE_COLORS[r.route] + '">' + r.spot + '</span>' : "";
+  const dep = departureText(r);
+  const when = dep ? '<p class="when">🗓️ <strong>' + esc(dep) + '</strong></p>' : "";
+  const call = r.phone ? '<p class="call">📞 ' + esc(t("call")) + ' <a href="tel:' + esc(r.phoneTel) + '">' + esc(r.phone) + '</a></p>' : "";
+  const pickup = r.address ? '<p class="pickup">📍 ' + esc(r.address) + '</p>' : "";
+  const desc = r.description ? '<p class="desc">' + esc(r.description) + '</p>' : "";
+  return '<article class="card" id="ride-' + esc(r.id) + '" data-route="' + esc(r.route) + '">' +
+    '<div class="card-top">' + badge + '<span class="price">' + esc(priceText(r)) + '</span>' +
+    '<span class="posted">' + esc(t("posted")) + ' ' + esc(postedText(r)) + '</span></div>' +
+    '<h3 class="card-title"><a href="' + esc(r.url) + '" target="_blank" rel="noopener">' + esc(r.title) + '</a></h3>' +
+    when + call + pickup + desc +
+    '<a class="open-link" href="' + esc(r.url) + '" target="_blank" rel="noopener">' + esc(t("viewAd")) + '</a></article>';
+}
+function renderBoard(){
+  const board = document.getElementById("board");
+  board.innerHTML = ROUTE_ORDER.map(route => {
+    const rides = listings.filter(r => r.route === route);
+    const cards = rides.map(cardHTML).join("");
+    const empty = rides.length ? "" : '<p class="empty">' + esc(t("noRides")) + '</p>';
+    return '<section class="route-section" data-section="' + route + '"><h2>' + esc(routeLabel(route)) +
+      ' <span class="count">(' + rides.length + ')</span></h2><div class="cards">' + cards + empty + '</div></section>';
+  }).join("");
+  const spots = document.getElementById("spots");
+  const withSpots = listings.filter(r => r.spot);
+  spots.innerHTML = withSpots.length ? withSpots.map(r =>
+    '<li><button type="button" class="spot-item" data-target="ride-' + esc(r.id) + '" data-route="' + esc(r.route) + '">' +
+    '<span class="spot-badge" style="background:' + ROUTE_COLORS[r.route] + '">' + r.spot + '</span>' +
+    '<span class="spot-text">' + esc(r.address || r.title) + ' — ' + esc(routeLabel(r.route)) + ' · ' + esc(priceText(r)) + '</span></button></li>'
+  ).join("") : '<li class="empty">' + esc(t("noSpots")) + '</li>';
+  buildPins();
+  applyFilter(currentFilter);
+}
+async function refreshListings(){
+  try{
+    const r = await fetch("data/listings.json", {cache: "no-store"});
+    if(!r.ok) return;
+    const data = await r.json();
+    if(!data.generatedAt || data.generatedAt <= BOARD.generatedAt) return;
+    listings = data.listings || [];
+    generatedAt = data.generatedAt;
+    if(data.counts) BOARD.counts = data.counts;
+    const tEl = document.getElementById("updated-time");
+    if(tEl){ tEl.setAttribute("datetime", data.generatedAt); tEl.textContent = new Date(data.generatedAt).toLocaleString(lang === "fr" ? "fr-CA" : "en-CA", {timeZone: "America/Toronto"}); }
+    const note = document.getElementById("hidden-note");
+    if(note && data.counts){ note.textContent = hiddenNoteText(data.counts); }
+    renderBoard();
+  }catch(e){ /* baked-in content stays */ }
+}
+
+/* ---------- map + pin/card sync ---------- */
+let map = null, markers = {};
+function buildPins(){
+  if(!map) return;
+  Object.values(markers).forEach(m => map.removeLayer(m));
+  markers = {};
+  listings.filter(r => r.lat != null && r.lng != null).forEach(r => {
+    const icon = L.divIcon({className: "", html: '<span class="pin-icon" style="background:' + ROUTE_COLORS[r.route] + '">' + (r.spot || "") + '</span>', iconSize: [26,26], iconAnchor: [13,13]});
+    const m = L.marker([r.lat, r.lng], {icon}).addTo(map)
+      .bindPopup("<strong>" + esc(r.title) + "</strong><br>" + esc(routeLabel(r.route)) + " · " + esc(priceText(r)));
+    m.on("click", () => focusCard(r.id, false));
+    markers[r.id] = m;
+  });
+}
+function focusCard(id, scroll){
+  const el = document.getElementById("ride-" + id);
+  if(!el) return;
+  if(scroll !== false) el.scrollIntoView({behavior: "smooth", block: "center"});
+  el.classList.add("flash");
+  setTimeout(() => el.classList.remove("flash"), 1800);
+}
+function initMap(){
+  const pins = listings.filter(r => r.lat != null && r.lng != null);
+  if(!window.L || !pins.length){
+    document.getElementById("map").style.display = "none";
+    document.getElementById("map-fallback").style.display = "block";
+    return;
+  }
+  map = L.map("map").setView([44.3, -77.6], 7);
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 18, attribution: "© OpenStreetMap contributors"
+  }).addTo(map);
+  buildPins();
+  const bounds = L.latLngBounds(pins.map(r => [r.lat, r.lng]));
+  map.fitBounds(bounds.pad(0.08));
+}
+
+/* ---------- tabs / filtering ---------- */
+let currentFilter = "all";
+function applyFilter(f){
+  currentFilter = f;
+  document.querySelectorAll(".tab").forEach(b => b.classList.toggle("active", b.dataset.filter === f));
+  document.querySelectorAll(".route-section").forEach(s => {
+    s.style.display = (f === "all" || s.dataset.section === f) ? "" : "none";
+  });
+  document.querySelectorAll(".spot-item").forEach(b => {
+    b.parentElement.style.display = (f === "all" || b.dataset.route === f) ? "" : "none";
+  });
+}
+document.querySelectorAll(".tab").forEach(b => b.addEventListener("click", () => applyFilter(b.dataset.filter)));
+
+/* spot index + card clicks sync with the map */
+document.getElementById("spots").addEventListener("click", e => {
+  const btn = e.target.closest(".spot-item");
+  if(!btn) return;
+  const id = btn.dataset.target.replace("ride-", "");
+  focusCard(id, true);
+  const m = markers[id];
+  if(m && map){ map.flyTo(m.getLatLng(), Math.max(map.getZoom(), 10)); m.openPopup(); }
+});
+document.getElementById("board").addEventListener("click", e => {
+  if(e.target.closest("a")) return;
+  const card = e.target.closest(".card");
+  if(!card) return;
+  const id = card.id.replace("ride-", "");
+  const m = markers[id];
+  if(m && map){ focusCard(id, false); map.flyTo(m.getLatLng(), Math.max(map.getZoom(), 10)); m.openPopup(); }
+});
+
+/* ---------- language toggle (EN | FR) ---------- */
+function applyLang(newLang){
+  lang = (newLang === "fr") ? "fr" : "en";
+  try{ localStorage.setItem("trb-lang", lang); }catch(e){}
+  document.documentElement.lang = lang;
+  document.title = t("docTitle");
+  const md = document.querySelector('meta[name="description"]:not([lang])');
+  if(md) md.setAttribute("content", t("metaDesc"));
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const v = t(el.getAttribute("data-i18n"));
+    if(v != null) el.textContent = v;
+  });
+  document.querySelectorAll("[data-i18n-aria]").forEach(el => {
+    const v = t(el.getAttribute("data-i18n-aria"));
+    if(v != null) el.setAttribute("aria-label", v);
+  });
+  const btnEn = document.getElementById("lang-en");
+  const btnFr = document.getElementById("lang-fr");
+  btnEn.classList.toggle("active", lang === "en");
+  btnFr.classList.toggle("active", lang === "fr");
+  btnEn.setAttribute("aria-pressed", String(lang === "en"));
+  btnFr.setAttribute("aria-pressed", String(lang === "fr"));
+  const note = document.getElementById("hidden-note");
+  if(note && BOARD.counts) note.textContent = hiddenNoteText(BOARD.counts);
+  const tt = document.getElementById("updated-time");
+  if(tt && generatedAt) tt.textContent = new Date(generatedAt).toLocaleString(lang === "fr" ? "fr-CA" : "en-CA", {timeZone: "America/Toronto"});
+  paintWeather();
+  renderBoard();
+}
+document.getElementById("lang-en").addEventListener("click", () => applyLang("en"));
+document.getElementById("lang-fr").addEventListener("click", () => applyLang("fr"));
+
+initMap();
+paintWeather();
+applyLang(lang);
+refreshWeather();
+refreshListings();
+</script>
+</body>
+</html>
