@@ -1,18 +1,18 @@
 {
- "generatedAt": "2026-10-20T13:57:54.796413-04:00",
+ "generatedAt": "2026-10-21T07:43:37.156415-04:00",
  "source": "https://www.kijiji.ca/b-rideshare-carpool/city-of-toronto/c5l1700273",
  "counts": {
   "pulled": 40,
-  "kept": 28,
-  "hidden": 12,
+  "kept": 29,
+  "hidden": 11,
   "hiddenTopAd": 4,
-  "hiddenBlockedCity": 8,
+  "hiddenBlockedCity": 7,
   "byRoute": {
-   "montreal": 3,
+   "montreal": 4,
    "ottawa": 7,
    "other": 18
   },
-  "withDeparture": 12,
+  "withDeparture": 13,
   "withPhone": 15
  },
  "weather": [
@@ -20,52 +20,75 @@
    "name": "Toronto",
    "lat": 43.6532,
    "lon": -79.3832,
-   "temp": 15.9,
+   "temp": 4.4,
    "code": 0,
    "label": "Clear sky",
    "emoji": "☀️",
-   "wind": 15.9,
-   "hi": 15.9,
-   "lo": 6.5
+   "wind": 9.5,
+   "hi": 13.8,
+   "lo": 4.2
   },
   {
    "name": "Kingston",
    "lat": 44.2312,
    "lon": -76.486,
-   "temp": 14.3,
+   "temp": 0.1,
    "code": 0,
    "label": "Clear sky",
    "emoji": "☀️",
-   "wind": 15.6,
-   "hi": 14.3,
-   "lo": 5.1
+   "wind": 6.4,
+   "hi": 11.6,
+   "lo": 0.2
   },
   {
    "name": "Ottawa",
    "lat": 45.4215,
    "lon": -75.6972,
-   "temp": 14.5,
+   "temp": -0.4,
    "code": 0,
    "label": "Clear sky",
    "emoji": "☀️",
-   "wind": 10.6,
-   "hi": 14.9,
-   "lo": 1.8
+   "wind": 3.3,
+   "hi": 10.7,
+   "lo": -0.3
   },
   {
    "name": "Montréal",
    "lat": 45.5019,
    "lon": -73.5674,
-   "temp": 13.1,
+   "temp": 1.3,
    "code": 0,
    "label": "Clear sky",
    "emoji": "☀️",
-   "wind": 12.3,
-   "hi": 13.8,
-   "lo": 4.5
+   "wind": 7.7,
+   "hi": 10.4,
+   "lo": 1.4
   }
  ],
  "listings": [
+  {
+   "id": "1745102642",
+   "title": "“ONLY 50$, TORONTO MONTREAL FRI OCT 23, 7.30am”GUARANTEED",
+   "description": "HI GUYS! Only 50$ TORONTO TO MONTREAL FRIDAY OCT 23 at 7.30am SHARP CONTACT FRANK : 514 290 8030 or 647 885 5088 EXCELLENT MINIVAN TOYOTA SIENNA, NEVER CROWDED!! Pickup place: Parking lot of Loblaws ...",
+   "price": "$50",
+   "address": "York, ON M6E 2V2",
+   "lat": 43.68041,
+   "lng": -79.43536,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/only-50-toronto-montreal-fri-oct-23-7-30am-guaranteed/1745102642",
+   "posted": "Oct 20, 9:08 PM",
+   "postedIso": "2026-10-21T01:08:24.000Z",
+   "route": "montreal",
+   "departure": "Fri · 7:30 AM",
+   "departureParts": {
+    "days": "Fri",
+    "times": [
+     "7:30 AM"
+    ]
+   },
+   "phone": "(514) 290-8030",
+   "phoneTel": "+15142908030",
+   "spot": 1
+  },
   {
    "id": "1745072690",
    "title": "“RIDE TORONTO TO MONTREAL, FRI 23, 7.30am” GUARANTEED",
@@ -87,7 +110,7 @@
    },
    "phone": "(514) 290-8030",
    "phoneTel": "+15142908030",
-   "spot": 1
+   "spot": 2
   },
   {
    "id": "1744910791",
@@ -110,7 +133,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 2
+   "spot": 3
   },
   {
    "id": "1744832908",
@@ -131,7 +154,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 3
+   "spot": 4
   },
   {
    "id": "1744966428",
@@ -156,7 +179,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 4
+   "spot": 5
   },
   {
    "id": "1744919683",
@@ -179,7 +202,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 5
+   "spot": 6
   },
   {
    "id": "1744889819",
@@ -202,7 +225,7 @@
    },
    "phone": "(647) 545-6059",
    "phoneTel": "+16475456059",
-   "spot": 6
+   "spot": 7
   },
   {
    "id": "1744877150",
@@ -223,7 +246,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 7
+   "spot": 8
   },
   {
    "id": "1744807945",
@@ -246,7 +269,7 @@
    },
    "phone": "(426) 938-8454",
    "phoneTel": "+14269388454",
-   "spot": 8
+   "spot": 9
   },
   {
    "id": "1739193586",
@@ -269,7 +292,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 9
+   "spot": 10
   },
   {
    "id": "1705011168",
@@ -290,7 +313,7 @@
    },
    "phone": "(647) 619-0835",
    "phoneTel": "+16476190835",
-   "spot": 10
+   "spot": 11
   },
   {
    "id": "1745019532",
@@ -311,7 +334,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 11
+   "spot": 12
   },
   {
    "id": "1744961929",
@@ -335,7 +358,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 12
+   "spot": 13
   },
   {
    "id": "1744908276",
@@ -359,7 +382,28 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 13
+   "spot": 14
+  },
+  {
+   "id": "1742358953",
+   "title": "Private Rides GTA & Beyond",
+   "description": "Private Rides – GTA & Beyond! ✈️ Airport Pick-up & Drop-off ️ Niagara Falls & Tourist Destinations Anywhere in the GTA & beyond New Toyota Sienna | Up to 7 Passengers Excellent rates based on ...",
+   "price": "See ad",
+   "address": "Scarborough, ON M1C",
+   "lat": 43.78454,
+   "lng": -79.1605,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/private-rides-gta-beyond/1742358953",
+   "posted": "Aug 21, 4:27 PM",
+   "postedIso": "2026-08-21T20:27:05.000Z",
+   "route": "other",
+   "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
+   "phone": null,
+   "phoneTel": null,
+   "spot": 15
   },
   {
    "id": "1742298174",
@@ -380,7 +424,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 14
+   "spot": 16
   },
   {
    "id": "1742255266",
@@ -401,7 +445,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 15
+   "spot": 17
   },
   {
    "id": "1742242140",
@@ -422,7 +466,28 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 16
+   "spot": 18
+  },
+  {
+   "id": "1739507129",
+   "title": "Are you looking for an airport ride?",
+   "description": "Are you looking for an airport ride or from the Airport? Text/WhatsApp: 437-264-4576 Thank you!",
+   "price": "See ad",
+   "address": "East York, ON M4C",
+   "lat": 43.69534,
+   "lng": -79.31839,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/are-you-looking-for-an-airport-ride/1739507129",
+   "posted": "Jun 21, 6:15 AM",
+   "postedIso": "2026-06-21T10:15:56.000Z",
+   "route": "other",
+   "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
+   "phone": "(437) 264-4576",
+   "phoneTel": "+14372644576",
+   "spot": 19
   },
   {
    "id": "1739483130",
@@ -443,7 +508,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 17
+   "spot": 20
   },
   {
    "id": "1739426601",
@@ -464,7 +529,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 18
+   "spot": 21
   },
   {
    "id": "1739354526",
@@ -485,7 +550,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 19
+   "spot": 22
   },
   {
    "id": "1739304628",
@@ -506,7 +571,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 20
+   "spot": 23
   },
   {
    "id": "1739258565",
@@ -527,49 +592,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 21
-  },
-  {
-   "id": "1738856099",
-   "title": "From Pearson International Airport to Scarborough",
-   "description": "If you need a ride from Pearson International Airport to Scarborough Call/Text/Whatsapp: 437-264-4576 Thank you!",
-   "price": "See ad",
-   "address": "Scarborough, ON M1G 2V4",
-   "lat": 43.77322,
-   "lng": -79.22943,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/from-pearson-international-airport-to-scarborough/1738856099",
-   "posted": "Jun 7, 9:48 PM",
-   "postedIso": "2026-06-08T01:48:57.000Z",
-   "route": "other",
-   "departure": null,
-   "departureParts": {
-    "days": null,
-    "times": []
-   },
-   "phone": "(437) 264-4576",
-   "phoneTel": "+14372644576",
-   "spot": 22
-  },
-  {
-   "id": "1738856090",
-   "title": "Affordable Airport Ride Vehicle With The Substantial Trunk",
-   "description": "Affordable Airport Ride Vehicle With The Substantial Trunk Available. Feel free to text: 437-264-4576 Thank you!",
-   "price": "See ad",
-   "address": "Scarborough, ON M1E",
-   "lat": 43.76357,
-   "lng": -79.18871,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/affordable-airport-ride-vehicle-with-the-substantial-trunk/1738856090",
-   "posted": "Jun 7, 9:48 PM",
-   "postedIso": "2026-06-08T01:48:35.000Z",
-   "route": "other",
-   "departure": null,
-   "departureParts": {
-    "days": null,
-    "times": []
-   },
-   "phone": "(437) 264-4576",
-   "phoneTel": "+14372644576",
-   "spot": 23
+   "spot": 24
   },
   {
    "id": "1738811720",
@@ -590,7 +613,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 24
+   "spot": 25
   },
   {
    "id": "1738753299",
@@ -611,7 +634,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 25
+   "spot": 26
   },
   {
    "id": "1738481226",
@@ -632,7 +655,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 26
+   "spot": 27
   },
   {
    "id": "1738475390",
@@ -653,7 +676,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 27
+   "spot": 28
   },
   {
    "id": "1738429829",
@@ -674,7 +697,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 28
+   "spot": 29
   }
  ]
 }
