@@ -68,6 +68,35 @@
   .lang-btn{border:0;background:transparent;color:#eafff5;font-family:var(--font-body);font-weight:700;font-size:.85rem;line-height:1;padding:7px 17px;border-radius:999px;cursor:pointer;transition:background .18s ease,color .18s ease}
   .lang-btn:hover{color:#fff}
   .lang-btn.active{background:#fff;color:#07563c;box-shadow:0 4px 12px rgba(0,0,0,.18)}
+  .hero-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+
+  /* ---------- accessibility options ---------- */
+  .a11y{position:relative}
+  .a11y-btn{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:9px 16px;color:#eafff5;font-family:var(--font-body);font-weight:700;font-size:.85rem;line-height:1;cursor:pointer;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:background .18s ease,color .18s ease}
+  .a11y-btn:hover{color:#fff}
+  .a11y-btn[aria-expanded="true"]{background:#fff;color:#07563c;box-shadow:0 4px 12px rgba(0,0,0,.18)}
+  .a11y-btn:focus-visible{outline:3px solid #fff;outline-offset:2px}
+  .a11y-panel{position:absolute;right:0;top:calc(100% + 10px);z-index:80;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:16px 18px;min-width:240px;display:flex;flex-direction:column;gap:6px;text-align:left}
+  .a11y-panel[hidden]{display:none}
+  .a11y-title{margin:0 0 6px;font-family:var(--font-display);font-weight:800;font-size:.95rem;letter-spacing:-.01em}
+  .a11y-opt{display:flex;align-items:center;gap:10px;font-size:.95rem;font-weight:500;color:var(--ink);cursor:pointer;padding:6px 6px;border-radius:10px}
+  .a11y-opt:hover{background:#f4f6f1}
+  .a11y-opt input{width:19px;height:19px;flex:0 0 auto;margin:0;accent-color:var(--green-deep);cursor:pointer}
+  .a11y-opt input:focus-visible{outline:3px solid var(--green-deep);outline-offset:2px}
+  .a11y-opt:focus-within{outline:2px solid var(--green);outline-offset:1px}
+  /* Larger text: one root font-size step (16px -> 18px). The layout is
+     sized in px (map height, paddings), so only rem-based text grows. */
+  html.a11y-text{font-size:112.5%}
+  /* High contrast: darker text/ink variables plus firmer borders. */
+  body.a11y-contrast{--ink:#0a0f0c;--ink-soft:#26332c;--muted:#3d4f45;--line:#93a198;--green:#076b3d;--green-deep:#043f2a;--amber-bg:#ffedb3;--amber-ink:#664000}
+  body.a11y-contrast .hero .intro{color:#fff}
+  body.a11y-contrast .ride-card,body.a11y-contrast .panel,body.a11y-contrast .wx-chip,body.a11y-contrast .spot-item,body.a11y-contrast .tabs,body.a11y-contrast .a11y-panel{border-color:#66766c}
+  body.a11y-contrast .meta-pill,body.a11y-contrast .lang-toggle,body.a11y-contrast .a11y-btn{border-color:rgba(255,255,255,.65)}
+  body.a11y-contrast .card-title a,body.a11y-contrast .open-link{text-decoration:underline}
+  body.a11y-contrast :focus-visible{outline:3px solid #0a0f0c;outline-offset:2px}
+  /* Reduce motion: kill CSS animation/transition, restore instant scroll. */
+  body.a11y-motion *,body.a11y-motion *::before,body.a11y-motion *::after{animation:none!important;transition:none!important}
+  html:has(> body.a11y-motion){scroll-behavior:auto}
   .hero-title{font-family:var(--font-display);font-weight:800;font-size:clamp(2.5rem,6.2vw,4rem);line-height:1.03;letter-spacing:-.032em;margin:48px 0 16px;max-width:15ch}
   .hero .intro{margin:0;font-size:1.13rem;line-height:1.62;color:rgba(255,255,255,.88);max-width:64ch}
   .hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
@@ -153,9 +182,20 @@
   <div class="wrap hero-inner">
     <div class="hero-top">
       <span class="brand" data-i18n="siteTitle">🚗 Toronto Rideshare Board</span>
-      <div class="lang-toggle" role="group" aria-label="Language / Langue">
-        <button type="button" id="lang-en" class="lang-btn active" aria-pressed="true">EN</button>
-        <button type="button" id="lang-fr" class="lang-btn" aria-pressed="false">FR</button>
+      <div class="hero-controls">
+        <div class="a11y">
+          <button type="button" id="a11y-btn" class="a11y-btn" aria-expanded="false" aria-controls="a11y-panel" aria-haspopup="true" data-i18n-aria="a11yLabel" aria-label="Accessibility"><span aria-hidden="true">♿</span> <span data-i18n="a11yLabel">Accessibility</span></button>
+          <div id="a11y-panel" class="a11y-panel" role="group" aria-labelledby="a11y-panel-title" hidden>
+            <p class="a11y-title" id="a11y-panel-title" data-i18n="a11yPanelTitle">Accessibility options</p>
+            <label class="a11y-opt"><input type="checkbox" id="a11y-opt-text"> <span data-i18n="a11yLargerText">Larger text</span></label>
+            <label class="a11y-opt"><input type="checkbox" id="a11y-opt-contrast"> <span data-i18n="a11yContrast">High contrast</span></label>
+            <label class="a11y-opt"><input type="checkbox" id="a11y-opt-motion"> <span data-i18n="a11yMotion">Reduce motion</span></label>
+          </div>
+        </div>
+        <div class="lang-toggle" role="group" aria-label="Language / Langue">
+          <button type="button" id="lang-en" class="lang-btn active" aria-pressed="true">EN</button>
+          <button type="button" id="lang-fr" class="lang-btn" aria-pressed="false">FR</button>
+        </div>
       </div>
     </div>
     <h1 class="hero-title" data-i18n="siteTitle">🚗 Toronto Rideshare Board</h1>
@@ -230,6 +270,11 @@ const I18N = {
     mapFallback: "The interactive map could not load — use the numbered pickup index below; tapping a spot highlights its ride.",
     footer: "Listings are collected from the public Kijiji Toronto rideshare & carpool category and refreshed daily. Prices, times and phone numbers are quoted from the ads themselves — always confirm details with the driver before travelling. This board is not affiliated with Kijiji. Brampton and Windsor rides and Kijiji promoted (“Top Ad”) listings are filtered out.",
     supportLabel: "Support",
+    a11yLabel: "Accessibility",
+    a11yPanelTitle: "Accessibility options",
+    a11yLargerText: "Larger text",
+    a11yContrast: "High contrast",
+    a11yMotion: "Reduce motion",
     visitsLabel: "visits",
     docTitle: "Toronto Rideshare Board — Toronto to Montréal & Ottawa Carpool Rides, Updated Daily",
     metaDesc: "Daily-updated Toronto rideshare board: carpool rides from Toronto to Montréal and Toronto to Ottawa, plus other Toronto rides. Prices, pickup spots, departure days and times, driver phone numbers and route weather.",
@@ -262,6 +307,11 @@ const I18N = {
     mapFallback: "La carte interactive n'a pas pu se charger — utilisez l'index numéroté des lieux de ramassage ci-dessous; touchez un lieu pour mettre son trajet en évidence.",
     footer: "Les annonces proviennent de la catégorie publique Covoiturage de Kijiji Toronto et sont actualisées chaque jour. Les prix, les heures et les numéros de téléphone sont cités des annonces elles-mêmes — confirmez toujours les détails avec le conducteur avant de voyager. Ce tableau n'est pas affilié à Kijiji. Les trajets vers Brampton et Windsor ainsi que les annonces promues de Kijiji (« Top Ad ») sont exclus.",
     supportLabel: "Assistance",
+    a11yLabel: "Accessibilité",
+    a11yPanelTitle: "Options d'accessibilité",
+    a11yLargerText: "Texte plus grand",
+    a11yContrast: "Contraste élevé",
+    a11yMotion: "Réduire les animations",
     visitsLabel: "visites",
     docTitle: "Covoiturage Toronto — Trajets de Toronto vers Montréal et Ottawa, mis à jour chaque jour",
     metaDesc: "Tableau de covoiturage de Toronto mis à jour chaque jour : trajets de Toronto vers Montréal et Toronto vers Ottawa, et autres trajets au départ de Toronto. Prix, lieux de ramassage, jours et heures de départ, numéros de téléphone des conducteurs et météo du trajet.",
@@ -441,9 +491,16 @@ function buildPins(){
 function focusCard(id, scroll){
   const el = document.getElementById("ride-" + id);
   if(!el) return;
-  if(scroll !== false) el.scrollIntoView({behavior: "smooth", block: "center"});
+  if(scroll !== false) el.scrollIntoView({behavior: a11y.motion ? "auto" : "smooth", block: "center"});
   el.classList.add("flash");
   setTimeout(() => el.classList.remove("flash"), 1800);
+}
+function panToMarker(m){
+  if(!m || !map) return;
+  const target = Math.max(map.getZoom(), 10);
+  if(a11y.motion) map.setView(m.getLatLng(), target);
+  else map.flyTo(m.getLatLng(), target);
+  m.openPopup();
 }
 function initMap(){
   const pins = listings.filter(r => r.lat != null && r.lng != null);
@@ -481,17 +538,68 @@ document.getElementById("spots").addEventListener("click", e => {
   if(!btn) return;
   const id = btn.dataset.target.replace("ride-", "");
   focusCard(id, true);
-  const m = markers[id];
-  if(m && map){ map.flyTo(m.getLatLng(), Math.max(map.getZoom(), 10)); m.openPopup(); }
+  panToMarker(markers[id]);
 });
 document.getElementById("board").addEventListener("click", e => {
   if(e.target.closest("a")) return;
   const card = e.target.closest(".card");
   if(!card) return;
   const id = card.id.replace("ride-", "");
-  const m = markers[id];
-  if(m && map){ focusCard(id, false); map.flyTo(m.getLatLng(), Math.max(map.getZoom(), 10)); m.openPopup(); }
+  if(markers[id] && map){ focusCard(id, false); panToMarker(markers[id]); }
 });
+
+/* ---------- accessibility options (♿ panel: text size, contrast, motion) ---------- */
+const A11Y_KEY = "trb-a11y";
+const a11y = {text: false, contrast: false, motion: false};
+let a11ySaved = false;
+try{
+  const raw = localStorage.getItem(A11Y_KEY);
+  if(raw){
+    const p = JSON.parse(raw);
+    a11y.text = !!p.text;
+    a11y.contrast = !!p.contrast;
+    a11y.motion = !!p.motion;
+    a11ySaved = true;
+  }
+}catch(e){}
+/* With no saved choice, "Reduce motion" defaults to the OS preference. */
+if(!a11ySaved && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+  a11y.motion = true;
+}
+const a11yBtn = document.getElementById("a11y-btn");
+const a11yPanel = document.getElementById("a11y-panel");
+const a11yToggles = {
+  text: document.getElementById("a11y-opt-text"),
+  contrast: document.getElementById("a11y-opt-contrast"),
+  motion: document.getElementById("a11y-opt-motion")
+};
+function paintA11y(){
+  document.documentElement.classList.toggle("a11y-text", a11y.text);
+  document.body.classList.toggle("a11y-contrast", a11y.contrast);
+  document.body.classList.toggle("a11y-motion", a11y.motion);
+  Object.keys(a11yToggles).forEach(k => { if(a11yToggles[k]) a11yToggles[k].checked = a11y[k]; });
+}
+function saveA11y(){
+  a11ySaved = true;
+  try{ localStorage.setItem(A11Y_KEY, JSON.stringify(a11y)); }catch(e){}
+}
+Object.keys(a11yToggles).forEach(k => {
+  const el = a11yToggles[k];
+  if(!el) return;
+  el.addEventListener("change", () => { a11y[k] = el.checked; saveA11y(); paintA11y(); });
+});
+function setA11yPanel(open){
+  a11yPanel.hidden = !open;
+  a11yBtn.setAttribute("aria-expanded", String(open));
+}
+a11yBtn.addEventListener("click", () => setA11yPanel(a11yPanel.hidden));
+document.addEventListener("click", e => {
+  if(!a11yPanel.hidden && !e.target.closest(".a11y")) setA11yPanel(false);
+});
+document.addEventListener("keydown", e => {
+  if(e.key === "Escape" && !a11yPanel.hidden){ setA11yPanel(false); a11yBtn.focus(); }
+});
+paintA11y();
 
 /* ---------- language toggle (EN | FR) ---------- */
 function applyLang(newLang){
