@@ -30,85 +30,146 @@
 <script type="application/ld+json">
 %%JSONLD%%
 </script>
+<!-- ===== DESIGN: custom modern theme (no framework). Typography: Plus Jakarta Sans (display) + Inter (body). ===== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
   :root{
-    --green:#0b6e2f; --green-dark:#084d21; --ink:#1c2430; --muted:#5b6675;
-    --line:#dde3ea; --bg:#f5f7f5; --amber:#fff3cd; --amber-ink:#7a5200;
-    --call-bg:#e3f4e5; --radius:12px;
+    --bg:#f5f3ee;
+    --surface:#ffffff;
+    --ink:#17251f;
+    --ink-soft:#44554c;
+    --muted:#71827a;
+    --line:#e7e3d9;
+    --green:#0c9a58;
+    --green-deep:#065f46;
+    --amber-bg:#fff4d6;
+    --amber-ink:#8a5a00;
+    --radius:20px;
+    --shadow:0 1px 2px rgba(23,37,31,.05),0 18px 44px -22px rgba(23,37,31,.28);
+    --shadow-card:0 1px 2px rgba(23,37,31,.05),0 12px 32px -16px rgba(23,37,31,.20);
+    --font-body:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --font-display:"Plus Jakarta Sans","Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
   }
   *{box-sizing:border-box}
-  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.45}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 16px 48px}
-  header.site{background:linear-gradient(135deg,var(--green),var(--green-dark));color:#fff;padding:28px 0 22px;margin-bottom:18px}
-  header.site .wrap{padding-bottom:0}
-  header.site h1{margin:0 0 6px;font-size:1.9rem;letter-spacing:.2px}
-  header.site p{margin:0;max-width:70ch;opacity:.92}
-  .updated{margin-top:10px;font-size:.9rem;opacity:.85}
-  h2{font-size:1.25rem;margin:26px 0 10px}
-  h2 .count{color:var(--muted);font-weight:500;font-size:1rem}
-  .hidden-note{font-size:.85rem;color:var(--muted);margin:4px 0 0}
-  .lang-toggle{display:flex;gap:8px;align-items:center;margin-top:14px}
-  .lang-toggle>span{opacity:.7;color:#fff}
-  .lang-btn{background:transparent;border:1px solid rgba(255,255,255,.7);color:#fff;border-radius:999px;padding:4px 16px;font-weight:700;font-size:.9rem;cursor:pointer}
-  .lang-btn.active{background:#fff;color:var(--green-dark);border-color:#fff}
-  /* weather */
-  .wx-strip{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px}
-  .wx-chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:.9rem;display:flex;gap:8px;align-items:center}
-  .wx-city{font-weight:700}
-  /* tabs */
-  .tabs{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 6px}
-  .tabs button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 16px;font-size:.95rem;cursor:pointer}
-  .tabs button.active{background:var(--green);color:#fff;border-color:var(--green)}
-  /* map + spots */
-  #map{height:380px;border-radius:var(--radius);border:1px solid var(--line);background:#e8eee9;z-index:0}
-  .map-fallback{display:none;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;color:var(--muted)}
-  .pin-icon{border-radius:50%;color:#fff;font-weight:700;font-size:.8rem;display:flex;align-items:center;justify-content:center;width:26px;height:26px;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.35)}
-  .spots{list-style:none;margin:10px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:6px}
-  .spot-item{display:flex;gap:8px;align-items:center;width:100%;text-align:left;background:#fff;border:1px solid var(--line);border-radius:8px;padding:7px 10px;cursor:pointer;font-size:.9rem}
-  .spot-item:hover{border-color:var(--green)}
-  .spot-badge{flex:0 0 auto;width:22px;height:22px;border-radius:50%;color:#fff;font-weight:700;font-size:.78rem;display:inline-flex;align-items:center;justify-content:center}
-  /* cards */
-  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:12px}
-  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;display:flex;flex-direction:column;gap:6px}
-  .card.flash{outline:3px solid #f5b301;outline-offset:2px}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(118deg,#043527 0%,#076048 46%,#0a7d78 105%)}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(560px 300px at 85% -60px,rgba(110,231,183,.35),transparent 65%),radial-gradient(480px 260px at -60px 110%,rgba(45,212,191,.22),transparent 60%);pointer-events:none}
+  .hero-inner{position:relative;z-index:1;padding:20px 20px 96px}
+  .hero-top{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .brand{font-family:var(--font-display);font-weight:800;font-size:1.02rem;letter-spacing:-.01em}
+  .lang-toggle{display:flex;gap:2px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:3px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .lang-btn{border:0;background:transparent;color:#eafff5;font-family:var(--font-body);font-weight:700;font-size:.85rem;line-height:1;padding:7px 17px;border-radius:999px;cursor:pointer;transition:background .18s ease,color .18s ease}
+  .lang-btn:hover{color:#fff}
+  .lang-btn.active{background:#fff;color:#07563c;box-shadow:0 4px 12px rgba(0,0,0,.18)}
+  .hero-title{font-family:var(--font-display);font-weight:800;font-size:clamp(2.5rem,6.2vw,4rem);line-height:1.03;letter-spacing:-.032em;margin:48px 0 16px;max-width:15ch}
+  .hero .intro{margin:0;font-size:1.13rem;line-height:1.62;color:rgba(255,255,255,.88);max-width:64ch}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+  .meta-pill{margin:0;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:7px 15px;font-size:.86rem;font-weight:500;color:#eafff5;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+
+  /* ---------- main panels ---------- */
+  main.wrap{margin-top:-58px;position:relative;z-index:2;padding-bottom:60px}
+  .panel{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px 28px;margin-bottom:26px}
+  .section-title{font-family:var(--font-display);font-weight:800;font-size:1.26rem;letter-spacing:-.02em;margin:0 0 18px}
+
+  /* ---------- weather ---------- */
+  .wx-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .wx-chip{background:linear-gradient(180deg,#f8fbf9,#f1f7f2);border:1px solid #e4eee6;border-radius:16px;padding:16px 18px}
+  .wx-city{display:block;font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  .wx-body{display:block;font-size:1.03rem;font-weight:600;line-height:1.45;color:var(--ink)}
+
+  /* ---------- route filter: segmented control ---------- */
+  .tabs{position:sticky;top:14px;z-index:60;display:flex;gap:4px;width:fit-content;max-width:100%;margin:0 auto 28px;padding:5px;background:rgba(255,255,255,.92);border:1px solid var(--line);border-radius:999px;box-shadow:var(--shadow-card);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);overflow-x:auto}
+  .tab{border:0;background:transparent;font-family:var(--font-body);font-weight:600;font-size:.95rem;color:var(--ink-soft);padding:10px 22px;border-radius:999px;cursor:pointer;white-space:nowrap;transition:background .18s ease,color .18s ease,box-shadow .18s ease}
+  .tab:hover{color:var(--ink)}
+  .tab.active{background:var(--green-deep);color:#fff;box-shadow:0 8px 18px -8px rgba(6,95,70,.6)}
+
+  /* ---------- map + pickup index ---------- */
+  .map-grid{display:grid;grid-template-columns:1.45fr 1fr;gap:26px;align-items:start}
+  #map{height:460px;width:100%;border-radius:16px;background:#e8eee9;z-index:0}
+  .map-fallback{display:none;background:#fff7db;border:1px solid #f0dfa0;color:#7a5200;border-radius:14px;padding:12px 15px;font-size:.92rem;margin:0 0 12px}
+  .spots{list-style:none;margin:0;padding:2px 4px 2px 0;display:flex;flex-direction:column;gap:8px;max-height:460px;overflow-y:auto}
+  .spot-item{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:#f8f7f3;border:1px solid var(--line);border-radius:14px;padding:11px 14px;cursor:pointer;font-family:var(--font-body);transition:border-color .16s ease,background .16s ease,transform .16s ease}
+  .spot-item:hover{border-color:var(--green);background:#eefaf2;transform:translateY(-1px)}
+  .spot-badge{flex:0 0 auto;width:28px;height:28px;border-radius:50%;color:#fff;font-weight:700;font-size:.85rem;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 3px 8px rgba(23,37,31,.25)}
+  .spot-text{font-size:.92rem;font-weight:500;color:var(--ink)}
+  .pin-icon{border-radius:50%;color:#fff;font-weight:700;font-size:.82rem;display:flex;align-items:center;justify-content:center;width:28px;height:28px;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.35)}
+
+  /* ---------- ride cards ---------- */
+  .route-section{margin-bottom:36px}
+  .route-title{font-family:var(--font-display);font-weight:800;font-size:1.45rem;letter-spacing:-.02em;margin:4px 0 18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .route-title .count{font-family:var(--font-body);font-size:.88rem;font-weight:600;color:var(--ink-soft);background:#ebe8de;border-radius:999px;padding:3px 12px}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .ride-card{background:var(--surface);border:1px solid rgba(23,37,31,.05);border-radius:var(--radius);box-shadow:var(--shadow-card);padding:22px;display:flex;flex-direction:column;gap:10px;transition:transform .18s ease,box-shadow .18s ease}
+  .ride-card:hover{transform:translateY(-4px);box-shadow:0 2px 3px rgba(23,37,31,.05),0 22px 40px -18px rgba(23,37,31,.30)}
+  .ride-card.flash{outline:3px solid #f5b301;outline-offset:3px}
   .card-top{display:flex;align-items:center;gap:10px}
-  .price{font-size:1.3rem;font-weight:800;color:var(--green)}
-  .posted{margin-left:auto;font-size:.8rem;color:var(--muted)}
-  .card-title{margin:0;font-size:1.02rem;line-height:1.3}
+  .price{font-family:var(--font-display);font-size:1.55rem;font-weight:800;letter-spacing:-.025em;color:var(--green-deep)}
+  .posted{margin-left:auto;font-size:.78rem;font-weight:500;color:var(--muted);text-align:right}
+  .card-title{margin:0;font-size:1.05rem;line-height:1.35;font-weight:700}
   .card-title a{color:var(--ink);text-decoration:none}
-  .card-title a:hover{text-decoration:underline}
-  .when{margin:0;background:var(--amber);color:var(--amber-ink);border-radius:8px;padding:6px 10px;font-size:.95rem}
-  .call{margin:0;background:var(--call-bg);border-radius:8px;padding:6px 10px;font-size:.98rem}
-  .call a{font-weight:800;color:var(--green-dark);text-decoration:none}
-  .call a:hover{text-decoration:underline}
-  .pickup{margin:0;font-size:.92rem}
-  .desc{margin:0;font-size:.88rem;color:var(--muted);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-  .open-link{margin-top:auto;font-weight:600;color:var(--green);text-decoration:none;font-size:.92rem}
+  .card-title a:hover{color:var(--green-deep);text-decoration:underline}
+  .when{align-self:flex-start;display:inline-flex;align-items:center;background:var(--amber-bg);color:var(--amber-ink);border-radius:999px;padding:6px 14px;font-size:.9rem;margin:0}
+  .pickup{margin:0;font-size:.93rem;color:var(--ink-soft)}
+  .desc{margin:0;font-size:.88rem;line-height:1.55;color:var(--muted);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .card-actions{margin-top:auto;padding-top:10px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .call{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#0da35e,#078148);color:#fff;text-decoration:none;font-weight:700;font-size:.93rem;border-radius:999px;padding:10px 19px;box-shadow:0 10px 20px -10px rgba(12,154,88,.75);transition:transform .16s ease,box-shadow .16s ease}
+  .call:hover{transform:translateY(-1px);box-shadow:0 14px 24px -10px rgba(12,154,88,.8)}
+  .open-link{margin-left:auto;font-weight:600;font-size:.93rem;color:var(--green-deep);text-decoration:none}
   .open-link:hover{text-decoration:underline}
-  .empty{color:var(--muted)}
-  footer.site{border-top:1px solid var(--line);margin-top:36px;padding-top:16px;font-size:.85rem;color:var(--muted)}
-  @media (max-width:560px){ #map{height:300px} header.site h1{font-size:1.55rem} }
+  .empty{grid-column:1/-1;color:var(--muted);background:var(--surface);border-radius:16px;box-shadow:var(--shadow-card);padding:20px;margin:0}
+
+  /* ---------- footer ---------- */
+  .site-footer{margin-top:46px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem;line-height:1.6}
+  .site-footer p{margin:0;max-width:82ch}
+  .site-footer .owner-line{margin-top:10px}
+  .site-footer .owner-line a{color:inherit;text-decoration:underline}
+
+  @media (max-width:1020px){
+    .cards{grid-template-columns:repeat(2,1fr)}
+    .map-grid{grid-template-columns:1fr}
+    .spots{max-height:320px}
+    #map{height:360px}
+  }
+  @media (max-width:680px){
+    .wx-strip{grid-template-columns:repeat(2,1fr)}
+    .cards{grid-template-columns:1fr}
+    .panel{padding:20px 18px}
+    .hero-inner{padding-bottom:84px}
+    .hero-title{margin-top:34px}
+    .tab{padding:9px 15px;font-size:.9rem}
+    #map{height:300px}
+  }
 </style>
 </head>
 <body>
-<header class="site">
-  <div class="wrap">
-    <h1 data-i18n="siteTitle">🚗 Toronto Rideshare Board</h1>
-    <p data-i18n="intro">Toronto rideshare and carpool rides — Toronto to Montréal, Toronto to Ottawa, and other Toronto rides — pulled from Kijiji daily, with prices, pickup spots, departure days, driver phone numbers and weather along the route.</p>
-    <p class="updated"><span data-i18n="lastUpdated">Last updated:</span> <time id="updated-time" datetime="%%GENERATED_AT_ISO%%">%%GENERATED_AT_DISPLAY%%</time> <span data-i18n="updatedSuffix">(Toronto time) · Updates daily</span></p>
-    <p class="hidden-note" id="hidden-note">%%HIDDEN_NOTE%%</p>
-    <div class="lang-toggle" role="group" aria-label="Language / Langue">
-      <button type="button" id="lang-en" class="lang-btn active" aria-pressed="true">EN</button>
-      <span aria-hidden="true">|</span>
-      <button type="button" id="lang-fr" class="lang-btn" aria-pressed="false">FR</button>
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-top">
+      <span class="brand" data-i18n="siteTitle">🚗 Toronto Rideshare Board</span>
+      <div class="lang-toggle" role="group" aria-label="Language / Langue">
+        <button type="button" id="lang-en" class="lang-btn active" aria-pressed="true">EN</button>
+        <button type="button" id="lang-fr" class="lang-btn" aria-pressed="false">FR</button>
+      </div>
+    </div>
+    <h1 class="hero-title" data-i18n="siteTitle">🚗 Toronto Rideshare Board</h1>
+    <p class="intro" data-i18n="intro">Toronto rideshare and carpool rides — Toronto to Montréal, Toronto to Ottawa, and other Toronto rides — pulled from Kijiji daily, with prices, pickup spots, departure days, driver phone numbers and weather along the route.</p>
+    <div class="hero-meta">
+      <p class="meta-pill"><span data-i18n="lastUpdated">Last updated:</span> <time id="updated-time" datetime="%%GENERATED_AT_ISO%%">%%GENERATED_AT_DISPLAY%%</time> <span data-i18n="updatedSuffix">(Toronto time) · Updates daily</span></p>
+      <p class="meta-pill" id="hidden-note">%%HIDDEN_NOTE%%</p>
     </div>
   </div>
 </header>
 
 <main class="wrap">
-  <section data-i18n-aria="weatherAria" aria-label="Route weather">
-    <h2 data-i18n="weatherHeading">🌤️ Weather along the route</h2>
+  <section class="panel" data-i18n-aria="weatherAria" aria-label="Route weather">
+    <h2 class="section-title" data-i18n="weatherHeading">🌤️ Weather along the route</h2>
     <div class="wx-strip" id="wx-strip">
 %%WEATHER_HTML%%
     </div>
@@ -121,21 +182,26 @@
     <button type="button" class="tab" data-filter="other" data-i18n="tabOther">Other rides</button>
   </nav>
 
-  <section data-i18n-aria="pickupAria" aria-label="Pickup map">
-    <h2 data-i18n="pickupHeading">📍 Pickup spots</h2>
-    <div id="map" role="img" data-i18n-aria="mapAria" aria-label="Map of rideshare pickup spots between Toronto, Kingston, Montréal and Ottawa"></div>
-    <p class="map-fallback" id="map-fallback" data-i18n="mapFallback">The interactive map could not load — use the numbered pickup index below; tapping a spot highlights its ride.</p>
-    <ul class="spots" id="spots">
+  <section class="panel" data-i18n-aria="pickupAria" aria-label="Pickup map">
+    <h2 class="section-title" data-i18n="pickupHeading">📍 Pickup spots</h2>
+    <div class="map-grid">
+      <div id="map" role="img" data-i18n-aria="mapAria" aria-label="Map of rideshare pickup spots between Toronto, Kingston, Montréal and Ottawa"></div>
+      <div>
+        <p class="map-fallback" id="map-fallback" data-i18n="mapFallback">The interactive map could not load — use the numbered pickup index below; tapping a spot highlights its ride.</p>
+        <ul class="spots" id="spots">
 %%SPOTS_HTML%%
-    </ul>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <div id="board">
 %%LISTINGS_HTML%%
   </div>
 
-  <footer class="site">
-    <p data-i18n="footer">Listings are collected from the public Kijiji Toronto rideshare &amp; carpool category and refreshed daily. Prices, times and phone numbers are quoted from the ads themselves — always confirm details with the driver before travelling. This board is not affiliated with Kijiji. Brampton and Windsor rides and Kijiji promoted (“Top Ad”) listings are filtered out.</p>
+  <footer class="site-footer">
+    <p data-i18n="footer">Listings are collected from the public Kijiji Toronto rideshare & carpool category and refreshed daily. Prices, times and phone numbers are quoted from the ads themselves — always confirm details with the driver before travelling. This board is not affiliated with Kijiji. Brampton and Windsor rides and Kijiji promoted (“Top Ad”) listings are filtered out.</p>
+    <p class="owner-line">© 2026 Patpound Corporation · <span data-i18n="supportLabel">Support</span>: <a href="mailto:patpoundy2kb@gmail.com">patpoundy2kb@gmail.com</a></p>
   </footer>
 </main>
 
@@ -163,6 +229,7 @@ const I18N = {
     mapAria: "Map of rideshare pickup spots between Toronto, Kingston, Montréal and Ottawa",
     mapFallback: "The interactive map could not load — use the numbered pickup index below; tapping a spot highlights its ride.",
     footer: "Listings are collected from the public Kijiji Toronto rideshare & carpool category and refreshed daily. Prices, times and phone numbers are quoted from the ads themselves — always confirm details with the driver before travelling. This board is not affiliated with Kijiji. Brampton and Windsor rides and Kijiji promoted (“Top Ad”) listings are filtered out.",
+    supportLabel: "Support",
     docTitle: "Toronto Rideshare Board — Toronto to Montréal & Ottawa Carpool Rides, Updated Daily",
     metaDesc: "Daily-updated Toronto rideshare board: carpool rides from Toronto to Montréal and Toronto to Ottawa, plus other Toronto rides. Prices, pickup spots, departure days and times, driver phone numbers and route weather.",
     routes: {montreal: "Toronto → Montréal", ottawa: "Toronto → Ottawa", other: "Other Toronto rides"},
@@ -193,6 +260,7 @@ const I18N = {
     mapAria: "Carte des lieux de ramassage entre Toronto, Kingston, Montréal et Ottawa",
     mapFallback: "La carte interactive n'a pas pu se charger — utilisez l'index numéroté des lieux de ramassage ci-dessous; touchez un lieu pour mettre son trajet en évidence.",
     footer: "Les annonces proviennent de la catégorie publique Covoiturage de Kijiji Toronto et sont actualisées chaque jour. Les prix, les heures et les numéros de téléphone sont cités des annonces elles-mêmes — confirmez toujours les détails avec le conducteur avant de voyager. Ce tableau n'est pas affilié à Kijiji. Les trajets vers Brampton et Windsor ainsi que les annonces promues de Kijiji (« Top Ad ») sont exclus.",
+    supportLabel: "Assistance",
     docTitle: "Covoiturage Toronto — Trajets de Toronto vers Montréal et Ottawa, mis à jour chaque jour",
     metaDesc: "Tableau de covoiturage de Toronto mis à jour chaque jour : trajets de Toronto vers Montréal et Toronto vers Ottawa, et autres trajets au départ de Toronto. Prix, lieux de ramassage, jours et heures de départ, numéros de téléphone des conducteurs et météo du trajet.",
     routes: {montreal: "Toronto → Montréal", ottawa: "Toronto → Ottawa", other: "Autres trajets à Toronto"},
@@ -307,15 +375,16 @@ function cardHTML(r){
   const badge = r.spot ? '<span class="spot-badge" style="background:' + ROUTE_COLORS[r.route] + '">' + r.spot + '</span>' : "";
   const dep = departureText(r);
   const when = dep ? '<p class="when">🗓️ <strong>' + esc(dep) + '</strong></p>' : "";
-  const call = r.phone ? '<p class="call">📞 ' + esc(t("call")) + ' <a href="tel:' + esc(r.phoneTel) + '">' + esc(r.phone) + '</a></p>' : "";
+  const call = r.phone ? '<a class="call" href="tel:' + esc(r.phoneTel) + '">📞 ' + esc(t("call")) + ' ' + esc(r.phone) + '</a>' : "";
   const pickup = r.address ? '<p class="pickup">📍 ' + esc(r.address) + '</p>' : "";
   const desc = r.description ? '<p class="desc">' + esc(r.description) + '</p>' : "";
-  return '<article class="card" id="ride-' + esc(r.id) + '" data-route="' + esc(r.route) + '">' +
+  const open = '<a class="open-link" href="' + esc(r.url) + '" target="_blank" rel="noopener">' + esc(t("viewAd")) + '</a>';
+  return '<article class="ride-card card" id="ride-' + esc(r.id) + '" data-route="' + esc(r.route) + '">' +
     '<div class="card-top">' + badge + '<span class="price">' + esc(priceText(r)) + '</span>' +
     '<span class="posted">' + esc(t("posted")) + ' ' + esc(postedText(r)) + '</span></div>' +
     '<h3 class="card-title"><a href="' + esc(r.url) + '" target="_blank" rel="noopener">' + esc(r.title) + '</a></h3>' +
-    when + call + pickup + desc +
-    '<a class="open-link" href="' + esc(r.url) + '" target="_blank" rel="noopener">' + esc(t("viewAd")) + '</a></article>';
+    when + pickup + desc +
+    '<div class="card-actions">' + call + open + '</div></article>';
 }
 function renderBoard(){
   const board = document.getElementById("board");
@@ -323,7 +392,7 @@ function renderBoard(){
     const rides = listings.filter(r => r.route === route);
     const cards = rides.map(cardHTML).join("");
     const empty = rides.length ? "" : '<p class="empty">' + esc(t("noRides")) + '</p>';
-    return '<section class="route-section" data-section="' + route + '"><h2>' + esc(routeLabel(route)) +
+    return '<section class="route-section" data-section="' + route + '"><h2 class="route-title">' + esc(routeLabel(route)) +
       ' <span class="count">(' + rides.length + ')</span></h2><div class="cards">' + cards + empty + '</div></section>';
   }).join("");
   const spots = document.getElementById("spots");
@@ -360,7 +429,7 @@ function buildPins(){
   Object.values(markers).forEach(m => map.removeLayer(m));
   markers = {};
   listings.filter(r => r.lat != null && r.lng != null).forEach(r => {
-    const icon = L.divIcon({className: "", html: '<span class="pin-icon" style="background:' + ROUTE_COLORS[r.route] + '">' + (r.spot || "") + '</span>', iconSize: [26,26], iconAnchor: [13,13]});
+    const icon = L.divIcon({className: "", html: '<span class="pin-icon" style="background:' + ROUTE_COLORS[r.route] + '">' + (r.spot || "") + '</span>', iconSize: [28,28], iconAnchor: [14,14]});
     const m = L.marker([r.lat, r.lng], {icon}).addTo(map)
       .bindPopup("<strong>" + esc(r.title) + "</strong><br>" + esc(routeLabel(r.route)) + " · " + esc(priceText(r)));
     m.on("click", () => focusCard(r.id, false));
