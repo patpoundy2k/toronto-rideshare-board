@@ -201,7 +201,7 @@
 
   <footer class="site-footer">
     <p data-i18n="footer">Listings are collected from the public Kijiji Toronto rideshare & carpool category and refreshed daily. Prices, times and phone numbers are quoted from the ads themselves — always confirm details with the driver before travelling. This board is not affiliated with Kijiji. Brampton and Windsor rides and Kijiji promoted (“Top Ad”) listings are filtered out.</p>
-    <p class="owner-line">© 2026 Patpound Corporation · <span data-i18n="supportLabel">Support</span>: <a href="mailto:patpoundy2kb@gmail.com">patpoundy2kb@gmail.com</a></p>
+    <p class="owner-line">© 2026 Patpound Corporation · <span data-i18n="supportLabel">Support</span>: <a href="mailto:patpoundy2kb@gmail.com">patpoundy2kb@gmail.com</a><span id="gc-visits"></span></p>
   </footer>
 </main>
 
@@ -230,6 +230,7 @@ const I18N = {
     mapFallback: "The interactive map could not load — use the numbered pickup index below; tapping a spot highlights its ride.",
     footer: "Listings are collected from the public Kijiji Toronto rideshare & carpool category and refreshed daily. Prices, times and phone numbers are quoted from the ads themselves — always confirm details with the driver before travelling. This board is not affiliated with Kijiji. Brampton and Windsor rides and Kijiji promoted (“Top Ad”) listings are filtered out.",
     supportLabel: "Support",
+    visitsLabel: "visits",
     docTitle: "Toronto Rideshare Board — Toronto to Montréal & Ottawa Carpool Rides, Updated Daily",
     metaDesc: "Daily-updated Toronto rideshare board: carpool rides from Toronto to Montréal and Toronto to Ottawa, plus other Toronto rides. Prices, pickup spots, departure days and times, driver phone numbers and route weather.",
     routes: {montreal: "Toronto → Montréal", ottawa: "Toronto → Ottawa", other: "Other Toronto rides"},
@@ -261,6 +262,7 @@ const I18N = {
     mapFallback: "La carte interactive n'a pas pu se charger — utilisez l'index numéroté des lieux de ramassage ci-dessous; touchez un lieu pour mettre son trajet en évidence.",
     footer: "Les annonces proviennent de la catégorie publique Covoiturage de Kijiji Toronto et sont actualisées chaque jour. Les prix, les heures et les numéros de téléphone sont cités des annonces elles-mêmes — confirmez toujours les détails avec le conducteur avant de voyager. Ce tableau n'est pas affilié à Kijiji. Les trajets vers Brampton et Windsor ainsi que les annonces promues de Kijiji (« Top Ad ») sont exclus.",
     supportLabel: "Assistance",
+    visitsLabel: "visites",
     docTitle: "Covoiturage Toronto — Trajets de Toronto vers Montréal et Ottawa, mis à jour chaque jour",
     metaDesc: "Tableau de covoiturage de Toronto mis à jour chaque jour : trajets de Toronto vers Montréal et Toronto vers Ottawa, et autres trajets au départ de Toronto. Prix, lieux de ramassage, jours et heures de départ, numéros de téléphone des conducteurs et météo du trajet.",
     routes: {montreal: "Toronto → Montréal", ottawa: "Toronto → Ottawa", other: "Autres trajets à Toronto"},
@@ -519,6 +521,7 @@ function applyLang(newLang){
   if(tt && generatedAt) tt.textContent = new Date(generatedAt).toLocaleString(lang === "fr" ? "fr-CA" : "en-CA", {timeZone: "America/Toronto"});
   paintWeather();
   renderBoard();
+  if(window.__gcPaint) window.__gcPaint();
 }
 document.getElementById("lang-en").addEventListener("click", () => applyLang("en"));
 document.getElementById("lang-fr").addEventListener("click", () => applyLang("fr"));
@@ -528,6 +531,26 @@ paintWeather();
 applyLang(lang);
 refreshWeather();
 refreshListings();
+</script>
+<script data-goatcounter="https://ride401.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script>
+(function(){
+  var gcCount = null;
+  window.__gcPaint = function(){
+    var el = document.getElementById("gc-visits");
+    if(!el) return;
+    if(gcCount == null || !(gcCount > 0)){ el.textContent = ""; return; }
+    var lbl = (typeof lang !== "undefined" && lang === "fr") ? "visites" : "visits";
+    el.textContent = " · " + gcCount + " " + lbl;
+  };
+  fetch("https://ride401.goatcounter.com/counter/%2F.json")
+    .then(function(r){ return r && r.ok ? r.json() : null; })
+    .then(function(d){
+      if(d && d.count != null){ var n = parseInt(d.count, 10); if(!isNaN(n)) gcCount = n; }
+      window.__gcPaint();
+    })
+    .catch(function(){});
+})();
 </script>
 </body>
 </html>
