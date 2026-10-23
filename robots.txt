@@ -58,4 +58,4 @@ Allow: /
 User-agent: YouBot
 Allow: /
 
-Sitemap: https://patpoundy2k.github.io/toronto-rideshare-board/sitemap.xml
+Sitemap: https://ride401.ca/sitemap.xml
