@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-23T19:25:45.114812-04:00",
+ "generatedAt": "2026-10-23T19:32:09.853770-04:00",
  "source": "https://www.kijiji.ca/b-rideshare-carpool/city-of-toronto/c5l1700273",
  "counts": {
   "pulled": 40,
@@ -20,7 +20,7 @@
    "name": "Toronto",
    "lat": 43.6532,
    "lon": -79.3832,
-   "temp": 8.8,
+   "temp": 8.6,
    "code": 0,
    "label": "Clear sky",
    "emoji": "☀️",
@@ -32,11 +32,11 @@
    "name": "Kingston",
    "lat": 44.2312,
    "lon": -76.486,
-   "temp": 6.6,
-   "code": 1,
-   "label": "Mainly clear",
-   "emoji": "🌤️",
-   "wind": 9.8,
+   "temp": 6.5,
+   "code": 2,
+   "label": "Partly cloudy",
+   "emoji": "⛅",
+   "wind": 9.7,
    "hi": 11.9,
    "lo": 0.9
   },
@@ -44,11 +44,11 @@
    "name": "Ottawa",
    "lat": 45.4215,
    "lon": -75.6972,
-   "temp": 6.4,
+   "temp": 6.5,
    "code": 0,
    "label": "Clear sky",
    "emoji": "☀️",
-   "wind": 7.0,
+   "wind": 4.7,
    "hi": 12.7,
    "lo": -0.9
   },
@@ -60,7 +60,7 @@
    "code": 0,
    "label": "Clear sky",
    "emoji": "☀️",
-   "wind": 7.7,
+   "wind": 7.1,
    "hi": 10.4,
    "lo": 0.7
   }
