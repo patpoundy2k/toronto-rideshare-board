@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-23T17:10:39.512670-04:00",
+ "generatedAt": "2026-10-23T19:25:45.114812-04:00",
  "source": "https://www.kijiji.ca/b-rideshare-carpool/city-of-toronto/c5l1700273",
  "counts": {
   "pulled": 40,
@@ -9,8 +9,8 @@
   "hiddenBlockedCity": 8,
   "byRoute": {
    "montreal": 7,
-   "ottawa": 7,
-   "other": 14
+   "ottawa": 6,
+   "other": 15
   },
   "withDeparture": 14,
   "withPhone": 11
@@ -20,11 +20,11 @@
    "name": "Toronto",
    "lat": 43.6532,
    "lon": -79.3832,
-   "temp": 12.0,
+   "temp": 8.8,
    "code": 0,
    "label": "Clear sky",
    "emoji": "☀️",
-   "wind": 11.4,
+   "wind": 8.7,
    "hi": 12.8,
    "lo": 5.3
   },
@@ -32,11 +32,11 @@
    "name": "Kingston",
    "lat": 44.2312,
    "lon": -76.486,
-   "temp": 10.4,
-   "code": 0,
-   "label": "Clear sky",
-   "emoji": "☀️",
-   "wind": 8.9,
+   "temp": 6.6,
+   "code": 1,
+   "label": "Mainly clear",
+   "emoji": "🌤️",
+   "wind": 9.8,
    "hi": 11.9,
    "lo": 0.9
   },
@@ -44,11 +44,11 @@
    "name": "Ottawa",
    "lat": 45.4215,
    "lon": -75.6972,
-   "temp": 11.5,
-   "code": 3,
-   "label": "Overcast",
-   "emoji": "☁️",
-   "wind": 2.8,
+   "temp": 6.4,
+   "code": 0,
+   "label": "Clear sky",
+   "emoji": "☀️",
+   "wind": 7.0,
    "hi": 12.7,
    "lo": -0.9
   },
@@ -56,12 +56,12 @@
    "name": "Montréal",
    "lat": 45.5019,
    "lon": -73.5674,
-   "temp": 9.2,
+   "temp": 6.2,
    "code": 0,
    "label": "Clear sky",
    "emoji": "☀️",
-   "wind": 3.8,
-   "hi": 10.2,
+   "wind": 7.7,
+   "hi": 10.4,
    "lo": 0.7
   }
  ],
@@ -323,27 +323,6 @@
    "spot": 11
   },
   {
-   "id": "1744877150",
-   "title": "Ride Share to Ottawa",
-   "description": "RIDE SHARE: NIAGARA FALLS & TORONTO → OTTAWA Date: Friday, October 16, 2026 Looking for a ride to Ottawa? I’m offering a ride share for 2 passengers travelling from Niagara Falls and Toronto to ...",
-   "price": "See ad",
-   "address": "Niagara Falls, ON L2H 1B7",
-   "lat": 43.10502,
-   "lng": -79.12857,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/ride-share-to-ottawa/1744877150",
-   "posted": "Oct 15, 8:32 PM",
-   "postedIso": "2026-10-16T00:32:06.000Z",
-   "route": "ottawa",
-   "departure": "Fri",
-   "departureParts": {
-    "days": "Fri",
-    "times": []
-   },
-   "phone": null,
-   "phoneTel": null,
-   "spot": 12
-  },
-  {
    "id": "1739193586",
    "title": "RIDESHARE Toronto to Ottawa",
    "description": "Book your seats. Moving/ Chatter are available. PICK UP Tine 7pm 1. YORKDALE shopping center, Entrance A front of Indigo bookshop, parking lot A3. 2. S CARBOROUGH TOWN CENTER front of Cineplex ...",
@@ -364,7 +343,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 13
+   "spot": 12
   },
   {
    "id": "1705011168",
@@ -385,7 +364,7 @@
    },
    "phone": "(647) 619-0835",
    "phoneTel": "+16476190835",
-   "spot": 14
+   "spot": 13
   },
   {
    "id": "1745019532",
@@ -402,6 +381,27 @@
    "departure": null,
    "departureParts": {
     "days": null,
+    "times": []
+   },
+   "phone": null,
+   "phoneTel": null,
+   "spot": 14
+  },
+  {
+   "id": "1744908276",
+   "title": "I offer RIDE SHARE from TORONTO to Pearson Airport NOT everyday",
+   "description": "I offer RIDE SHARE from Toronto to Pearson Airport Ontario. NOT everyday, some days only. One passenger only. No luggage charge. 30 years driving experience. Accept Cash only. Please text me at 647 ...",
+   "price": "$50",
+   "address": "Markham, ON L3R1E6",
+   "lat": 43.82122,
+   "lng": -79.33846,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/i-offer-ride-share-from-toronto-to-pearson-airport-not-everyday/1744908276",
+   "posted": "Oct 16, 2:23 PM",
+   "postedIso": "2026-10-16T18:23:05.000Z",
+   "route": "other",
+   "departure": "Daily",
+   "departureParts": {
+    "days": "Daily",
     "times": []
    },
    "phone": null,
