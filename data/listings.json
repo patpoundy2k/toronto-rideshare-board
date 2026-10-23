@@ -1,71 +1,92 @@
 {
- "generatedAt": "2026-10-22T13:20:51.124274-04:00",
+ "generatedAt": "2026-10-23T07:44:52.867181-04:00",
  "source": "https://www.kijiji.ca/b-rideshare-carpool/city-of-toronto/c5l1700273",
  "counts": {
   "pulled": 40,
-  "kept": 28,
-  "hidden": 12,
+  "kept": 29,
+  "hidden": 11,
   "hiddenTopAd": 4,
-  "hiddenBlockedCity": 8,
+  "hiddenBlockedCity": 7,
   "byRoute": {
-   "montreal": 6,
+   "montreal": 7,
    "ottawa": 8,
    "other": 14
   },
-  "withDeparture": 16,
-  "withPhone": 13
+  "withDeparture": 15,
+  "withPhone": 11
  },
  "weather": [
   {
    "name": "Toronto",
    "lat": 43.6532,
    "lon": -79.3832,
-   "temp": 18.1,
-   "code": 0,
-   "label": "Clear sky",
-   "emoji": "☀️",
-   "wind": 6.6,
-   "hi": 18.4,
-   "lo": 3.9
+   "temp": 5.7,
+   "code": 1,
+   "label": "Mainly clear",
+   "emoji": "🌤️",
+   "wind": 10.3,
+   "hi": 12.6,
+   "lo": 5.3
   },
   {
    "name": "Kingston",
    "lat": 44.2312,
    "lon": -76.486,
-   "temp": 14.5,
+   "temp": 1.0,
    "code": 0,
    "label": "Clear sky",
    "emoji": "☀️",
-   "wind": 15.5,
-   "hi": 14.8,
-   "lo": 0.2
+   "wind": 10.8,
+   "hi": 11.9,
+   "lo": 0.9
   },
   {
    "name": "Ottawa",
    "lat": 45.4215,
    "lon": -75.6972,
-   "temp": 13.6,
+   "temp": -0.5,
    "code": 0,
    "label": "Clear sky",
    "emoji": "☀️",
-   "wind": 15.9,
-   "hi": 14.4,
-   "lo": -0.3
+   "wind": 4.7,
+   "hi": 10.9,
+   "lo": -0.5
   },
   {
    "name": "Montréal",
    "lat": 45.5019,
    "lon": -73.5674,
-   "temp": 11.5,
+   "temp": 1.2,
    "code": 0,
    "label": "Clear sky",
    "emoji": "☀️",
-   "wind": 10.3,
-   "hi": 13.2,
-   "lo": 1.5
+   "wind": 9.4,
+   "hi": 9.1,
+   "lo": 1.2
   }
  ],
  "listings": [
+  {
+   "id": "1745178558",
+   "title": "Toronto to montreal and return back",
+   "description": "Stop to stop $98door to door extra",
+   "price": "$98",
+   "address": "University Ave, Toronto, M5H 3M7",
+   "lat": 43.65343,
+   "lng": -79.38789,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/toronto-to-montreal-and-return-back/1745178558",
+   "posted": "Oct 22, 4:30 PM",
+   "postedIso": "2026-10-22T20:30:03.000Z",
+   "route": "montreal",
+   "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
+   "phone": null,
+   "phoneTel": null,
+   "spot": 1
+  },
   {
    "id": "1745163589",
    "title": "“RIDE TORONTO TO MONTREAL TOMORROW FRI 23, 7.30am”",
@@ -87,7 +108,7 @@
    },
    "phone": "(514) 290-8030",
    "phoneTel": "+15142908030",
-   "spot": 1
+   "spot": 2
   },
   {
    "id": "1745160453",
@@ -111,7 +132,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 2
+   "spot": 3
   },
   {
    "id": "1745117503",
@@ -134,7 +155,7 @@
    },
    "phone": "(514) 290-8030",
    "phoneTel": "+15142908030",
-   "spot": 3
+   "spot": 4
   },
   {
    "id": "1745102642",
@@ -157,7 +178,7 @@
    },
    "phone": "(514) 290-8030",
    "phoneTel": "+15142908030",
-   "spot": 4
+   "spot": 5
   },
   {
    "id": "1745072690",
@@ -180,7 +201,7 @@
    },
    "phone": "(514) 290-8030",
    "phoneTel": "+15142908030",
-   "spot": 5
+   "spot": 6
   },
   {
    "id": "1744910791",
@@ -203,7 +224,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 6
+   "spot": 7
   },
   {
    "id": "1745163703",
@@ -228,7 +249,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 7
+   "spot": 8
   },
   {
    "id": "1745154846",
@@ -251,7 +272,7 @@
    },
    "phone": "(647) 545-6059",
    "phoneTel": "+16475456059",
-   "spot": 8
+   "spot": 9
   },
   {
    "id": "1745137912",
@@ -274,7 +295,7 @@
    },
    "phone": "(647) 545-6059",
    "phoneTel": "+16475456059",
-   "spot": 9
+   "spot": 10
   },
   {
    "id": "1744966428",
@@ -299,7 +320,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 10
+   "spot": 11
   },
   {
    "id": "1744919683",
@@ -322,7 +343,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 11
+   "spot": 12
   },
   {
    "id": "1744877150",
@@ -343,7 +364,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 12
+   "spot": 13
   },
   {
    "id": "1739193586",
@@ -366,7 +387,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 13
+   "spot": 14
   },
   {
    "id": "1705011168",
@@ -387,7 +408,7 @@
    },
    "phone": "(647) 619-0835",
    "phoneTel": "+16476190835",
-   "spot": 14
+   "spot": 15
   },
   {
    "id": "1745019532",
@@ -408,31 +429,28 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 15
+   "spot": 16
   },
   {
-   "id": "1744961929",
-   "title": "rideshare from Kitchener to Toronto",
-   "description": "Leaving 5pm/6pm today October 17th Suv Space for 5 people",
-   "price": "$25",
-   "address": "Gilroy Dr, Toronto, M1P 1Z8",
-   "lat": 43.76094,
-   "lng": -79.28051,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/rideshare-from-kitchener-to-toronto/1744961929",
-   "posted": "Oct 17, 4:15 PM",
-   "postedIso": "2026-10-17T20:15:06.000Z",
+   "id": "1742459851",
+   "title": "Airport Ride Made Easy",
+   "description": "Need a comfortable ride between Scarborough & Toronto Pearson Airport? ✅ Excellent driving record ✅ Flat & affordable rate ✅ Private, reliable & hassle-free service Call/Text: 437-264-457",
+   "price": "See ad",
+   "address": "Scarborough, ON M1G 1C7",
+   "lat": 43.75729,
+   "lng": -79.22062,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/airport-ride-made-easy/1742459851",
+   "posted": "Aug 23, 6:04 PM",
+   "postedIso": "2026-08-23T22:04:43.000Z",
    "route": "other",
-   "departure": "5 PM, 6 PM",
+   "departure": null,
    "departureParts": {
     "days": null,
-    "times": [
-     "5 PM",
-     "6 PM"
-    ]
+    "times": []
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 16
+   "spot": 17
   },
   {
    "id": "1742409381",
@@ -453,7 +471,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 17
+   "spot": 18
   },
   {
    "id": "1742358953",
@@ -474,7 +492,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 18
+   "spot": 19
   },
   {
    "id": "1742298174",
@@ -495,7 +513,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 19
+   "spot": 20
   },
   {
    "id": "1742255266",
@@ -516,7 +534,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 20
+   "spot": 21
   },
   {
    "id": "1742242140",
@@ -537,7 +555,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 21
+   "spot": 22
   },
   {
    "id": "1739507129",
@@ -558,7 +576,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 22
+   "spot": 23
   },
   {
    "id": "1739483130",
@@ -579,7 +597,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 23
+   "spot": 24
   },
   {
    "id": "1739426601",
@@ -600,7 +618,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 24
+   "spot": 25
   },
   {
    "id": "1739354526",
@@ -621,7 +639,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 25
+   "spot": 26
   },
   {
    "id": "1739304628",
@@ -642,49 +660,49 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 26
-  },
-  {
-   "id": "1738475390",
-   "title": "Experience fast, reliable & affordable ride",
-   "description": "Experience fast, reliable & affordable rides available across GTA Contact: 437-264-4576 Thank you!",
-   "price": "See ad",
-   "address": "Scarborough, ON M1X",
-   "lat": 43.83612,
-   "lng": -79.20564,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/experience-fast-reliable-affordable-ride/1738475390",
-   "posted": "May 31, 1:51 PM",
-   "postedIso": "2026-05-31T17:51:06.000Z",
-   "route": "other",
-   "departure": null,
-   "departureParts": {
-    "days": null,
-    "times": []
-   },
-   "phone": "(437) 264-4576",
-   "phoneTel": "+14372644576",
    "spot": 27
   },
   {
-   "id": "1738429829",
-   "title": "Driver available day and night",
-   "description": "Driver available day and night for affordable rides. Call/Text/Whatsapp: 437-264-4576 Thank you!",
-   "price": "See ad",
-   "address": "Scarborough, ON M1W",
-   "lat": 43.79953,
-   "lng": -79.31839,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/driver-available-day-and-night/1738429829",
-   "posted": "May 30, 3:13 PM",
-   "postedIso": "2026-05-30T19:13:20.000Z",
+   "id": "1673780089",
+   "title": "GTA to New Brunswick (Female Driver)",
+   "description": "G licence Former female Uber/Lyft driver with 5 years of experience (16,000 trips) Price $2500 Timing flexible. After 7 hours drive I need break for 4/5 hours. After confirm ride, I will share my ...",
+   "price": "$2,500",
+   "address": "York, ON M6N 4Z5",
+   "lat": 43.66765,
+   "lng": -79.48515,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/gta-to-new-brunswick-female-driver/1673780089",
+   "posted": "Oct 4, 1:11 AM",
+   "postedIso": "2023-10-04T05:11:04.000Z",
    "route": "other",
    "departure": null,
    "departureParts": {
     "days": null,
     "times": []
    },
-   "phone": "(437) 264-4576",
-   "phoneTel": "+14372644576",
+   "phone": null,
+   "phoneTel": null,
    "spot": 28
+  },
+  {
+   "id": "1673055631",
+   "title": "GTA To Sudbury (Female Driver)",
+   "description": "G licence Former female Uber/Lyft driver with 5 years of experience (16,000 trips) 1 way $575 Timing flexible Toyota Corolla. Professional female driver. After confirming ride, I will share my ...",
+   "price": "$575",
+   "address": "York, ON M6N 4Z5",
+   "lat": 43.66765,
+   "lng": -79.48515,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/gta-to-sudbury-female-driver/1673055631",
+   "posted": "Sep 26, 1:08 PM",
+   "postedIso": "2023-09-26T17:08:35.000Z",
+   "route": "other",
+   "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
+   "phone": null,
+   "phoneTel": null,
+   "spot": 29
   }
  ]
 }
