@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-23T19:32:09.853770-04:00",
+ "generatedAt": "2026-10-24T07:40:28.636400-04:00",
  "source": "https://www.kijiji.ca/b-rideshare-carpool/city-of-toronto/c5l1700273",
  "counts": {
   "pulled": 40,
@@ -8,11 +8,11 @@
   "hiddenTopAd": 4,
   "hiddenBlockedCity": 8,
   "byRoute": {
-   "montreal": 7,
+   "montreal": 8,
    "ottawa": 6,
-   "other": 15
+   "other": 14
   },
-  "withDeparture": 14,
+  "withDeparture": 15,
   "withPhone": 11
  },
  "weather": [
@@ -20,52 +20,73 @@
    "name": "Toronto",
    "lat": 43.6532,
    "lon": -79.3832,
-   "temp": 8.6,
+   "temp": 4.4,
    "code": 0,
    "label": "Clear sky",
    "emoji": "☀️",
-   "wind": 8.7,
-   "hi": 12.8,
-   "lo": 5.3
+   "wind": 11.5,
+   "hi": 13.6,
+   "lo": 4.2
   },
   {
    "name": "Kingston",
    "lat": 44.2312,
    "lon": -76.486,
-   "temp": 6.5,
-   "code": 2,
-   "label": "Partly cloudy",
-   "emoji": "⛅",
-   "wind": 9.7,
-   "hi": 11.9,
-   "lo": 0.9
+   "temp": -2.7,
+   "code": 1,
+   "label": "Mainly clear",
+   "emoji": "🌤️",
+   "wind": 8.9,
+   "hi": 10.5,
+   "lo": -2.8
   },
   {
    "name": "Ottawa",
    "lat": 45.4215,
    "lon": -75.6972,
-   "temp": 6.5,
+   "temp": -3.6,
    "code": 0,
    "label": "Clear sky",
    "emoji": "☀️",
-   "wind": 4.7,
-   "hi": 12.7,
-   "lo": -0.9
+   "wind": 2.3,
+   "hi": 10.0,
+   "lo": -3.6
   },
   {
    "name": "Montréal",
    "lat": 45.5019,
    "lon": -73.5674,
-   "temp": 6.2,
+   "temp": -0.6,
    "code": 0,
    "label": "Clear sky",
    "emoji": "☀️",
-   "wind": 7.1,
-   "hi": 10.4,
-   "lo": 0.7
+   "wind": 4.8,
+   "hi": 10.6,
+   "lo": -0.7
   }
  ],
  "listings": [
+  {
+   "id": "1745234399",
+   "title": "EXPRESS-Every day Ride shares Montréal to Toronto",
+   "description": "HASSLE FREE <>ONLY CALL PLEASE”. —)- NOT TEXTING -) ONLY PHONE CALLS -)☎️(-514-803-0018-)☎️-)- 647-534-1598 -))-NOT TEXTING -(( RIDESHARES -) FROM - MONTRÉAL TO TORONTO at.MORNING ”-)-starting ...",
+   "price": "See ad",
+   "address": "Front St E, Toronto, ON M5E 1B2",
+   "lat": 43.64693,
+   "lng": -79.37685,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/express-every-day-ride-shares-montreal-to-toronto/1745234399",
+   "posted": "Oct 23, 10:04 PM",
+   "postedIso": "2026-10-24T02:04:58.000Z",
+   "route": "montreal",
+   "departure": "Daily",
+   "departureParts": {
+    "days": "Daily",
+    "times": []
+   },
+   "phone": "(514) 803-0018",
+   "phoneTel": "+15148030018",
+   "spot": 1
+  },
   {
    "id": "1745178558",
    "title": "Toronto to montreal and return back",
@@ -85,7 +106,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 1
+   "spot": 2
   },
   {
    "id": "1745163589",
@@ -108,7 +129,7 @@
    },
    "phone": "(514) 290-8030",
    "phoneTel": "+15142908030",
-   "spot": 2
+   "spot": 3
   },
   {
    "id": "1745160453",
@@ -132,7 +153,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 3
+   "spot": 4
   },
   {
    "id": "1745117503",
@@ -155,7 +176,7 @@
    },
    "phone": "(514) 290-8030",
    "phoneTel": "+15142908030",
-   "spot": 4
+   "spot": 5
   },
   {
    "id": "1745102642",
@@ -178,7 +199,7 @@
    },
    "phone": "(514) 290-8030",
    "phoneTel": "+15142908030",
-   "spot": 5
+   "spot": 6
   },
   {
    "id": "1745072690",
@@ -201,7 +222,7 @@
    },
    "phone": "(514) 290-8030",
    "phoneTel": "+15142908030",
-   "spot": 6
+   "spot": 7
   },
   {
    "id": "1744910791",
@@ -224,7 +245,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 7
+   "spot": 8
   },
   {
    "id": "1745163703",
@@ -249,7 +270,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 8
+   "spot": 9
   },
   {
    "id": "1745154846",
@@ -272,7 +293,7 @@
    },
    "phone": "(647) 545-6059",
    "phoneTel": "+16475456059",
-   "spot": 9
+   "spot": 10
   },
   {
    "id": "1745137912",
@@ -295,7 +316,7 @@
    },
    "phone": "(647) 545-6059",
    "phoneTel": "+16475456059",
-   "spot": 10
+   "spot": 11
   },
   {
    "id": "1744966428",
@@ -320,7 +341,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 11
+   "spot": 12
   },
   {
    "id": "1739193586",
@@ -343,7 +364,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 12
+   "spot": 13
   },
   {
    "id": "1705011168",
@@ -364,7 +385,7 @@
    },
    "phone": "(647) 619-0835",
    "phoneTel": "+16476190835",
-   "spot": 13
+   "spot": 14
   },
   {
    "id": "1745019532",
@@ -385,7 +406,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 14
+   "spot": 15
   },
   {
    "id": "1744908276",
@@ -406,7 +427,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 15
+   "spot": 16
   },
   {
    "id": "1742459851",
@@ -427,7 +448,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 16
+   "spot": 17
   },
   {
    "id": "1742409381",
@@ -448,7 +469,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 17
+   "spot": 18
   },
   {
    "id": "1742358953",
@@ -469,7 +490,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 18
+   "spot": 19
   },
   {
    "id": "1742298174",
@@ -490,7 +511,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 19
+   "spot": 20
   },
   {
    "id": "1742255266",
@@ -511,7 +532,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 20
+   "spot": 21
   },
   {
    "id": "1742242140",
@@ -532,7 +553,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 21
+   "spot": 22
   },
   {
    "id": "1739507129",
@@ -553,7 +574,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 22
+   "spot": 23
   },
   {
    "id": "1739483130",
@@ -574,7 +595,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 23
+   "spot": 24
   },
   {
    "id": "1739426601",
@@ -595,7 +616,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 24
+   "spot": 25
   },
   {
    "id": "1739354526",
@@ -616,27 +637,6 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 25
-  },
-  {
-   "id": "1739304628",
-   "title": "Do you require airport transit assistance?",
-   "description": "Do you require airport transit assistance? Feel free to contact: 437-264-4576 Thank you!",
-   "price": "See ad",
-   "address": "East York, ON M4H 1L5",
-   "lat": 43.70596,
-   "lng": -79.34145,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/do-you-require-airport-transit-assistance/1739304628",
-   "posted": "Jun 17, 3:57 AM",
-   "postedIso": "2026-06-17T07:57:05.000Z",
-   "route": "other",
-   "departure": null,
-   "departureParts": {
-    "days": null,
-    "times": []
-   },
-   "phone": "(437) 264-4576",
-   "phoneTel": "+14372644576",
    "spot": 26
   },
   {
