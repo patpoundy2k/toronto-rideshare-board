@@ -1,69 +1,69 @@
 {
- "generatedAt": "2026-10-26T00:03:59.240473-04:00",
+ "generatedAt": "2026-10-26T08:38:28.627768-04:00",
  "source": "https://www.kijiji.ca/b-rideshare-carpool/city-of-toronto/c5l1700273",
  "counts": {
   "pulled": 40,
-  "kept": 26,
-  "hidden": 14,
+  "kept": 25,
+  "hidden": 15,
   "hiddenTopAd": 3,
-  "hiddenBlockedCity": 7,
+  "hiddenBlockedCity": 8,
   "hiddenExpired": 4,
   "byRoute": {
    "montreal": 5,
    "ottawa": 6,
-   "other": 15
+   "other": 14
   },
   "withDeparture": 11,
-  "withPhone": 9
+  "withPhone": 8
  },
  "weather": [
   {
    "name": "Toronto",
    "lat": 43.6532,
    "lon": -79.3832,
-   "temp": 10.4,
+   "temp": 10.1,
    "code": 0,
    "label": "Clear sky",
    "emoji": "☀️",
-   "wind": 9.9,
-   "hi": 14.5,
-   "lo": 7.8
+   "wind": 10.5,
+   "hi": 16.1,
+   "lo": 7.4
   },
   {
    "name": "Kingston",
    "lat": 44.2312,
    "lon": -76.486,
-   "temp": 7.7,
+   "temp": 10.7,
    "code": 0,
    "label": "Clear sky",
    "emoji": "☀️",
-   "wind": 10.2,
-   "hi": 11.9,
-   "lo": 2.8
+   "wind": 8.9,
+   "hi": 13.8,
+   "lo": 3.4
   },
   {
    "name": "Ottawa",
    "lat": 45.4215,
    "lon": -75.6972,
-   "temp": 10.2,
+   "temp": 11.5,
    "code": 3,
    "label": "Overcast",
    "emoji": "☁️",
-   "wind": 6.4,
-   "hi": 10.9,
-   "lo": 1.0
+   "wind": 9.3,
+   "hi": 11.8,
+   "lo": 2.2
   },
   {
    "name": "Montréal",
    "lat": 45.5019,
    "lon": -73.5674,
-   "temp": 7.8,
-   "code": 0,
-   "label": "Clear sky",
-   "emoji": "☀️",
-   "wind": 13.0,
-   "hi": 10.7,
-   "lo": 1.8
+   "temp": 10.7,
+   "code": 2,
+   "label": "Partly cloudy",
+   "emoji": "⛅",
+   "wind": 11.3,
+   "hi": 11.8,
+   "lo": 2.1
   }
  ],
  "listings": [
@@ -547,27 +547,6 @@
    "spot": 22
   },
   {
-   "id": "1739426601",
-   "title": "Experience fast, reliable and affordable rides available",
-   "description": "Experience fast, reliable and affordable rides available across GTA Text: 437-264-4576 Thank you!",
-   "price": "See ad",
-   "address": "North York, ON M2J",
-   "lat": 43.77852,
-   "lng": -79.34656,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/experience-fast-reliable-and-affordable-rides-available/1739426601",
-   "posted": "Jun 19, 1:38 PM",
-   "postedIso": "2026-06-19T17:38:00.000Z",
-   "route": "other",
-   "departure": null,
-   "departureParts": {
-    "days": null,
-    "times": []
-   },
-   "phone": "(437) 264-4576",
-   "phoneTel": "+14372644576",
-   "spot": 23
-  },
-  {
    "id": "1730857880",
    "title": "Toronto Pearson Airport Pickup/Drop off from/to Scarborough",
    "description": "Provide a ride to/from Toronto Pearson Airport from Scarborough; 30 years reliable driving experience with very good record; Flat rate between Scarborough and Toronto Pearson Airport; Please ...",
@@ -586,7 +565,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 24
+   "spot": 23
   },
   {
    "id": "1673780089",
@@ -607,7 +586,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 25
+   "spot": 24
   },
   {
    "id": "1673055631",
@@ -628,7 +607,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 26
+   "spot": 25
   }
  ]
 }
