@@ -31,8 +31,11 @@ crawlers.
 2. `scripts/update-listings.py` fetches the Kijiji Toronto rideshare category
    and reads the listings out of the page's embedded data.
 3. **Hard filters** are applied: rides serving **Brampton or Windsor** are
-   excluded, and Kijiji paid promoted **“Top Ad”** listings are excluded. The
-   page shows a small “N ads hidden by filters” note.
+   excluded, Kijiji paid promoted **“Top Ad”** listings are excluded, and
+   one-off rides whose stated date has passed ("FRI 23", "OCT 23",
+   "TODAY: 6:30AM") are dropped as expired. Recurring ads ("everyday",
+   "weekends") and ads with no usable date are never dropped this way.
+   The page shows a small “N ads hidden by filters” note.
 4. For each kept ad it extracts, from the ad's own text only, a **departure
    day/time** and a **phone number** (shown highlighted; omitted when the ad
    doesn't state one — never invented).
@@ -60,7 +63,7 @@ update job and the traffic all live under your account.
    cd toronto-rideshare-site
    git init && git add . && git commit -m "Toronto Rideshare Board"
    git branch -M main
-   git remote add origin https://github.com/patpound2k/toronto-rideshare-board.git
+   git remote add origin https://github.com/patpoundy2k/toronto-rideshare-board.git
    git push -u origin main
    ```
    — or use GitHub's web upload (“uploading an existing file”) and commit.
@@ -69,11 +72,11 @@ update job and the traffic all live under your account.
 4. **Turn on Pages**: in the repo, go to **Settings → Pages → Build and
    deployment → Source** and choose **GitHub Actions**.
 5. **Set the real canonical URL**: the package ships with the placeholder
-   `patpound2k` in `index.html`, `templates/index.template.html`,
+   `patpoundy2k` in `index.html`, `templates/index.template.html`,
    `robots.txt` and `sitemap.xml`. Replace it with your actual GitHub
-   username in all four files (find-and-replace `patpound2k`),
+   username in all four files (find-and-replace `patpoundy2k`),
    then commit. Your site address will be
-   `https://patpound2k.github.io/toronto-rideshare-board/`.
+   `https://patpoundy2k.github.io/toronto-rideshare-board/`.
 6. **Run the first build**: go to the **Actions** tab, open **Update listings
    & deploy**, and click **Run workflow**. When it finishes (a couple of
    minutes), the site is live at the address above.

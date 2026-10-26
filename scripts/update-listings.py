@@ -27,7 +27,7 @@ import json
 import re
 import sys
 import urllib.request
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -359,6 +359,149 @@ def fetch_weather() -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
+# One-off ride expiry
+# ---------------------------------------------------------------------------
+#
+# A ride ad that names a specific calendar date ("FRI 23", "OCT 23",
+# "TOMORROW", "TODAY: 6:30AM") is a one-off: once that date has passed the
+# ride is gone, even though the Kijiji ad itself may still be live.
+# Recurring ads ("everyday", "daily", "weekends", ...) are never expired
+# this way, and ads with no usable date anchor are kept — expiry only
+# drops a ride when a date is stated clearly enough to resolve. When in
+# doubt, keep the ride.
+
+MONTH_NAMES = {
+    "jan": 1, "january": 1, "janv": 1, "janvier": 1,
+    "feb": 2, "february": 2, "févr": 2, "février": 2, "fev": 2, "fevrier": 2,
+    "mar": 3, "march": 3, "mars": 3,
+    "apr": 4, "april": 4, "avr": 4, "avril": 4,
+    "may": 5, "mai": 5,
+    "jun": 6, "june": 6, "juin": 6,
+    "jul": 7, "july": 7, "juil": 7, "juillet": 7,
+    "aug": 8, "august": 8, "août": 8, "aout": 8,
+    "sep": 9, "sept": 9, "september": 9, "septembre": 9,
+    "oct": 10, "october": 10, "octobre": 10,
+    "nov": 11, "november": 11, "novembre": 11,
+    "dec": 12, "december": 12, "déc": 12, "décembre": 12, "decembre": 12,
+}
+
+WEEKDAY_NUM = {
+    "monday": 0, "mon": 0, "lundi": 0, "lun": 0,
+    "tuesday": 1, "tue": 1, "tues": 1, "mardi": 1, "mar": 1,
+    "wednesday": 2, "wed": 2, "mercredi": 2, "mer": 2,
+    "thursday": 3, "thu": 3, "thur": 3, "thurs": 3, "jeudi": 3, "jeu": 3,
+    "friday": 4, "fri": 4, "vendredi": 4, "ven": 4,
+    "saturday": 5, "sat": 5, "samedi": 5, "sam": 5,
+    "sunday": 6, "sun": 6, "dimanche": 6, "dim": 6,
+}
+
+_MONTH_ALT = "|".join(sorted(MONTH_NAMES, key=len, reverse=True))
+_WEEKDAY_ALT = "|".join(sorted(WEEKDAY_NUM, key=len, reverse=True))
+_ORDINAL = r"(?:st|nd|rd|th)?"
+MONTH_DAY_RE = re.compile(
+    r"\b(" + _MONTH_ALT + r")\.?\s+(\d{1,2})" + _ORDINAL + r"\b", re.I
+)
+DAY_MONTH_RE = re.compile(
+    r"\b(\d{1,2})" + _ORDINAL + r"\s+(" + _MONTH_ALT + r")\b", re.I
+)
+WEEKDAY_DAY_RE = re.compile(
+    r"\b(" + _WEEKDAY_ALT + r")\.?\s+(\d{1,2})" + _ORDINAL + r"\b", re.I
+)
+RECURRING_RE = re.compile(
+    r"\b(daily|every\s?day|each\s+day|7\s?days?|all\s+week|week\s?days?|"
+    r"week\s?ends?|every\s+week|every\s+(" + _WEEKDAY_ALT + r"))\b",
+    re.I,
+)
+
+
+def is_recurring(text: str) -> bool:
+    return bool(text) and bool(RECURRING_RE.search(text.lower()))
+
+
+def _parse_posted_date(posted_iso: str | None):
+    if not posted_iso:
+        return None
+    try:
+        return datetime.fromisoformat(
+            posted_iso.replace("Z", "+00:00")
+        ).astimezone(TORONTO_TZ).date()
+    except ValueError:
+        return None
+
+
+def _nearest_occurrence(month: int, day: int, anchor: date):
+    """The month/day occurrence nearest the anchor date (this/last/next year)."""
+    best = None
+    for year in (anchor.year - 1, anchor.year, anchor.year + 1):
+        try:
+            cand = date(year, month, day)
+        except ValueError:
+            continue
+        if best is None or abs((cand - anchor).days) < abs((best - anchor).days):
+            best = cand
+    return best
+
+
+def _weekday_day_occurrence(weekday: int, day: int, anchor: date):
+    """Resolve e.g. 'FRI 23' to the same/adjacent month's day whose weekday
+    matches; None when no nearby month's day matches (ambiguous — keep)."""
+    cands = []
+    for delta in (0, -1, 1):
+        month = anchor.month + delta
+        year = anchor.year
+        while month < 1:
+            month += 12
+            year -= 1
+        while month > 12:
+            month -= 12
+            year += 1
+        try:
+            cand = date(year, month, day)
+        except ValueError:
+            continue
+        if cand.weekday() == weekday:
+            cands.append(cand)
+    if not cands:
+        return None
+    return min(cands, key=lambda c: abs((c - anchor).days))
+
+
+def extract_ride_date(text: str, posted_iso: str | None):
+    """Resolve a stated one-off ride date, or None when nothing usable.
+
+    The ad's posting date anchors relative references ("tomorrow") and
+    disambiguates bare day numbers ("FRI 23"). "Today" only counts when
+    the ad also states a time, so marketing phrases like "call today"
+    never expire a ride on their own.
+    """
+    if not text:
+        return None
+    low = text.lower()
+    anchor = _parse_posted_date(posted_iso) or datetime.now(TORONTO_TZ).date()
+
+    m = MONTH_DAY_RE.search(low)
+    if m:
+        return _nearest_occurrence(MONTH_NAMES[m.group(1)], int(m.group(2)), anchor)
+    m = DAY_MONTH_RE.search(low)
+    if m:
+        return _nearest_occurrence(MONTH_NAMES[m.group(2)], int(m.group(1)), anchor)
+    m = WEEKDAY_DAY_RE.search(low)
+    if m:
+        resolved = _weekday_day_occurrence(
+            WEEKDAY_NUM[m.group(1)], int(m.group(2)), anchor
+        )
+        if resolved:
+            return resolved
+    if re.search(r"\b(tomorrow|demain)\b", low):
+        return anchor + timedelta(days=1)
+    if re.search(r"\b(today|tonight|aujourd['’]hui|ce\s+soir)\b", low) and (
+        TIME_AMPM_RE.search(text) or TIME_H_RE.search(text)
+    ):
+        return anchor
+    return None
+
+
+# ---------------------------------------------------------------------------
 # Record building
 # ---------------------------------------------------------------------------
 
@@ -368,6 +511,8 @@ def build_records(raw_listings: list[dict]):
     seen_ids: set[str] = set()
     hidden_topad = 0
     hidden_city = 0
+    hidden_expired = 0
+    today = datetime.now(TORONTO_TZ).date()
 
     for raw in raw_listings:
         lid = str(raw.get("id", ""))
@@ -394,6 +539,14 @@ def build_records(raw_listings: list[dict]):
         posted_iso = raw.get("activationDate") or raw.get("sortingDate")
         phone = extract_phone(full_text)
         dep_display, dep_parts = extract_departure(full_text)
+
+        # Hard filter 3: one-off rides whose stated date has passed.
+        # Recurring and dateless ads are never dropped by this filter.
+        if not is_recurring(full_text):
+            ride_date = extract_ride_date(full_text, posted_iso)
+            if ride_date is not None and ride_date < today:
+                hidden_expired += 1
+                continue
 
         kept.append(
             {
@@ -431,9 +584,10 @@ def build_records(raw_listings: list[dict]):
     counts = {
         "pulled": len(raw_listings),
         "kept": len(ordered),
-        "hidden": hidden_topad + hidden_city,
+        "hidden": hidden_topad + hidden_city + hidden_expired,
         "hiddenTopAd": hidden_topad,
         "hiddenBlockedCity": hidden_city,
+        "hiddenExpired": hidden_expired,
         "byRoute": {
             route: sum(1 for r in ordered if r["route"] == route)
             for route in ROUTE_ORDER
@@ -465,21 +619,26 @@ def render_card(r: dict) -> str:
         else ""
     )
     call = (
-        f'<p class="call">📞 Call: <a href="tel:{esc(r["phoneTel"])}">{esc(r["phone"])}</a></p>'
+        f'<a class="call" href="tel:{esc(r["phoneTel"])}">📞 Call: {esc(r["phone"])}</a>'
         if r["phone"]
         else ""
     )
     pickup = f'<p class="pickup">📍 {esc(r["address"])}</p>' if r["address"] else ""
-    desc = f'<p class="desc">{esc(r["description"])}</p>' if r["description"] else ""
-    return f"""<article class="card" id="ride-{esc(r['id'])}" data-route="{esc(r['route'])}">
+    desc = (
+        f'<p class="desc">{esc(r["description"])}</p>'
+        if r["description"]
+        else ""
+    )
+    return f"""<article class="ride-card card" id="ride-{esc(r['id'])}" data-route="{esc(r['route'])}">
   <div class="card-top">{spot_badge}<span class="price">{esc(r['price'])}</span><span class="posted">Posted {esc(r['posted'])}</span></div>
   <h3 class="card-title"><a href="{esc(r['url'])}" target="_blank" rel="noopener">{esc(r['title'])}</a></h3>
   {when}
-  {call}
   {pickup}
   {desc}
-  <a class="open-link" href="{esc(r['url'])}" target="_blank" rel="noopener">View ad on Kijiji →</a>
+  <div class="card-actions">{call}<a class="open-link" href="{esc(r['url'])}" target="_blank" rel="noopener">View ad on Kijiji →</a></div>
 </article>"""
+
+
 
 
 def render_listings_html(listings: list[dict]) -> str:
@@ -490,7 +649,7 @@ def render_listings_html(listings: list[dict]) -> str:
         empty = "" if rides else '<p class="empty">No rides listed right now — check back after the next daily update.</p>'
         sections.append(
             f"""<section class="route-section" data-section="{route}">
-<h2>{esc(ROUTE_LABELS[route])} <span class="count">({len(rides)})</span></h2>
+<h2 class="route-title">{esc(ROUTE_LABELS[route])} <span class="count">({len(rides)})</span></h2>
 <div class="cards">
 {cards}
 {empty}
@@ -498,6 +657,8 @@ def render_listings_html(listings: list[dict]) -> str:
 </section>"""
         )
     return "\n".join(sections)
+
+
 
 
 def render_spots_html(listings: list[dict]) -> str:
@@ -516,6 +677,8 @@ def render_spots_html(listings: list[dict]) -> str:
     return "\n".join(items)
 
 
+
+
 def render_weather_html(weather: list[dict]) -> str:
     chips = []
     for w in weather:
@@ -529,9 +692,13 @@ def render_weather_html(weather: list[dict]) -> str:
                 else f'{esc(w["emoji"])} {round(w["temp"])}°C · {esc(w["label"])}'
             )
         chips.append(
-            f'<div class="wx-chip" data-city="{esc(w["name"])}"><span class="wx-city">{esc(w["name"])}</span><span class="wx-body">{body}</span></div>'
+            f'<div class="wx-chip" data-city="{esc(w["name"])}">'
+            f'<span class="wx-city">{esc(w["name"])}</span>'
+            f'<span class="wx-body">{body}</span></div>'
         )
     return "\n".join(chips)
+
+
 
 
 def build_jsonld(listings: list[dict], canonical: str) -> str:
@@ -630,7 +797,8 @@ def main() -> int:
             .replace(
                 "%%HIDDEN_NOTE%%",
                 f'{counts["hidden"]} ads hidden by filters '
-                f'({counts["hiddenBlockedCity"]} Brampton/Windsor, {counts["hiddenTopAd"]} promoted)',
+                f'({counts["hiddenBlockedCity"]} Brampton/Windsor, {counts["hiddenTopAd"]} promoted, '
+                f'{counts["hiddenExpired"]} expired)',
             )
             .replace("%%LISTINGS_HTML%%", render_listings_html(listings))
             .replace("%%SPOTS_HTML%%", render_spots_html(listings))
