@@ -1,83 +1,83 @@
 {
- "generatedAt": "2026-10-27T07:46:10.647731-04:00",
+ "generatedAt": "2026-10-27T16:52:46.114421-04:00",
  "source": "https://www.kijiji.ca/b-rideshare-carpool/city-of-toronto/c5l1700273",
  "counts": {
   "pulled": 40,
-  "kept": 26,
-  "hidden": 14,
-  "hiddenTopAd": 1,
-  "hiddenBlockedCity": 9,
+  "kept": 27,
+  "hidden": 13,
+  "hiddenTopAd": 3,
+  "hiddenBlockedCity": 6,
   "hiddenExpired": 4,
   "byRoute": {
    "montreal": 6,
    "ottawa": 5,
-   "other": 15
+   "other": 16
   },
   "withDeparture": 12,
-  "withPhone": 9
+  "withPhone": 10
  },
  "weather": [
   {
    "name": "Toronto",
    "lat": 43.6532,
    "lon": -79.3832,
-   "temp": 2.0,
+   "temp": 10.0,
    "code": 0,
    "label": "Clear sky",
    "emoji": "☀️",
-   "wind": 10.2,
-   "hi": 9.1,
-   "lo": 2.0
+   "wind": 11.4,
+   "hi": 10.8,
+   "lo": 2.3
   },
   {
    "name": "Kingston",
    "lat": 44.2312,
    "lon": -76.486,
-   "temp": -0.4,
+   "temp": 7.7,
    "code": 0,
    "label": "Clear sky",
    "emoji": "☀️",
-   "wind": 10.9,
-   "hi": 7.3,
-   "lo": -0.4
+   "wind": 5.2,
+   "hi": 8.1,
+   "lo": -0.5
   },
   {
    "name": "Ottawa",
    "lat": 45.4215,
    "lon": -75.6972,
-   "temp": -1.1,
+   "temp": 7.1,
    "code": 0,
    "label": "Clear sky",
    "emoji": "☀️",
-   "wind": 6.8,
-   "hi": 6.8,
-   "lo": -1.3
+   "wind": 6.4,
+   "hi": 7.7,
+   "lo": -1.4
   },
   {
    "name": "Montréal",
    "lat": 45.5019,
    "lon": -73.5674,
-   "temp": -0.4,
+   "temp": 5.7,
    "code": 0,
    "label": "Clear sky",
    "emoji": "☀️",
-   "wind": 8.4,
-   "hi": 6.1,
-   "lo": -0.4
+   "wind": 6.6,
+   "hi": 6.5,
+   "lo": -0.7
   }
  ],
  "listings": [
   {
-   "id": "1745366942",
-   "title": "Rideshare – Montreal to Toronto - Wednesday, Oct 28 – 3 p.m.",
+   "id": "1745377087",
+   "title": "Rideshare – Montreal to Toronto - Wednesday, Oct 28 – 3 p.m.$50",
    "description": "Planning to travel from Montreal to Toronto? Join us for a comfortable and affordable ride! Fare: $50 per seat When: Wednesday, October 28 at 3 pm Pickup Location: Namur Metro Station Drop-off ...",
    "price": "$50",
    "address": "Scarborough, ON M1P",
    "lat": 43.75741,
    "lng": -79.2733,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/rideshare-montreal-to-toronto-wednesday-oct-28-3-p-m/1745366942",
-   "posted": "Oct 26, 10:18 PM",
-   "postedIso": "2026-10-27T02:18:02.000Z",
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/rideshare-montreal-to-toronto-wednesday-oct-28-3-p-m-50/1745377087",
+   "posted": "Oct 27, 9:00 AM",
+   "postedIso": "2026-10-27T13:00:44.000Z",
    "route": "montreal",
    "departure": "Wed · 3 PM",
    "departureParts": {
@@ -314,6 +314,27 @@
    "spot": 11
   },
   {
+   "id": "1745384482",
+   "title": "AIRPORT PICK UP DROP OFF ERRANDS DELIVERY MOVING 647-761-0675",
+   "description": "AIRPORT PICK UP DROP OFF ERRANDS DELIVERY MOVING 647-761-0675",
+   "price": "$2",
+   "address": "East York, ON M4B 3L2",
+   "lat": 43.70537,
+   "lng": -79.29664,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/airport-pick-up-drop-off-errands-delivery-moving-647-761-0675/1745384482",
+   "posted": "Oct 27, 11:53 AM",
+   "postedIso": "2026-10-27T15:53:41.000Z",
+   "route": "other",
+   "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
+   "phone": "(647) 761-0675",
+   "phoneTel": "+16477610675",
+   "spot": 12
+  },
+  {
    "id": "1745364330",
    "title": "Ride, Toronto to Kingston on Oct 27",
    "description": "Departs around 1 pm from Finch subway station to Kingston stops along the highway",
@@ -334,7 +355,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 12
+   "spot": 13
   },
   {
    "id": "1745335927",
@@ -355,7 +376,7 @@
    },
    "phone": "(647) 761-0675",
    "phoneTel": "+16477610675",
-   "spot": 13
+   "spot": 14
   },
   {
    "id": "1745335162",
@@ -376,7 +397,7 @@
    },
    "phone": "(437) 230-6672",
    "phoneTel": "+14372306672",
-   "spot": 14
+   "spot": 15
   },
   {
    "id": "1745279163",
@@ -397,28 +418,28 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 15
+   "spot": 16
   },
   {
-   "id": "1745251823",
-   "title": "AIRPORT PICK UP DROP OFF ERRANDS DELIVERY 647-761-0675",
-   "description": "AIRPORT PICK UP DROP OFF ERRANDS DELIVERY 647-761-0675",
-   "price": "$2",
-   "address": "East York, ON M4B 3L2",
-   "lat": 43.70537,
-   "lng": -79.29664,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/airport-pick-up-drop-off-errands-delivery-647-761-0675/1745251823",
-   "posted": "Oct 24, 10:42 AM",
-   "postedIso": "2026-10-24T14:42:55.000Z",
+   "id": "1742664558",
+   "title": "LONG-DISTANCE RIDES",
+   "description": "LONG-DISTANCE RIDES • ✨ Private Ride. No Sharing. Cheaper than Uber & Lyft ️ Comfortable • Reliable • Direct Text: 437-264-4576 For rates & availability",
+   "price": "See ad",
+   "address": "Scarborough, ON M1J",
+   "lat": 43.74473,
+   "lng": -79.23948,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/long-distance-rides/1742664558",
+   "posted": "Aug 28, 6:05 AM",
+   "postedIso": "2026-08-28T10:05:19.000Z",
    "route": "other",
    "departure": null,
    "departureParts": {
     "days": null,
     "times": []
    },
-   "phone": "(647) 761-0675",
-   "phoneTel": "+16477610675",
-   "spot": 16
+   "phone": "(437) 264-4576",
+   "phoneTel": "+14372644576",
+   "spot": 17
   },
   {
    "id": "1742459851",
@@ -439,7 +460,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 17
+   "spot": 18
   },
   {
    "id": "1742409381",
@@ -460,7 +481,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 18
+   "spot": 19
   },
   {
    "id": "1742358953",
@@ -481,7 +502,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 19
+   "spot": 20
   },
   {
    "id": "1742298174",
@@ -502,7 +523,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 20
+   "spot": 21
   },
   {
    "id": "1742255266",
@@ -523,7 +544,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 21
+   "spot": 22
   },
   {
    "id": "1739507129",
@@ -544,7 +565,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 22
+   "spot": 23
   },
   {
    "id": "1739483130",
@@ -565,7 +586,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 23
+   "spot": 24
   },
   {
    "id": "1730857880",
@@ -586,7 +607,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 24
+   "spot": 25
   },
   {
    "id": "1673780089",
@@ -607,7 +628,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 25
+   "spot": 26
   },
   {
    "id": "1673055631",
@@ -628,7 +649,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 26
+   "spot": 27
   }
  ]
 }
