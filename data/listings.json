@@ -1,15 +1,15 @@
 {
- "generatedAt": "2026-11-04T06:59:22.927326-05:00",
+ "generatedAt": "2026-11-05T07:03:43.814029-05:00",
  "source": "https://www.kijiji.ca/b-rideshare-carpool/city-of-toronto/c5l1700273",
  "counts": {
   "pulled": 40,
-  "kept": 19,
-  "hidden": 21,
+  "kept": 20,
+  "hidden": 20,
   "hiddenTopAd": 2,
-  "hiddenBlockedCity": 15,
+  "hiddenBlockedCity": 14,
   "hiddenExpired": 4,
   "byRoute": {
-   "montreal": 3,
+   "montreal": 4,
    "ottawa": 6,
    "other": 10
   },
@@ -21,52 +21,73 @@
    "name": "Toronto",
    "lat": 43.6532,
    "lon": -79.3832,
-   "temp": 11.0,
-   "code": 2,
-   "label": "Partly cloudy",
-   "emoji": "⛅",
-   "wind": 8.7,
-   "hi": 19.5,
-   "lo": 11.0
+   "temp": 15.4,
+   "code": 3,
+   "label": "Overcast",
+   "emoji": "☁️",
+   "wind": 13.5,
+   "hi": 16.3,
+   "lo": 11.2
   },
   {
    "name": "Kingston",
    "lat": 44.2312,
    "lon": -76.486,
-   "temp": 11.1,
-   "code": 0,
-   "label": "Clear sky",
-   "emoji": "☀️",
-   "wind": 10.9,
-   "hi": 18.4,
-   "lo": 10.6
+   "temp": 15.2,
+   "code": 3,
+   "label": "Overcast",
+   "emoji": "☁️",
+   "wind": 27.5,
+   "hi": 17.9,
+   "lo": 10.8
   },
   {
    "name": "Ottawa",
    "lat": 45.4215,
    "lon": -75.6972,
-   "temp": 11.3,
-   "code": 0,
-   "label": "Clear sky",
-   "emoji": "☀️",
-   "wind": 6.5,
-   "hi": 19.5,
-   "lo": 11.3
+   "temp": 15.6,
+   "code": 51,
+   "label": "Light drizzle",
+   "emoji": "🌦️",
+   "wind": 11.2,
+   "hi": 19.4,
+   "lo": 11.0
   },
   {
    "name": "Montréal",
    "lat": 45.5019,
    "lon": -73.5674,
-   "temp": 11.9,
-   "code": 1,
-   "label": "Mainly clear",
-   "emoji": "🌤️",
-   "wind": 8.0,
-   "hi": 18.6,
-   "lo": 11.7
+   "temp": 13.8,
+   "code": 55,
+   "label": "Drizzle",
+   "emoji": "🌦️",
+   "wind": 10.2,
+   "hi": 18.0,
+   "lo": 12.1
   }
  ],
  "listings": [
+  {
+   "id": "1745728293",
+   "title": "Toronto ⇄ Montréal Courier Service",
+   "description": "If it fits in the van, it makes the run. Weekly courier service on the Highway 401 corridor between Toronto and Montreal — cheaper than a moving truck, faster than waiting on shipping. Over 5 years ...",
+   "price": "$1",
+   "address": "Toronto, ON, M1E 3R2",
+   "lat": 43.76,
+   "lng": -79.1789,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/toronto-montreal-courier-service/1745728293",
+   "posted": "Nov 4, 10:09 AM",
+   "postedIso": "2026-11-04T15:09:55.000Z",
+   "route": "montreal",
+   "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
+   "phone": null,
+   "phoneTel": null,
+   "spot": 1
+  },
   {
    "id": "1745703213",
    "title": "RIDESHARE EVERY DAY EXPRESS TORONTO AND MISSISSAUGA TO MONTREAL",
@@ -86,7 +107,7 @@
    },
    "phone": "(514) 803-0018",
    "phoneTel": "+15148030018",
-   "spot": 1
+   "spot": 2
   },
   {
    "id": "1745622990",
@@ -107,7 +128,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 2
+   "spot": 3
   },
   {
    "id": "1745551327",
@@ -131,7 +152,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 3
+   "spot": 4
   },
   {
    "id": "1745700003",
@@ -152,7 +173,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 4
+   "spot": 5
   },
   {
    "id": "1745661534",
@@ -176,7 +197,7 @@
    },
    "phone": "(647) 545-6059",
    "phoneTel": "+16475456059",
-   "spot": 5
+   "spot": 6
   },
   {
    "id": "1745661424",
@@ -199,7 +220,7 @@
    },
    "phone": "(647) 545-6059",
    "phoneTel": "+16475456059",
-   "spot": 6
+   "spot": 7
   },
   {
    "id": "1745639365",
@@ -224,7 +245,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 7
+   "spot": 8
   },
   {
    "id": "1745582014",
@@ -245,7 +266,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 8
+   "spot": 9
   },
   {
    "id": "1745569956",
@@ -266,7 +287,7 @@
    },
    "phone": "(514) 803-0018",
    "phoneTel": "+15148030018",
-   "spot": 9
+   "spot": 10
   },
   {
    "id": "1745706015",
@@ -287,7 +308,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 10
+   "spot": 11
   },
   {
    "id": "1745706010",
@@ -308,7 +329,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 11
+   "spot": 12
   },
   {
    "id": "1745667071",
@@ -329,7 +350,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 12
+   "spot": 13
   },
   {
    "id": "1745622934",
@@ -350,7 +371,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 13
+   "spot": 14
   },
   {
    "id": "1745599105",
@@ -371,7 +392,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 14
+   "spot": 15
   },
   {
    "id": "1742892546",
@@ -392,7 +413,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 15
+   "spot": 16
   },
   {
    "id": "1742892413",
@@ -413,7 +434,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 16
+   "spot": 17
   },
   {
    "id": "1740232132",
@@ -434,7 +455,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 17
+   "spot": 18
   },
   {
    "id": "1740092234",
@@ -455,7 +476,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 18
+   "spot": 19
   },
   {
    "id": "1740092218",
@@ -476,7 +497,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 19
+   "spot": 20
   }
  ]
 }
