@@ -1,20 +1,20 @@
 {
- "generatedAt": "2026-11-13T07:06:29.352117-05:00",
+ "generatedAt": "2026-11-14T06:49:53.255009-05:00",
  "source": "https://www.kijiji.ca/b-rideshare-carpool/city-of-toronto/c5l1700273",
  "counts": {
   "pulled": 40,
-  "kept": 28,
-  "hidden": 12,
-  "hiddenTopAd": 3,
-  "hiddenBlockedCity": 6,
-  "hiddenExpired": 3,
+  "kept": 19,
+  "hidden": 21,
+  "hiddenTopAd": 4,
+  "hiddenBlockedCity": 9,
+  "hiddenExpired": 8,
   "byRoute": {
-   "montreal": 6,
-   "ottawa": 2,
-   "other": 20
+   "montreal": 1,
+   "ottawa": 1,
+   "other": 17
   },
-  "withDeparture": 11,
-  "withPhone": 15
+  "withDeparture": 4,
+  "withPhone": 7
  },
  "weather": [
   {
@@ -33,178 +33,63 @@
    "name": "Kingston",
    "lat": 44.2312,
    "lon": -76.486,
-   "temp": null,
-   "code": null,
-   "label": "Unavailable",
-   "emoji": "🌡️",
-   "wind": null,
-   "hi": null,
-   "lo": null
+   "temp": 0.9,
+   "code": 3,
+   "label": "Overcast",
+   "emoji": "☁️",
+   "wind": 8.9,
+   "hi": 4.3,
+   "lo": 0.6
   },
   {
    "name": "Ottawa",
    "lat": 45.4215,
    "lon": -75.6972,
-   "temp": null,
-   "code": null,
-   "label": "Unavailable",
-   "emoji": "🌡️",
-   "wind": null,
-   "hi": null,
-   "lo": null
+   "temp": 1.6,
+   "code": 3,
+   "label": "Overcast",
+   "emoji": "☁️",
+   "wind": 7.2,
+   "hi": 4.7,
+   "lo": 0.8
   },
   {
    "name": "Montréal",
    "lat": 45.5019,
    "lon": -73.5674,
-   "temp": null,
-   "code": null,
-   "label": "Unavailable",
-   "emoji": "🌡️",
-   "wind": null,
-   "hi": null,
-   "lo": null
+   "temp": 2.1,
+   "code": 3,
+   "label": "Overcast",
+   "emoji": "☁️",
+   "wind": 12.3,
+   "hi": 4.8,
+   "lo": 1.6
   }
  ],
  "listings": [
   {
-   "id": "1746104000",
-   "title": "“LAST CALL”, “TORONTO TO MONTREAL TOMORROW FRI, 7.30am”",
-   "description": "HI GUYS! Only 50$ TORONTO TO MONTREAL FRIDAY NOV 13 at 7.30am SHARP CONTACT FRANK : 514 290 8030 or 647 885 5088 EXCELLENT MINIVAN TOYOTA SIENNA, NEVER CROWDED!! Pickup place: Parking lot of Loblaws ...",
-   "price": "$50",
-   "address": "York, ON M6E 2V2",
-   "lat": 43.68041,
-   "lng": -79.43536,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/last-call-toronto-to-montreal-tomorrow-fri-7-30am/1746104000",
-   "posted": "Nov 12, 4:14 PM",
-   "postedIso": "2026-11-12T21:14:03.000Z",
-   "route": "montreal",
-   "departure": "Fri · 7:30 AM",
-   "departureParts": {
-    "days": "Fri",
-    "times": [
-     "7:30 AM"
-    ]
-   },
-   "phone": "(514) 290-8030",
-   "phoneTel": "+15142908030",
-   "spot": 1
-  },
-  {
-   "id": "1746083252",
-   "title": "“ONLY 50$, TORONTO TO MONTREAL TOMORROW FRI 13, 7.30am”100%",
-   "description": "HI GUYS! Only 50$ TORONTO TO MONTREAL FRIDAY NOV 13 at 7.30am SHARP CONTACT FRANK : 514 290 8030 or 647 885 5088 EXCELLENT MINIVAN TOYOTA SIENNA, NEVER CROWDED!! Pickup place: Parking lot of Loblaws ...",
-   "price": "$50",
-   "address": "York, ON M6E 2V2",
-   "lat": 43.68041,
-   "lng": -79.43536,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/only-50-toronto-to-montreal-tomorrow-fri-13-7-30am-100/1746083252",
-   "posted": "Nov 12, 7:45 AM",
-   "postedIso": "2026-11-12T12:45:38.000Z",
-   "route": "montreal",
-   "departure": "Fri · 7:30 AM",
-   "departureParts": {
-    "days": "Fri",
-    "times": [
-     "7:30 AM"
-    ]
-   },
-   "phone": "(514) 290-8030",
-   "phoneTel": "+15142908030",
-   "spot": 2
-  },
-  {
-   "id": "1746048587",
-   "title": "“CHEAPEST & SAFEST RIDE TORONTO TO MONTREAL, FRI 13, 7.30am”",
-   "description": "HI GUYS! Only 50$ TORONTO TO MONTREAL FRIDAY NOV 13 at 7.30am SHARP CONTACT FRANK : 514 290 8030 or 647 885 5088 EXCELLENT MINIVAN TOYOTA SIENNA, NEVER CROWDED!! Pickup place: Parking lot of Loblaws ...",
-   "price": "$50",
-   "address": "York, ON M6E 2V2",
-   "lat": 43.68041,
-   "lng": -79.43536,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/cheapest-safest-ride-toronto-to-montreal-fri-13-7-30am/1746048587",
-   "posted": "Nov 11, 12:34 PM",
-   "postedIso": "2026-11-11T17:34:40.000Z",
-   "route": "montreal",
-   "departure": "Fri · 7:30 AM",
-   "departureParts": {
-    "days": "Fri",
-    "times": [
-     "7:30 AM"
-    ]
-   },
-   "phone": "(514) 290-8030",
-   "phoneTel": "+15142908030",
-   "spot": 3
-  },
-  {
-   "id": "1746014675",
-   "title": "“FRI NOV 13, TORONTO TO MONTREAL, 7.30am, 50$, GUARANTEED”",
-   "description": "HI GUYS! Only 50$ TORONTO TO MONTREAL FRIDAY NOV 13 at 7.30am SHARP CONTACT FRANK : 514 290 8030 or 647 885 5088 EXCELLENT MINIVAN TOYOTA SIENNA, NEVER CROWDED!! Pickup place: Parking lot of Loblaws ...",
-   "price": "$50",
-   "address": "York, ON M6E 2V2",
-   "lat": 43.68041,
-   "lng": -79.43536,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/fri-nov-13-toronto-to-montreal-7-30am-50-guaranteed/1746014675",
-   "posted": "Nov 10, 5:11 PM",
-   "postedIso": "2026-11-10T22:11:46.000Z",
-   "route": "montreal",
-   "departure": "Fri · 7:30 AM",
-   "departureParts": {
-    "days": "Fri",
-    "times": [
-     "7:30 AM"
-    ]
-   },
-   "phone": "(514) 290-8030",
-   "phoneTel": "+15142908030",
-   "spot": 4
-  },
-  {
-   "id": "1745987237",
-   "title": "“BEST RIDE EVER, TORONTO TO MONTREAL, FRI NOV 13, 7.30am”",
-   "description": "HI GUYS! Only 50$ TORONTO TO MONTREAL FRIDAY NOV 13 at 7.30am SHARP CONTACT FRANK : 514 290 8030 or 647 885 5088 EXCELLENT MINIVAN TOYOTA SIENNA, NEVER CROWDED!! Pickup place: Parking lot of Loblaws ...",
-   "price": "$50",
-   "address": "York, ON M6E 2V2",
-   "lat": 43.68041,
-   "lng": -79.43536,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/best-ride-ever-toronto-to-montreal-fri-nov-13-7-30am/1745987237",
-   "posted": "Nov 10, 6:35 AM",
-   "postedIso": "2026-11-10T11:35:10.000Z",
-   "route": "montreal",
-   "departure": "Fri · 7:30 AM",
-   "departureParts": {
-    "days": "Fri",
-    "times": [
-     "7:30 AM"
-    ]
-   },
-   "phone": "(514) 290-8030",
-   "phoneTel": "+15142908030",
-   "spot": 5
-  },
-  {
-   "id": "1745902290",
-   "title": "Rideshare Toronto — Montreal everyday at 2:00pm",
-   "description": "Rideshare Toronto — Montreal everyday at 2:00pm Pick up at Don Mills subway Drop off at Lionel Groulx metro Montreal — Toronto at 7:00am Pick up at Lionel Groulx metro Drop off at Don Mills subway ...",
+   "id": "1746126496",
+   "title": "Rideshare Toronto to Montreal everyday at 2pm",
+   "description": "Rideshare Toronto to Montreal everyday at 2pm Pick up at Don Mills subway Drop off at Lionel Groulx metro Montreal to Toronto at 7am Pick up at Lionel Groulx metro Drop off at Don Mills subway ...",
    "price": "See ad",
    "address": "North York, ON M2J 5G9",
    "lat": 43.77641,
    "lng": -79.3462,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/rideshare-toronto-montreal-everyday-at-2:00pm/1745902290",
-   "posted": "Nov 8, 7:32 AM",
-   "postedIso": "2026-11-08T12:32:27.000Z",
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/rideshare-toronto-to-montreal-everyday-at-2pm/1746126496",
+   "posted": "Nov 13, 7:44 AM",
+   "postedIso": "2026-11-13T12:44:54.000Z",
    "route": "montreal",
-   "departure": "Daily · 2:00 PM, 7:00 AM",
+   "departure": "Daily · 2 PM, 7 AM",
    "departureParts": {
     "days": "Daily",
     "times": [
-     "2:00 PM",
-     "7:00 AM"
+     "2 PM",
+     "7 AM"
     ]
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 6
+   "spot": 1
   },
   {
    "id": "1746065390",
@@ -227,32 +112,49 @@
    },
    "phone": "(647) 545-6059",
    "phoneTel": "+16475456059",
-   "spot": 7
+   "spot": 2
   },
   {
-   "id": "1745956166",
-   "title": "EVERYDAY !! OTTAWA AND TORONTO RIDE",
-   "description": "Good day !! Friends I have nice and friendly ride service to Ottawa and Toronto Daily Evening And Morning special From both cities From Ottawa **** 8:00 Am and 2:00 Pm AND 5 PM ( 275 Rideau st lcbo). ...",
+   "id": "1746154591",
+   "title": "Affordable black truck black SUV black Escalade night out party",
+   "description": "Contact for more details",
    "price": "See ad",
-   "address": "North York, ON M2J",
-   "lat": 43.77852,
-   "lng": -79.34656,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/everyday-ottawa-and-toronto-ride/1745956166",
-   "posted": "Nov 9, 11:42 AM",
-   "postedIso": "2026-11-09T16:42:58.000Z",
-   "route": "ottawa",
-   "departure": "Daily · 8:00 AM, 2:00 PM, 5 PM",
+   "address": "Toronto, ON M5J",
+   "lat": 43.64082,
+   "lng": -79.38175,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/affordable-black-truck-black-suv-black-escalade-night-out-party/1746154591",
+   "posted": "Nov 13, 6:34 PM",
+   "postedIso": "2026-11-13T23:34:11.000Z",
+   "route": "other",
+   "departure": null,
    "departureParts": {
-    "days": "Daily",
-    "times": [
-     "8:00 AM",
-     "2:00 PM",
-     "5 PM"
-    ]
+    "days": null,
+    "times": []
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 8
+   "spot": 3
+  },
+  {
+   "id": "1746128238",
+   "title": "Ride to KINGSTON Nov 21",
+   "description": "My pup Freedom and I are driving to KINGSTON November 21 Returning to Toronto November 22 Come with us and share the driving :) YAY!!!",
+   "price": "See ad",
+   "address": "Elmer Avenue, Toronto, ON",
+   "lat": 43.66983,
+   "lng": -79.30404,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/ride-to-kingston-nov-21/1746128238",
+   "posted": "Nov 13, 8:52 AM",
+   "postedIso": "2026-11-13T13:52:14.000Z",
+   "route": "other",
+   "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
+   "phone": null,
+   "phoneTel": null,
+   "spot": 4
   },
   {
    "id": "1746039763",
@@ -273,7 +175,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 9
+   "spot": 5
   },
   {
    "id": "1746019341",
@@ -294,7 +196,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 10
+   "spot": 6
   },
   {
    "id": "1745993308",
@@ -315,7 +217,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 11
+   "spot": 7
   },
   {
    "id": "1745985425",
@@ -336,7 +238,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 12
+   "spot": 8
   },
   {
    "id": "1745968922",
@@ -359,51 +261,7 @@
    },
    "phone": "(416) 938-8454",
    "phoneTel": "+14169388454",
-   "spot": 13
-  },
-  {
-   "id": "1745933061",
-   "title": "Drop off person needed for my Child (Pickering or Ajax area)",
-   "description": "I’m looking for a reliable person driver who can pick up my son from home pickering at 4.05 pm, intersection is kingston and brock, and drop him at a local mosque near by. We need the service on ...",
-   "price": "See ad",
-   "address": "Pickering, ON, L1V",
-   "lat": 43.82749,
-   "lng": -79.11534,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/drop-off-person-needed-for-my-child-pickering-or-ajax-area/1745933061",
-   "posted": "Nov 8, 7:30 PM",
-   "postedIso": "2026-11-09T00:30:56.000Z",
-   "route": "other",
-   "departure": "4:05 PM",
-   "departureParts": {
-    "days": null,
-    "times": [
-     "4:05 PM"
-    ]
-   },
-   "phone": null,
-   "phoneTel": null,
-   "spot": 14
-  },
-  {
-   "id": "1745919603",
-   "title": "RIDE AVAILABLE FROM SCARBOROUGH (MIN 150 KM)",
-   "description": "Private RIDE AVAILABLE FROM SCARBOROUGH TO ANYWHERE ANYTIME. TAKING ONLY MINIMUM 150KM RIDES. 0.80 CENTS PER KM. CALCULATE AND LET ME KNOW IF YOU NEED THE RIDE.",
-   "price": "See ad",
-   "address": "Lawrence Ave East at Bennett Rd, Toronto, M1E 4B5",
-   "lat": 43.77296,
-   "lng": -79.16596,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/ride-available-from-scarborough-min-150-km/1745919603",
-   "posted": "Nov 8, 2:11 PM",
-   "postedIso": "2026-11-08T19:11:54.000Z",
-   "route": "other",
-   "departure": null,
-   "departureParts": {
-    "days": null,
-    "times": []
-   },
-   "phone": null,
-   "phoneTel": null,
-   "spot": 15
+   "spot": 9
   },
   {
    "id": "1743439023",
@@ -424,7 +282,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 16
+   "spot": 10
   },
   {
    "id": "1743439004",
@@ -445,7 +303,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 17
+   "spot": 11
   },
   {
    "id": "1742502026",
@@ -468,7 +326,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 18
+   "spot": 12
   },
   {
    "id": "1740561586",
@@ -489,7 +347,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 19
+   "spot": 13
   },
   {
    "id": "1740504551",
@@ -510,7 +368,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 20
+   "spot": 14
   },
   {
    "id": "1740504541",
@@ -531,7 +389,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 21
+   "spot": 15
   },
   {
    "id": "1740504532",
@@ -552,91 +410,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 22
-  },
-  {
-   "id": "1740410483",
-   "title": "Are you planning a trip and need an airport commute?",
-   "description": "Are you planning a trip and need an airport commute? Call/Text/Whatsapp: 437-264-4576 Thank you!",
-   "price": "See ad",
-   "address": "Scarborough, ON M1M",
-   "lat": 43.71632,
-   "lng": -79.23948,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/are-you-planning-a-trip-and-need-an-airport-commute/1740410483",
-   "posted": "Jul 10, 8:40 PM",
-   "postedIso": "2026-07-11T00:40:51.000Z",
-   "route": "other",
-   "departure": null,
-   "departureParts": {
-    "days": null,
-    "times": []
-   },
-   "phone": "(437) 264-4576",
-   "phoneTel": "+14372644576",
-   "spot": 23
-  },
-  {
-   "id": "1740410470",
-   "title": "Flying with Extra Luggage?",
-   "description": "Traveling can be stressful—especially when you’re carrying extra bags, kids’ items, or heavy luggage. Let us make your journey smooth and worry-free! ✅ Spacious Sedan, SUV & Minivan options ✅ Perfect ...",
-   "price": "See ad",
-   "address": "North York, ON M1L",
-   "lat": 43.71111,
-   "lng": -79.28458,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/flying-with-extra-luggage/1740410470",
-   "posted": "Jul 10, 8:40 PM",
-   "postedIso": "2026-07-11T00:40:32.000Z",
-   "route": "other",
-   "departure": null,
-   "departureParts": {
-    "days": null,
-    "times": []
-   },
-   "phone": null,
-   "phoneTel": null,
-   "spot": 24
-  },
-  {
-   "id": "1740410462",
-   "title": "Need Airport Ride? On-Time Service – All Vehicles",
-   "description": "Travel stress-free with Airport Ride & Fly. We offer airport pick-up & drop-off with Sedan, SUV & Minivan options. Affordable, comfortable & reliable service across GTA. Book Now: 437-264-4576",
-   "price": "See ad",
-   "address": "Scarborough, ON M1K",
-   "lat": 43.72793,
-   "lng": -79.26203,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/need-airport-ride-on-time-service-all-vehicles/1740410462",
-   "posted": "Jul 10, 8:40 PM",
-   "postedIso": "2026-07-11T00:40:19.000Z",
-   "route": "other",
-   "departure": null,
-   "departureParts": {
-    "days": null,
-    "times": []
-   },
-   "phone": "(437) 264-4576",
-   "phoneTel": "+14372644576",
-   "spot": 25
-  },
-  {
-   "id": "1740396951",
-   "title": "Airport Pick & Drop 24/7 | Sedan • SUV • Minivan Available",
-   "description": "Airport Pick & Drop 24/7 Sedan • SUV • Minivan Available 437-264-4576",
-   "price": "See ad",
-   "address": "Scarborough, ON M1K",
-   "lat": 43.72793,
-   "lng": -79.26203,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/airport-pick-drop-24-7-sedan-suv-minivan-available/1740396951",
-   "posted": "Jul 10, 2:59 PM",
-   "postedIso": "2026-07-10T18:59:56.000Z",
-   "route": "other",
-   "departure": null,
-   "departureParts": {
-    "days": null,
-    "times": []
-   },
-   "phone": "(437) 264-4576",
-   "phoneTel": "+14372644576",
-   "spot": 26
+   "spot": 16
   },
   {
    "id": "1736245457",
@@ -657,7 +431,28 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 27
+   "spot": 17
+  },
+  {
+   "id": "1732429336",
+   "title": "Ride to Toronto Pearson Airport from Scarborough-reliable driver",
+   "description": "Provide a ride to/from Toronto Pearson Airport from Scarborough. 30 years reliable driving experience with very good record. Flat rate between Scarborough and Toronto Pearson Airport Please ...",
+   "price": "$65",
+   "address": "3628A Saint Clair Avenue East, Scarborough, ON M1N 0A5",
+   "lat": 43.7188,
+   "lng": -79.25296,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/ride-to-toronto-pearson-airport-from-scarborough-reliable-driver/1732429336",
+   "posted": "Jan 29, 1:30 PM",
+   "postedIso": "2026-01-29T18:30:35.000Z",
+   "route": "other",
+   "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
+   "phone": null,
+   "phoneTel": null,
+   "spot": 18
   },
   {
    "id": "1692867306",
@@ -678,7 +473,7 @@
    },
    "phone": "(647) 226-9997",
    "phoneTel": "+16472269997",
-   "spot": 28
+   "spot": 19
   }
  ]
 }
