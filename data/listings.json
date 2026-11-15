@@ -1,19 +1,19 @@
 {
- "generatedAt": "2026-11-14T06:49:53.255009-05:00",
+ "generatedAt": "2026-11-15T06:50:45.217448-05:00",
  "source": "https://www.kijiji.ca/b-rideshare-carpool/city-of-toronto/c5l1700273",
  "counts": {
   "pulled": 40,
-  "kept": 19,
-  "hidden": 21,
+  "kept": 21,
+  "hidden": 19,
   "hiddenTopAd": 4,
   "hiddenBlockedCity": 9,
-  "hiddenExpired": 8,
+  "hiddenExpired": 6,
   "byRoute": {
-   "montreal": 1,
-   "ottawa": 1,
+   "montreal": 2,
+   "ottawa": 2,
    "other": 17
   },
-  "withDeparture": 4,
+  "withDeparture": 5,
   "withPhone": 7
  },
  "weather": [
@@ -21,52 +21,75 @@
    "name": "Toronto",
    "lat": 43.6532,
    "lon": -79.3832,
-   "temp": null,
-   "code": null,
-   "label": "Unavailable",
-   "emoji": "🌡️",
-   "wind": null,
-   "hi": null,
-   "lo": null
+   "temp": 0.8,
+   "code": 0,
+   "label": "Clear sky",
+   "emoji": "☀️",
+   "wind": 12.7,
+   "hi": 6.9,
+   "lo": 0.6
   },
   {
    "name": "Kingston",
    "lat": 44.2312,
    "lon": -76.486,
-   "temp": 0.9,
+   "temp": 0.2,
    "code": 3,
    "label": "Overcast",
    "emoji": "☁️",
-   "wind": 8.9,
-   "hi": 4.3,
-   "lo": 0.6
+   "wind": 10.4,
+   "hi": 4.7,
+   "lo": 0.2
   },
   {
    "name": "Ottawa",
    "lat": 45.4215,
    "lon": -75.6972,
    "temp": 1.6,
-   "code": 3,
-   "label": "Overcast",
-   "emoji": "☁️",
+   "code": 0,
+   "label": "Clear sky",
+   "emoji": "☀️",
    "wind": 7.2,
-   "hi": 4.7,
-   "lo": 0.8
+   "hi": 4.5,
+   "lo": 1.1
   },
   {
    "name": "Montréal",
    "lat": 45.5019,
    "lon": -73.5674,
-   "temp": 2.1,
-   "code": 3,
-   "label": "Overcast",
-   "emoji": "☁️",
-   "wind": 12.3,
-   "hi": 4.8,
+   "temp": 1.8,
+   "code": 0,
+   "label": "Clear sky",
+   "emoji": "☀️",
+   "wind": 14.7,
+   "hi": 5.9,
    "lo": 1.6
   }
  ],
  "listings": [
+  {
+   "id": "1746174905",
+   "title": "Rideshare Toronto to Montreal, Sat Nov 21, $60/seat",
+   "description": "I'm driving from Toronto to Montreal on Saturday, November 21, and I have up to 3 seats open. Departure: Saturday, Nov 21 at 1:00 PM Pickup: Yorkdale Mall or Fairview Mall (Don Mills) Drop-off: ...",
+   "price": "$60",
+   "address": "North York, ON M6A 2T9",
+   "lat": 43.72735,
+   "lng": -79.4514,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/rideshare-toronto-to-montreal-sat-nov-21-60-seat/1746174905",
+   "posted": "Nov 14, 9:10 AM",
+   "postedIso": "2026-11-14T14:10:09.000Z",
+   "route": "montreal",
+   "departure": "Sat · 1:00 PM",
+   "departureParts": {
+    "days": "Sat",
+    "times": [
+     "1:00 PM"
+    ]
+   },
+   "phone": null,
+   "phoneTel": null,
+   "spot": 1
+  },
   {
    "id": "1746126496",
    "title": "Rideshare Toronto to Montreal everyday at 2pm",
@@ -89,7 +112,28 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 1
+   "spot": 2
+  },
+  {
+   "id": "1746182228",
+   "title": "New Car ride: Toronto to Ottawa.",
+   "description": "Please call this telephone number at [1 - 8 7 3 - 3 7 6 - 7 0 0 0]. Please do not e-mail due to no e-mail access, e-mailing will not be able to get in touch with the driver. Offering rides from ...",
+   "price": "$70",
+   "address": "North York, ON M2K 1C5",
+   "lat": 43.77025,
+   "lng": -79.37031,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/new-car-ride:-toronto-to-ottawa/1746182228",
+   "posted": "Nov 14, 11:35 AM",
+   "postedIso": "2026-11-14T16:35:26.000Z",
+   "route": "ottawa",
+   "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
+   "phone": null,
+   "phoneTel": null,
+   "spot": 3
   },
   {
    "id": "1746065390",
@@ -112,19 +156,19 @@
    },
    "phone": "(647) 545-6059",
    "phoneTel": "+16475456059",
-   "spot": 2
+   "spot": 4
   },
   {
-   "id": "1746154591",
-   "title": "Affordable black truck black SUV black Escalade night out party",
+   "id": "1746155574",
+   "title": "Affordable black Escalade, black truck night out party",
    "description": "Contact for more details",
    "price": "See ad",
    "address": "Toronto, ON M5J",
    "lat": 43.64082,
    "lng": -79.38175,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/affordable-black-truck-black-suv-black-escalade-night-out-party/1746154591",
-   "posted": "Nov 13, 6:34 PM",
-   "postedIso": "2026-11-13T23:34:11.000Z",
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/affordable-black-escalade-black-truck-night-out-party/1746155574",
+   "posted": "Nov 13, 7:02 PM",
+   "postedIso": "2026-11-14T00:02:17.000Z",
    "route": "other",
    "departure": null,
    "departureParts": {
@@ -133,7 +177,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 3
+   "spot": 5
   },
   {
    "id": "1746128238",
@@ -154,7 +198,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 4
+   "spot": 6
   },
   {
    "id": "1746039763",
@@ -175,7 +219,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 5
+   "spot": 7
   },
   {
    "id": "1746019341",
@@ -196,7 +240,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 6
+   "spot": 8
   },
   {
    "id": "1745993308",
@@ -217,7 +261,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 7
+   "spot": 9
   },
   {
    "id": "1745985425",
@@ -238,7 +282,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 8
+   "spot": 10
   },
   {
    "id": "1745968922",
@@ -261,7 +305,7 @@
    },
    "phone": "(416) 938-8454",
    "phoneTel": "+14169388454",
-   "spot": 9
+   "spot": 11
   },
   {
    "id": "1743439023",
@@ -282,7 +326,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 10
+   "spot": 12
   },
   {
    "id": "1743439004",
@@ -303,7 +347,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 11
+   "spot": 13
   },
   {
    "id": "1742502026",
@@ -326,7 +370,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 12
+   "spot": 14
   },
   {
    "id": "1740561586",
@@ -347,7 +391,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 13
+   "spot": 15
   },
   {
    "id": "1740504551",
@@ -368,7 +412,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 14
+   "spot": 16
   },
   {
    "id": "1740504541",
@@ -389,7 +433,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 15
+   "spot": 17
   },
   {
    "id": "1740504532",
@@ -410,7 +454,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 16
+   "spot": 18
   },
   {
    "id": "1736245457",
@@ -431,7 +475,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 17
+   "spot": 19
   },
   {
    "id": "1732429336",
@@ -452,7 +496,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 18
+   "spot": 20
   },
   {
    "id": "1692867306",
@@ -473,7 +517,7 @@
    },
    "phone": "(647) 226-9997",
    "phoneTel": "+16472269997",
-   "spot": 19
+   "spot": 21
   }
  ]
 }
