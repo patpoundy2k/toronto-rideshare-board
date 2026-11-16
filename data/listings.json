@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-15T06:50:45.217448-05:00",
+ "generatedAt": "2026-11-16T07:22:18.684423-05:00",
  "source": "https://www.kijiji.ca/b-rideshare-carpool/city-of-toronto/c5l1700273",
  "counts": {
   "pulled": 40,
@@ -9,9 +9,9 @@
   "hiddenBlockedCity": 9,
   "hiddenExpired": 6,
   "byRoute": {
-   "montreal": 2,
+   "montreal": 3,
    "ottawa": 2,
-   "other": 17
+   "other": 16
   },
   "withDeparture": 5,
   "withPhone": 7
@@ -21,52 +21,75 @@
    "name": "Toronto",
    "lat": 43.6532,
    "lon": -79.3832,
-   "temp": 0.8,
-   "code": 0,
-   "label": "Clear sky",
-   "emoji": "☀️",
-   "wind": 12.7,
-   "hi": 6.9,
-   "lo": 0.6
+   "temp": 5.2,
+   "code": 3,
+   "label": "Overcast",
+   "emoji": "☁️",
+   "wind": 8.9,
+   "hi": 10.1,
+   "lo": 3.0
   },
   {
    "name": "Kingston",
    "lat": 44.2312,
    "lon": -76.486,
-   "temp": 0.2,
+   "temp": -0.3,
    "code": 3,
    "label": "Overcast",
    "emoji": "☁️",
-   "wind": 10.4,
-   "hi": 4.7,
-   "lo": 0.2
+   "wind": 5.1,
+   "hi": 5.7,
+   "lo": -0.4
   },
   {
    "name": "Ottawa",
    "lat": 45.4215,
    "lon": -75.6972,
-   "temp": 1.6,
-   "code": 0,
-   "label": "Clear sky",
-   "emoji": "☀️",
-   "wind": 7.2,
-   "hi": 4.5,
-   "lo": 1.1
+   "temp": 1.8,
+   "code": 3,
+   "label": "Overcast",
+   "emoji": "☁️",
+   "wind": 6.6,
+   "hi": 4.7,
+   "lo": -0.3
   },
   {
    "name": "Montréal",
    "lat": 45.5019,
    "lon": -73.5674,
-   "temp": 1.8,
-   "code": 0,
-   "label": "Clear sky",
-   "emoji": "☀️",
-   "wind": 14.7,
-   "hi": 5.9,
-   "lo": 1.6
+   "temp": 1.6,
+   "code": 3,
+   "label": "Overcast",
+   "emoji": "☁️",
+   "wind": 7.8,
+   "hi": 5.3,
+   "lo": 0.3
   }
  ],
  "listings": [
+  {
+   "id": "1746262272",
+   "title": "PARCELS TORONTO → MONTREAL — SAT NOV 21 — SAME-DAY DELIVERY",
+   "description": "Need something in Montreal fast? I'm driving there this Saturday and have room for your parcels! PICKUP: Yorkdale Mall or Fairview Mall (Don Mills), Saturday before 1:00 PM DROP-OFF: Côte-Vertu Metro ...",
+   "price": "See ad",
+   "address": "North York, ON M6A 2T9",
+   "lat": 43.72735,
+   "lng": -79.4514,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/parcels-toronto-montreal-sat-nov-21-same-day-delivery/1746262272",
+   "posted": "Nov 16, 7:15 AM",
+   "postedIso": "2026-11-16T12:15:34.000Z",
+   "route": "montreal",
+   "departure": "Sat · 1:00 PM",
+   "departureParts": {
+    "days": "Sat",
+    "times": [
+     "1:00 PM"
+    ]
+   },
+   "phone": null,
+   "phoneTel": null,
+   "spot": 1
+  },
   {
    "id": "1746174905",
    "title": "Rideshare Toronto to Montreal, Sat Nov 21, $60/seat",
@@ -88,7 +111,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 1
+   "spot": 2
   },
   {
    "id": "1746126496",
@@ -112,7 +135,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 2
+   "spot": 3
   },
   {
    "id": "1746182228",
@@ -133,7 +156,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 3
+   "spot": 4
   },
   {
    "id": "1746065390",
@@ -156,7 +179,7 @@
    },
    "phone": "(647) 545-6059",
    "phoneTel": "+16475456059",
-   "spot": 4
+   "spot": 5
   },
   {
    "id": "1746155574",
@@ -177,7 +200,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 5
+   "spot": 6
   },
   {
    "id": "1746128238",
@@ -198,7 +221,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 6
+   "spot": 7
   },
   {
    "id": "1746039763",
@@ -219,7 +242,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 7
+   "spot": 8
   },
   {
    "id": "1746019341",
@@ -240,7 +263,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 8
+   "spot": 9
   },
   {
    "id": "1745993308",
@@ -261,7 +284,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 9
+   "spot": 10
   },
   {
    "id": "1745985425",
@@ -282,30 +305,28 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 10
+   "spot": 11
   },
   {
-   "id": "1745968922",
-   "title": "Timmins or Sudbury to Toronto Airport on Tuesday 9:00 am",
-   "description": "Plz contact 4169388454",
-   "price": "$99",
-   "address": "Toronto St, Toronto, ON M5C",
-   "lat": 43.65013,
-   "lng": -79.37616,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/timmins-or-sudbury-to-toronto-airport-on-tuesday-9:00-am/1745968922",
-   "posted": "Nov 9, 4:14 PM",
-   "postedIso": "2026-11-09T21:14:34.000Z",
+   "id": "1743557514",
+   "title": "Toronto Pearson Airport",
+   "description": "Flying out? Landing at Pearson? Skip the hassle of parking, waiting, or surge pricing. 437-264-4576 Thank you!",
+   "price": "See ad",
+   "address": "Scarborough, ON M1W",
+   "lat": 43.79953,
+   "lng": -79.31839,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/toronto-pearson-airport/1743557514",
+   "posted": "Sep 16, 5:16 PM",
+   "postedIso": "2026-09-16T21:16:59.000Z",
    "route": "other",
-   "departure": "Tue · 9:00 AM",
+   "departure": null,
    "departureParts": {
-    "days": "Tue",
-    "times": [
-     "9:00 AM"
-    ]
+    "days": null,
+    "times": []
    },
-   "phone": "(416) 938-8454",
-   "phoneTel": "+14169388454",
-   "spot": 11
+   "phone": "(437) 264-4576",
+   "phoneTel": "+14372644576",
+   "spot": 12
   },
   {
    "id": "1743439023",
@@ -326,7 +347,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 12
+   "spot": 13
   },
   {
    "id": "1743439004",
@@ -347,7 +368,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 13
+   "spot": 14
   },
   {
    "id": "1742502026",
@@ -370,7 +391,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 14
+   "spot": 15
   },
   {
    "id": "1740561586",
@@ -391,49 +412,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 15
-  },
-  {
-   "id": "1740504551",
-   "title": "Ride available low in price",
-   "description": "Do you require Airport transit? For Airport Pick up and drop off feel free to reach out. 437 264 4576 Thank you",
-   "price": "See ad",
-   "address": "Scarborough, ON M1N",
-   "lat": 43.69266,
-   "lng": -79.26485,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/ride-available-low-in-price/1740504551",
-   "posted": "Jul 12, 7:03 PM",
-   "postedIso": "2026-07-12T23:03:02.000Z",
-   "route": "other",
-   "departure": null,
-   "departureParts": {
-    "days": null,
-    "times": []
-   },
-   "phone": "(437) 264-4576",
-   "phoneTel": "+14372644576",
    "spot": 16
-  },
-  {
-   "id": "1740504541",
-   "title": "Ride available low in price",
-   "description": "Looking for a comfortable ride at a reasonable price? We offer low-cost rides without compromising on quality, safety, or comfort. ✅ Budget-friendly pricing ✅ Reliable & on-time service ✅ Comfortable ...",
-   "price": "See ad",
-   "address": "Scarborough, ON M1P",
-   "lat": 43.75741,
-   "lng": -79.2733,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/ride-available-low-in-price/1740504541",
-   "posted": "Jul 12, 7:02 PM",
-   "postedIso": "2026-07-12T23:02:48.000Z",
-   "route": "other",
-   "departure": null,
-   "departureParts": {
-    "days": null,
-    "times": []
-   },
-   "phone": null,
-   "phoneTel": null,
-   "spot": 17
   },
   {
    "id": "1740504532",
@@ -454,6 +433,27 @@
    },
    "phone": null,
    "phoneTel": null,
+   "spot": 17
+  },
+  {
+   "id": "1740449314",
+   "title": "Locksmith Toronto Cabbagetown -Lock Change /Rekey",
+   "description": "Toronto – Metro City Locksmiths 647-483-7046 Locked out of your home, condo, or car in Toronto? Metro City Locksmiths is ready to help with fast, reliable emergency service whenever you need it. ...",
+   "price": "See ad",
+   "address": "Toronto, ON M4X 0A2, Canada",
+   "lat": 43.66968,
+   "lng": -79.37489,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/locksmith-toronto-cabbagetown-lock-change-rekey/1740449314",
+   "posted": "Jul 11, 2:46 PM",
+   "postedIso": "2026-07-11T18:46:12.000Z",
+   "route": "other",
+   "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
+   "phone": "(647) 483-7046",
+   "phoneTel": "+16474837046",
    "spot": 18
   },
   {
