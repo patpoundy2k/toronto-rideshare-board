@@ -1,19 +1,19 @@
 {
- "generatedAt": "2026-11-25T15:28:57.775965-05:00",
+ "generatedAt": "2026-11-26T15:11:12.701472-05:00",
  "source": "https://www.kijiji.ca/b-rideshare-carpool/city-of-toronto/c5l1700273",
  "counts": {
-  "pulled": 43,
-  "kept": 22,
-  "hidden": 21,
+  "pulled": 44,
+  "kept": 24,
+  "hidden": 20,
   "hiddenTopAd": 4,
-  "hiddenBlockedCity": 17,
+  "hiddenBlockedCity": 16,
   "hiddenExpired": 0,
   "byRoute": {
    "montreal": 6,
    "ottawa": 0,
-   "other": 16
+   "other": 18
   },
-  "withDeparture": 5,
+  "withDeparture": 6,
   "withPhone": 18
  },
  "weather": [
@@ -21,52 +21,75 @@
    "name": "Toronto",
    "lat": 43.6532,
    "lon": -79.3832,
-   "temp": 3.8,
-   "code": 1,
-   "label": "Mainly clear",
-   "emoji": "🌤️",
-   "wind": 18.9,
-   "hi": 4.7,
-   "lo": -3.8
+   "temp": null,
+   "code": null,
+   "label": "Unavailable",
+   "emoji": "🌡️",
+   "wind": null,
+   "hi": null,
+   "lo": null
   },
   {
    "name": "Kingston",
    "lat": 44.2312,
    "lon": -76.486,
-   "temp": 3.0,
-   "code": 0,
-   "label": "Clear sky",
-   "emoji": "☀️",
-   "wind": 9.7,
-   "hi": 3.1,
-   "lo": -6.9
+   "temp": 2.6,
+   "code": 3,
+   "label": "Overcast",
+   "emoji": "☁️",
+   "wind": 22.2,
+   "hi": 3.6,
+   "lo": -4.6
   },
   {
    "name": "Ottawa",
    "lat": 45.4215,
    "lon": -75.6972,
-   "temp": 1.0,
-   "code": 0,
-   "label": "Clear sky",
-   "emoji": "☀️",
-   "wind": 4.5,
-   "hi": 1.3,
-   "lo": -7.8
+   "temp": 1.8,
+   "code": 3,
+   "label": "Overcast",
+   "emoji": "☁️",
+   "wind": 9.7,
+   "hi": 2.3,
+   "lo": -7.9
   },
   {
    "name": "Montréal",
    "lat": 45.5019,
    "lon": -73.5674,
-   "temp": 1.3,
-   "code": 0,
-   "label": "Clear sky",
-   "emoji": "☀️",
-   "wind": 1.5,
-   "hi": 1.8,
-   "lo": -5.0
+   "temp": 0.4,
+   "code": 3,
+   "label": "Overcast",
+   "emoji": "☁️",
+   "wind": 12.9,
+   "hi": 1.1,
+   "lo": -6.6
   }
  ],
  "listings": [
+  {
+   "id": "1746701939",
+   "title": "“TOMORROW FRI 27, TORONTO TO MONTREAL, 7.30am”GUARANTEED",
+   "description": "HI GUYS! Only 50$ TORONTO TO MONTREAL FRIDAY NOV 27 at 7.30am SHARP CONTACT FRANK : 514 290 8030 or 647 885 5088 EXCELLENT MINIVAN TOYOTA SIENNA, NEVER CROWDED!! Pickup place: Parking lot of Loblaws ...",
+   "price": "$50",
+   "address": "York, ON M6E 2V2",
+   "lat": 43.68041,
+   "lng": -79.43536,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/tomorrow-fri-27-toronto-to-montreal-7-30am-guaranteed/1746701939",
+   "posted": "Nov 26, 9:19 AM",
+   "postedIso": "2026-11-26T14:19:54.000Z",
+   "route": "montreal",
+   "departure": "Fri · 7:30 AM",
+   "departureParts": {
+    "days": "Fri",
+    "times": [
+     "7:30 AM"
+    ]
+   },
+   "phone": "(514) 290-8030",
+   "phoneTel": "+15142908030",
+   "spot": 1
+  },
   {
    "id": "1746671602",
    "title": "EXPRESS-EVERY DAY-MONTREAL BELLEVILLE TORONTO RIDESHARE",
@@ -86,7 +109,7 @@
    },
    "phone": "(514) 803-0018",
    "phoneTel": "+15148030018",
-   "spot": 1
+   "spot": 2
   },
   {
    "id": "1746660298",
@@ -109,7 +132,7 @@
    },
    "phone": "(514) 290-8030",
    "phoneTel": "+15142908030",
-   "spot": 2
+   "spot": 3
   },
   {
    "id": "1746625741",
@@ -132,7 +155,7 @@
    },
    "phone": "(514) 290-8030",
    "phoneTel": "+15142908030",
-   "spot": 3
+   "spot": 4
   },
   {
    "id": "1746574875",
@@ -153,7 +176,7 @@
    },
    "phone": "(514) 803-0018",
    "phoneTel": "+15148030018",
-   "spot": 4
+   "spot": 5
   },
   {
    "id": "1746543048",
@@ -174,28 +197,91 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 5
+   "spot": 6
   },
   {
-   "id": "1746529275",
-   "title": "CARPOOL RIDE TORONTO MISSISSAUGA TO KINGSTON CORNWALL MONTREAL",
-   "description": "HASSLE FREE <>ONLY CALL PLEASE”. —)- NOT TEXTING -) ONLY PHONE CALLS -)☎️(-514-803-0018-)☎️-)- 647-534-1598 -))-NOT TEXTING -(( RIDESHARES -) FROM - MONTRÉAL TO TORONTO at.MORNING ”-)-starting ...",
+   "id": "1746715619",
+   "title": "Niagara Falls and Other Long Trips in Ontario and Quebec.",
+   "description": "Travel in Comfort with a Private Driver — Just for you! No Ride Sharing - No Waiting - No Hassle. ✔️ Brand new 5-seater SUV (spotless, smoke & pet free) ✔️ 20+ years of safe driving experience ✔️ ...",
    "price": "See ad",
-   "address": "3401 Dufferin St, North York, ON M6A 2T9",
-   "lat": 43.72511,
-   "lng": -79.45281,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/carpool-ride-toronto-mississauga-to-kingston-cornwall-montreal/1746529275",
-   "posted": "Nov 22, 10:25 AM",
-   "postedIso": "2026-11-22T15:25:10.000Z",
-   "route": "montreal",
+   "address": "Scarborough, ON M1P 4P5",
+   "lat": 43.77658,
+   "lng": -79.2571,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/niagara-falls-and-other-long-trips-in-ontario-and-quebec/1746715619",
+   "posted": "Nov 26, 2:44 PM",
+   "postedIso": "2026-11-26T19:44:02.000Z",
+   "route": "other",
    "departure": null,
    "departureParts": {
     "days": null,
     "times": []
    },
-   "phone": "(514) 803-0018",
-   "phoneTel": "+15148030018",
-   "spot": 6
+   "phone": null,
+   "phoneTel": null,
+   "spot": 7
+  },
+  {
+   "id": "1746709122",
+   "title": "Ride to Calgary from Toronto",
+   "description": "I am offering a long-haul road trip opportunity from Toronto, Ontario, to Calgary, Alberta, covering approximately 3,566 kilometers of Canada's beautiful landscape. This is a pre-owned travel ...",
+   "price": "$450",
+   "address": "Adelaide St W, Toronto, M5H 1P9",
+   "lat": 43.64938,
+   "lng": -79.38293,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/ride-to-calgary-from-toronto/1746709122",
+   "posted": "Nov 26, 12:07 PM",
+   "postedIso": "2026-11-26T17:07:11.000Z",
+   "route": "other",
+   "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
+   "phone": null,
+   "phoneTel": null,
+   "spot": 8
+  },
+  {
+   "id": "1746694934",
+   "title": "Clean and comfortable vehicle Ride",
+   "description": "I offer private airport transportation from Scarborough directly to Toronto Pearson International Airport. 437-264-4576",
+   "price": "See ad",
+   "address": "Scarborough, ON M1J",
+   "lat": 43.74473,
+   "lng": -79.23948,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/clean-and-comfortable-vehicle-ride/1746694934",
+   "posted": "Nov 26, 5:15 AM",
+   "postedIso": "2026-11-26T10:15:10.000Z",
+   "route": "other",
+   "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
+   "phone": "(437) 264-4576",
+   "phoneTel": "+14372644576",
+   "spot": 9
+  },
+  {
+   "id": "1746686453",
+   "title": "Driving Lessons- instructor School- Etobicoke- GTA",
+   "description": "Let’s Crush Your Driving Test! Yo! Big shout out for checking my post! Ready to OWN your, G2, or G Test? I got you! !!! Individual lessons: ✨ G2. :$50 for sixty minutes ✨ G : $60 for Sixty minutes ✨ ...",
+   "price": "See ad",
+   "address": "Tretti Wy, North York, ON M3H 5Y6",
+   "lat": 43.73273,
+   "lng": -79.44767,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/driving-lessons-instructor-school-etobicoke-gta/1746686453",
+   "posted": "Nov 25, 9:01 PM",
+   "postedIso": "2026-11-26T02:01:36.000Z",
+   "route": "other",
+   "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
+   "phone": null,
+   "phoneTel": null,
+   "spot": 10
   },
   {
    "id": "1746669710",
@@ -216,49 +302,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 7
-  },
-  {
-   "id": "1746657210",
-   "title": "Ride Share Services from Peterborough",
-   "description": "I am offering professional ride sharing services From PETERBOROUGH to Oshawa, Toronto (STC or Markham and Sheppard so you get express to Union) you need to go safely and efficiently. This service is ...",
-   "price": "$30",
-   "address": "Sheppard Ave E, Toronto, M1B 1G3",
-   "lat": 43.80082,
-   "lng": -79.15053,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/ride-share-services-from-peterborough/1746657210",
-   "posted": "Nov 25, 8:59 AM",
-   "postedIso": "2026-11-25T13:59:06.000Z",
-   "route": "other",
-   "departure": null,
-   "departureParts": {
-    "days": null,
-    "times": []
-   },
-   "phone": null,
-   "phoneTel": null,
-   "spot": 8
-  },
-  {
-   "id": "1746541767",
-   "title": "Locksmith Toronto Cabbagetown -Lock Change /Rekey",
-   "description": "Toronto – Metro City Locksmiths 647-483-7046 Locked out of your home, condo, or car in Toronto? Metro City Locksmiths is ready to help with fast, reliable emergency service whenever you need it. ...",
-   "price": "See ad",
-   "address": "Toronto, ON M4X 0A2, Canada",
-   "lat": 43.66968,
-   "lng": -79.37489,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/locksmith-toronto-cabbagetown-lock-change-rekey/1746541767",
-   "posted": "Nov 22, 2:25 PM",
-   "postedIso": "2026-11-22T19:25:41.000Z",
-   "route": "other",
-   "departure": null,
-   "departureParts": {
-    "days": null,
-    "times": []
-   },
-   "phone": "(647) 483-7046",
-   "phoneTel": "+16474837046",
-   "spot": 9
+   "spot": 11
   },
   {
    "id": "1738195414",
@@ -279,7 +323,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 10
+   "spot": 12
   },
   {
    "id": "1738146176",
@@ -300,7 +344,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 11
+   "spot": 13
   },
   {
    "id": "1738092547",
@@ -321,7 +365,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 12
+   "spot": 14
   },
   {
    "id": "1738020001",
@@ -342,7 +386,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 13
+   "spot": 15
   },
   {
    "id": "1738019936",
@@ -363,7 +407,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 14
+   "spot": 16
   },
   {
    "id": "1738000740",
@@ -384,7 +428,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 15
+   "spot": 17
   },
   {
    "id": "1737966778",
@@ -405,7 +449,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 16
+   "spot": 18
   },
   {
    "id": "1737966767",
@@ -426,7 +470,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 17
+   "spot": 19
   },
   {
    "id": "1737966759",
@@ -447,7 +491,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 18
+   "spot": 20
   },
   {
    "id": "1737920311",
@@ -468,7 +512,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 19
+   "spot": 21
   },
   {
    "id": "1737895652",
@@ -489,7 +533,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 20
+   "spot": 22
   },
   {
    "id": "1737895641",
@@ -510,7 +554,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 21
+   "spot": 23
   },
   {
    "id": "1706931704",
@@ -531,7 +575,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 22
+   "spot": 24
   }
  ]
 }
