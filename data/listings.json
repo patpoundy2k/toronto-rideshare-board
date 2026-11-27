@@ -1,17 +1,17 @@
 {
- "generatedAt": "2026-11-26T15:11:12.701472-05:00",
+ "generatedAt": "2026-11-27T14:56:39.492588-05:00",
  "source": "https://www.kijiji.ca/b-rideshare-carpool/city-of-toronto/c5l1700273",
  "counts": {
-  "pulled": 44,
-  "kept": 24,
-  "hidden": 20,
-  "hiddenTopAd": 4,
-  "hiddenBlockedCity": 16,
+  "pulled": 42,
+  "kept": 27,
+  "hidden": 15,
+  "hiddenTopAd": 2,
+  "hiddenBlockedCity": 13,
   "hiddenExpired": 0,
   "byRoute": {
    "montreal": 6,
    "ottawa": 0,
-   "other": 18
+   "other": 21
   },
   "withDeparture": 6,
   "withPhone": 18
@@ -21,52 +21,73 @@
    "name": "Toronto",
    "lat": 43.6532,
    "lon": -79.3832,
-   "temp": null,
-   "code": null,
-   "label": "Unavailable",
-   "emoji": "🌡️",
-   "wind": null,
-   "hi": null,
-   "lo": null
+   "temp": 4.4,
+   "code": 51,
+   "label": "Light drizzle",
+   "emoji": "🌦️",
+   "wind": 10.0,
+   "hi": 4.7,
+   "lo": 1.5
   },
   {
    "name": "Kingston",
    "lat": 44.2312,
    "lon": -76.486,
-   "temp": 2.6,
-   "code": 3,
-   "label": "Overcast",
-   "emoji": "☁️",
-   "wind": 22.2,
-   "hi": 3.6,
-   "lo": -4.6
+   "temp": 3.2,
+   "code": 45,
+   "label": "Fog",
+   "emoji": "🌫️",
+   "wind": 7.4,
+   "hi": 5.2,
+   "lo": 0.2
   },
   {
    "name": "Ottawa",
    "lat": 45.4215,
    "lon": -75.6972,
-   "temp": 1.8,
-   "code": 3,
-   "label": "Overcast",
-   "emoji": "☁️",
-   "wind": 9.7,
-   "hi": 2.3,
-   "lo": -7.9
+   "temp": 3.4,
+   "code": 55,
+   "label": "Drizzle",
+   "emoji": "🌦️",
+   "wind": 13.0,
+   "hi": 3.7,
+   "lo": 0.4
   },
   {
    "name": "Montréal",
    "lat": 45.5019,
    "lon": -73.5674,
-   "temp": 0.4,
+   "temp": 2.9,
    "code": 3,
    "label": "Overcast",
    "emoji": "☁️",
-   "wind": 12.9,
-   "hi": 1.1,
-   "lo": -6.6
+   "wind": 15.4,
+   "hi": 3.6,
+   "lo": 0.1
   }
  ],
  "listings": [
+  {
+   "id": "1746717416",
+   "title": "Dog/Cat DELIVERY Service Niagara Hamilton Toronto Montreal",
+   "description": "Your pet is in good hands! Experienced driver with a passion for animals, providing safe, reliable, and affordable pet transportation. I’ll make sure your furry family member gets to their ...",
+   "price": "See ad",
+   "address": "226 Brock Ave, Toronto, M6K 2L9",
+   "lat": 43.64833,
+   "lng": -79.43532,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/dog-cat-delivery-service-niagara-hamilton-toronto-montreal/1746717416",
+   "posted": "Nov 26, 3:25 PM",
+   "postedIso": "2026-11-26T20:25:30.000Z",
+   "route": "montreal",
+   "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
+   "phone": null,
+   "phoneTel": null,
+   "spot": 1
+  },
   {
    "id": "1746701939",
    "title": "“TOMORROW FRI 27, TORONTO TO MONTREAL, 7.30am”GUARANTEED",
@@ -88,7 +109,7 @@
    },
    "phone": "(514) 290-8030",
    "phoneTel": "+15142908030",
-   "spot": 1
+   "spot": 2
   },
   {
    "id": "1746671602",
@@ -109,7 +130,7 @@
    },
    "phone": "(514) 803-0018",
    "phoneTel": "+15148030018",
-   "spot": 2
+   "spot": 3
   },
   {
    "id": "1746660298",
@@ -132,7 +153,7 @@
    },
    "phone": "(514) 290-8030",
    "phoneTel": "+15142908030",
-   "spot": 3
+   "spot": 4
   },
   {
    "id": "1746625741",
@@ -155,27 +176,6 @@
    },
    "phone": "(514) 290-8030",
    "phoneTel": "+15142908030",
-   "spot": 4
-  },
-  {
-   "id": "1746574875",
-   "title": "RIDESHARE- EVERY DAY- Kingston to Montreal Toronto",
-   "description": "HASSLE FREE <>ONLY CALL PLEASE”. —)- NOT TEXTING -) ONLY PHONE CALLS -)☎️(-514-803-0018-)☎️-)- 647-534-1598 -))-NOT TEXTING -(( RIDESHARES -) FROM - MONTRÉAL TO TORONTO at.MORNING ”-)-starting ...",
-   "price": "See ad",
-   "address": "3401 Dufferin St, North York, ON M6A 2T9",
-   "lat": 43.72511,
-   "lng": -79.45281,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/rideshare-every-day-kingston-to-montreal-toronto/1746574875",
-   "posted": "Nov 23, 11:37 AM",
-   "postedIso": "2026-11-23T16:37:11.000Z",
-   "route": "montreal",
-   "departure": "Daily",
-   "departureParts": {
-    "days": "Daily",
-    "times": []
-   },
-   "phone": "(514) 803-0018",
-   "phoneTel": "+15148030018",
    "spot": 5
   },
   {
@@ -200,16 +200,37 @@
    "spot": 6
   },
   {
-   "id": "1746715619",
-   "title": "Niagara Falls and Other Long Trips in Ontario and Quebec.",
-   "description": "Travel in Comfort with a Private Driver — Just for you! No Ride Sharing - No Waiting - No Hassle. ✔️ Brand new 5-seater SUV (spotless, smoke & pet free) ✔️ 20+ years of safe driving experience ✔️ ...",
+   "id": "1746757182",
+   "title": "Small moves & deliveries from Ontario to Nova Scotia",
+   "description": "Heading from Ontario to Halifax, Nova Scotia (and anywhere along the way) on the first Sunday of every month. Need to move a few pieces of furniture, transport oversized boxes, or ship family ...",
    "price": "See ad",
-   "address": "Scarborough, ON M1P 4P5",
-   "lat": 43.77658,
-   "lng": -79.2571,
-   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/niagara-falls-and-other-long-trips-in-ontario-and-quebec/1746715619",
-   "posted": "Nov 26, 2:44 PM",
-   "postedIso": "2026-11-26T19:44:02.000Z",
+   "address": "University Ave, Toronto, M5G 1X3",
+   "lat": 43.65562,
+   "lng": -79.38848,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/small-moves-deliveries-from-ontario-to-nova-scotia/1746757182",
+   "posted": "Nov 27, 2:32 PM",
+   "postedIso": "2026-11-27T19:32:46.000Z",
+   "route": "other",
+   "departure": "Sun",
+   "departureParts": {
+    "days": "Sun",
+    "times": []
+   },
+   "phone": null,
+   "phoneTel": null,
+   "spot": 7
+  },
+  {
+   "id": "1746749653",
+   "title": "ride to Kitchener, Cambridge, guelph",
+   "description": "Ride share from Toronto to Cambridge, Kitchener, Guelph, or London on Dec 3 morning 4 seats",
+   "price": "$25",
+   "address": "Toronto, ON M4X 1M3",
+   "lat": 43.67054,
+   "lng": -79.37454,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/ride-to-kitchener-cambridge-guelph/1746749653",
+   "posted": "Nov 27, 11:46 AM",
+   "postedIso": "2026-11-27T16:46:29.000Z",
    "route": "other",
    "departure": null,
    "departureParts": {
@@ -218,7 +239,28 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 7
+   "spot": 8
+  },
+  {
+   "id": "1746743781",
+   "title": "Niagara Falls and Other Long Trips in Ontario and Quebec.",
+   "description": "Travel in Comfort with a Private Driver — Just for you! No Ride Sharing - No Waiting - No Hassle. ✔️ Brand new 5-seater SUV (spotless, smoke & pet free) ✔️ 20+ years of safe driving experience ✔️ ...",
+   "price": "See ad",
+   "address": "Scarborough, ON M1P 4P5",
+   "lat": 43.77658,
+   "lng": -79.2571,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/niagara-falls-and-other-long-trips-in-ontario-and-quebec/1746743781",
+   "posted": "Nov 27, 9:22 AM",
+   "postedIso": "2026-11-27T14:22:31.000Z",
+   "route": "other",
+   "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
+   "phone": null,
+   "phoneTel": null,
+   "spot": 9
   },
   {
    "id": "1746709122",
@@ -239,7 +281,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 8
+   "spot": 10
   },
   {
    "id": "1746694934",
@@ -260,7 +302,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 9
+   "spot": 11
   },
   {
    "id": "1746686453",
@@ -281,7 +323,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 10
+   "spot": 12
   },
   {
    "id": "1746669710",
@@ -302,7 +344,28 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 11
+   "spot": 13
+  },
+  {
+   "id": "1738392154",
+   "title": "Affordable and Reliable Private Rides are Available",
+   "description": "Affordable and Reliable Private Rides are Available Call/Text/Whatsapp: 437-264-4576 Thank you!",
+   "price": "See ad",
+   "address": "Scarborough, ON M1V 0A3",
+   "lat": 43.81724,
+   "lng": -79.31267,
+   "url": "https://www.kijiji.ca/v-rideshare-carpool/city-of-toronto/affordable-and-reliable-private-rides-are-available/1738392154",
+   "posted": "May 29, 9:30 PM",
+   "postedIso": "2026-05-30T01:30:02.000Z",
+   "route": "other",
+   "departure": null,
+   "departureParts": {
+    "days": null,
+    "times": []
+   },
+   "phone": "(437) 264-4576",
+   "phoneTel": "+14372644576",
+   "spot": 14
   },
   {
    "id": "1738195414",
@@ -323,7 +386,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 12
+   "spot": 15
   },
   {
    "id": "1738146176",
@@ -344,7 +407,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 13
+   "spot": 16
   },
   {
    "id": "1738092547",
@@ -365,7 +428,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 14
+   "spot": 17
   },
   {
    "id": "1738020001",
@@ -386,7 +449,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 15
+   "spot": 18
   },
   {
    "id": "1738019936",
@@ -407,7 +470,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 16
+   "spot": 19
   },
   {
    "id": "1738000740",
@@ -428,7 +491,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 17
+   "spot": 20
   },
   {
    "id": "1737966778",
@@ -449,7 +512,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 18
+   "spot": 21
   },
   {
    "id": "1737966767",
@@ -470,7 +533,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 19
+   "spot": 22
   },
   {
    "id": "1737966759",
@@ -491,7 +554,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 20
+   "spot": 23
   },
   {
    "id": "1737920311",
@@ -512,7 +575,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 21
+   "spot": 24
   },
   {
    "id": "1737895652",
@@ -533,7 +596,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 22
+   "spot": 25
   },
   {
    "id": "1737895641",
@@ -554,7 +617,7 @@
    },
    "phone": "(437) 264-4576",
    "phoneTel": "+14372644576",
-   "spot": 23
+   "spot": 26
   },
   {
    "id": "1706931704",
@@ -575,7 +638,7 @@
    },
    "phone": null,
    "phoneTel": null,
-   "spot": 24
+   "spot": 27
   }
  ]
 }
